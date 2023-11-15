@@ -10,3 +10,7 @@ while (n--> 0) {
     current += prevPrev;
     console.log(current);
 }
+
+let man = function(a,b) {
+    return (a + b);
+}
