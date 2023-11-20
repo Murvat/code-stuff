@@ -250,3 +250,8 @@
 // }
 
 // console.log(found ?'Mi  nashli damu!' : 'v kolode net dam');
+let func = (a, b) => {
+    let res = a + b;
+    return console.log(res);
+};
+ func(1, 2);
