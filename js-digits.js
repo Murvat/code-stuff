@@ -257,4 +257,18 @@
 // //  func(1, 2);
 
 
+
 // new topic
+
+
+
+let user = {
+    name: 'Murvat',
+    age: 30
+}
+
+let superUser = user
+
+console.log(superUser.name);
+console.log(superUser.age)
+
