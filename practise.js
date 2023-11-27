@@ -1,47 +1,51 @@
-<<<<<<< HEAD
-let entrances = 4;
-let floors = 9;
-let flatsPerFloor = 4;
+// <<<<<<< HEAD
+// let entrances = 4;
+// let floors = 9;
+// let flatsPerFloor = 4;
 
-let flatPerEntrance =  floor * flatsPerFloor;
-console.log('Kvartir v podyezde', flatsPerEntrance);
+// let flatPerEntrance =  floor * flatsPerFloor;
+// console.log('Kvartir v podyezde', flatsPerEntrance);
 
-let flats = entrances * flatsPerEntrance;
-console.log('Vsego kvartir', flats);
+// let flats = entrances * flatsPerEntrance;
+// console.log('Vsego kvartir', flats);
 
 
-let vodka = 50;
-let tomatoJuice = 120;
-let lemonJuice = 10;
-let tobasco = 1;
-let worcester = 1;
+// let vodka = 50;
+// let tomatoJuice = 120;
+// let lemonJuice = 10;
+// let tobasco = 1;
+// let worcester = 1;
  
-let  volume = 500;
+// let  volume = 500;
 
-let k = (vodka + tomatoJuice + lemonJuice+ tobasco + worcester) /volume;
+// let k = (vodka + tomatoJuice + lemonJuice+ tobasco + worcester) /volume;
 
-console.log(vodka*k);
-=======
-let entrances = 4;
-let floors = 9;
-let flatsPerFloor = 4;
+// console.log(vodka*k);
+// =======
+// let entrances = 4;
+// let floors = 9;
+// let flatsPerFloor = 4;
 
-let flatPerEntrance =  floor * flatsPerFloor;
-console.log('Kvartir v podyezde', flatsPerEntrance);
+// let flatPerEntrance =  floor * flatsPerFloor;
+// console.log('Kvartir v podyezde', flatsPerEntrance);
 
-let flats = entrances * flatsPerEntrance;
-console.log('Vsego kvartir', flats);
+// let flats = entrances * flatsPerEntrance;
+// console.log('Vsego kvartir', flats);
 
 
-let vodka = 50;
-let tomatoJuice = 120;
-let lemonJuice = 10;
-let tobasco = 1;
-let worcester = 1;
+// let vodka = 50;
+// let tomatoJuice = 120;
+// let lemonJuice = 10;
+// let tobasco = 1;
+// let worcester = 1;
  
-let  volume = 500;
+// let  volume = 500;
 
-let k = (vodka + tomatoJuice + lemonJuice+ tobasco + worcester) /volume;
+// let k = (vodka + tomatoJuice + lemonJuice+ tobasco + worcester) /volume;
 
-console.log(vodka*k);
->>>>>>> be6246479361706ce37233bd330d8aeace77474e
+// console.log(vodka*k);
+
+
+// const NameMurvat = {
+
+// }
