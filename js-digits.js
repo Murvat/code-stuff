@@ -424,3 +424,28 @@
 //         alert('Hello');
 //     }
 // })();
+
+//  (() => {
+//     const dragDiv = document.getElementById('dragDiv');
+//     let x, y, left, top;
+
+//     function onMove(event) {
+//         event.preventDefault();
+//         dragDiv.style.left = event.clientX - x + left + 'px';
+//         dragDiv.style.top = event.clientY - y + top + 'px';
+//     }
+
+//     dragDiv.addEventListener('mousedown', event => {
+//         x = event.clientX;
+//         y = event.clientY;
+//         left = parseInt(dragDiv.style.left) || 0;
+//         top = parseInt(dragDiv.style.top) || 0;
+
+//         window.addEventListener('mousemove', onMove);
+//     });
+
+//     document.addEventListener('mouseup', () => {
+//         window.removeEventListener('mousemove', onMove);
+//     });
+// })();
+
