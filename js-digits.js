@@ -399,14 +399,28 @@
 // // // // 5)Declare a string variable and write a function 
 // // // named reverseString that takes a string as a parameter and 
 // // returns its reverse.
-// // // // Write a function named isPalindrome that checks if
-// // //  a given string is a palindrome.
-// // // // Logical Operators:
+// Write a function named isPalindrome that checks if
+//  a given string is a palindrome.
+// Logical Operators:
 
-// // // // 6)Write a function named isTeenager that takes an 
-// // // age as a parameter and returns true if the age is 
-// // // between 13 and 19 (inclusive), otherwise false.
-// // // // Write a function named canVote that takes an age 
-// // // and citizenship status as parameters and returns true if a 
-// // person is eligible to vote.
+// 6)Write a function named isTeenager that takes an 
+// age as a parameter and returns true if the age is 
+// between 13 and 19 (inclusive), otherwise false.
+// Write a function named canVote that takes an age 
+// and citizenship status as parameters and returns true if a 
+// person is eligible to vote.
 
+// document.querySelector('button').addEventListener('click', () => {});
+
+// window.addEventListener('resize', () => {});
+
+// document.addEventListener('DOMContentLoaded', () => { })
+
+// function globalOnClick() {
+//     alert('HELLO!');
+// }
+// (()=>{
+//     function scopedOnClick() {
+//         alert('Hello');
+//     }
+// })();
