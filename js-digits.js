@@ -50,8 +50,8 @@
 // // else
 // // {result='Много';}
 
-// / // // // // // 2)
-// / // // // // let result = (a+b<4) ? MALO : mnogo;
+ // 2)
+//  let result = (a+b<4) ? MALO : mnogo;
 
 //  // // 3)
 //  // // let message ;
@@ -182,41 +182,41 @@
 // // // / / /               (num3 < num2 && num2 < num1) ? `${num1}, ${num2}, ${num3}` : '';
 // // // / / / console.log(result);
 
-// // / / / // // // // 4) Задача на использование тернарного оператора:
-// // / / / // // // // Задача: Напишите программу, которая принимает на вход два числа и выводит сообщение о том, 
+// // /  4) Задача на использование тернарного оператора:
+// // /  Задача: Напишите программу, которая принимает на вход два числа и выводит сообщение о том, 
 // // / / / // // // является ли их сумма четной или нечетной, используя тернарный оператор.
 
-// // / / // // // // // // // // // // let a = 4;
-// // / / // // // // // // // // // // let b = 2;
+// //  // // // // let a = 4;
+// //  // // // // let b = 2;
 
-// // / / // // // // // // // // // // let result = (((a+b)/2)-((a+b)%2)<1)?'summa necetnaya':'summa cetnaya';
-// // / / // // // // // // // // // // console.log(result)
+// //  // // // // let result = (((a+b)/2)-((a+b)%2)<1)?'summa necetnaya':'summa cetnaya';
+// //  // // // // console.log(result)
 
-// // / / // // // // // // // // // let a = 10;
-// // / / // // // // // // // // // let b = 2;
-// // / / // // // // // // // // // let res = (a+b)%2;
-// // / / // // // // // // // // // console.log(res)
-// // / / // // // // // // // // let i = 0
-// // / / // // // // // // // // while(i!=0) 
-// // / / // // // // // // // // {console.log("VVEDI CISLO br")?
-// // / / // // // // // // // // break};
-// // / / // // // // // // // for(let i=3;i%2>0;i+2){
-// // / / // // // // // // // console.log(i)};
-// // / / // // // // // // let fibo = [1,1];
-// // / / // // // // // // for(let i=1;i<49;i++){
-// // / / // // // // // //    fibo.push(fibo[i] + fibo[i-1])}
-// // / / // // // // // //    console.log(fibo)
+// //  // // // let a = 10;
+// //  // // // let b = 2;
+// //  // // // let res = (a+b)%2;
+// //  // // // console.log(res)
+// //  // // let i = 0
+// //  // // while(i!=0) 
+// //  // // {console.log("VVEDI CISLO br")?
+// //  // // break};
+// //  // for(let i=3;i%2>0;i+2){
+// //  // console.log(i)};
+// //  let fibo = [1,1];
+// //  for(let i=1;i<49;i++){
+// //     fibo.push(fibo[i] + fibo[i-1])}
+// //     console.log(fibo)
 
-// // / / // // // // // let weekd = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'sundat', 'saturday']
-// // / / // // // // // for(let days of weekd){
-// // / / // // // // //     console.log(days)
-// // / / // // // // // };
+// //  // let weekd = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'sundat', 'saturday']
+// //  // for(let days of weekd){
+// //  //     console.log(days)
+// //  // };
 
-// // / / // // // // let students=['murvat', 'vusal', 'mamed','babek'];
-// // / / // // // // console.log(students);
-// // / / // // // // for(let i in students){
-// // / / // // // //     console.log(`${parseInt(i) + 1} place : ${students[i]}`)
-// // / / // // // // }
+// //  let students=['murvat', 'vusal', 'mamed','babek'];
+// //  console.log(students);
+// //  for(let i in students){
+// //      console.log(`${parseInt(i) + 1} place : ${students[i]}`)
+// //  }
 
 // // / / // // // let a =[];
 // // / / // // // for(let i=0;i<9;++i){
@@ -257,67 +257,63 @@
 // // // / /  func(1, 2);
 
 
+//  new topic
 
-// // / // // // // // // // // // // new topic
+// / // // // let user = {
+// / // // //     name: 'Murvat',
+// / // // //     age: 30
+// / // // // }
 
+// / // // // let superUser = user
 
+// / // // // console.log(superUser.name);
+// / // // // console.log(superUser.age)
 
-// // / // // // // // // // // // let user = {
-// // / // // // // // // // // //     name: 'Murvat',
-// // / // // // // // // // // //     age: 30
-// // / // // // // // // // // // }
+// / // // let User = {
+// / // //     prop1: 20,
+// / // //     prop2: 30,
+// / // //     prop3: 2,
+// / // //     prop4: 'ses'
+// / // // }
 
-// // / // // // // // // // // // let superUser = user
+// / // // let User2={}
 
-// // / // // // // // // // // // console.log(superUser.name);
-// // / // // // // // // // // // console.log(superUser.age)
+// / // // let CounTB = () =>{
+// / // //     for(let key in User){
+// / // //         if(typeof User.key==Number){
+// / // //             key*= 2
+// / // //         }
+// / // //     }
+// / // //     return key
+// / // // }
 
+// / // // console.log(key)
 
-// // / // // // // // // // // let User = {
-// // / // // // // // // // //     prop1: 20,
-// // / // // // // // // // //     prop2: 30,
-// // / // // // // // // // //     prop3: 2,
-// // / // // // // // // // //     prop4: 'ses'
-// // / // // // // // // // // }
+// / // let User = {
+// / //     prop1: 20,
+// / //     prop2: 30,
+// / //     prop3: 2,
+// / //     prop4: 'ses'
+// / // };
 
-// // / // // // // // // // // let User2={}
+// / // let CounTB = () => {
+// / //     for (let key in User) {
+// / //         if (typeof User[key] === 'number') {
+// / //             User[key] *= 2;
+// / //         }
+// / //     }
+// / //     return User;
+// // / // };
 
-// // / // // // // // // // // let CounTB = () =>{
-// // / // // // // // // // //     for(let key in User){
-// // / // // // // // // // //         if(typeof User.key==Number){
-// // / // // // // // // // //             key*= 2
-// // / // // // // // // // //         }
-// // / // // // // // // // //     }
-// // / // // // // // // // //     return key
-// // / // // // // // // // // }
-
-// // / // // // // // // // // console.log(key)
-
-// // / // // // // // // // let User = {
-// // / // // // // // // //     prop1: 20,
-// // / // // // // // // //     prop2: 30,
-// // / // // // // // // //     prop3: 2,
-// // / // // // // // // //     prop4: 'ses'
-// // / // // // // // // // };
-
-// // / // // // // // // // let CounTB = () => {
-// // / // // // // // // //     for (let key in User) {
-// // / // // // // // // //         if (typeof User[key] === 'number') {
-// // / // // // // // // //             User[key] *= 2;
-// // / // // // // // // //         }
-// // / // // // // // // //     }
-// // / // // // // // // //     return User;
-// // // / // // // // // // // };
-
-// // / // // // // // // // console.log(CounTB());
-// // / // // // // // // 1)
-// // / // // // // // let sayHello=function(){
-// // / // // // // //     console.log('Hello, world')
-// // / // // // // //     };
-// // / // // // // //     sayHello();
-// // / // // // // 2)Function Parameters:
-// // / // // // // Declare a function named add that takes two parameters (num1 and num2) and returns their sum.
-// // / // // // // Call the function with different arguments to test it.
+// / // console.log(CounTB());
+// / 1)
+// / // let sayHello=function(){
+// / //     console.log('Hello, world')
+// / //     };
+// / //     sayHello();
+// / 2)Function Parameters:
+// / Declare a function named add that takes two parameters (num1 and num2) and returns their sum.
+// / Call the function with different arguments to test it.
 // // / // // // function add(num1, num2){
 // // / // // //  return console.log(num1 + num2 );
 // // / // // // };
@@ -457,3 +453,14 @@
 // }
 
 // nameMurvat.whoAmI();
+// document.body.addEventListener('mousemove', function(event) {
+//     //this-- <body>
+//     console.log(this);
+//     //event-- object of event
+//     console.log(event);
+// })// let Guest = prompt("Let's imagine who are u:", "User");
+// let acUser = {
+// [Guest]:'Murvat',
+// };
+
+// alert(acUser.User);
