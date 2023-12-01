@@ -489,9 +489,19 @@
 // isEmpty(obj), которая возвращает true, 
 // если у объекта нет свойств, иначе false.
 // Должно работать так:
-let schedule={};alert(isEmpty(schedule));// true 
-schedule["8:30"]="get up";
-alert(isEmpty(schedule));// false
+// let schedule = {name:'Murvat'};
+// let isEmpty = function(object) {
+//     for (let key in object) {
+//         return console.log(false);
+//     }
+//     return console.log(true);
+// }
+
+// isEmpty(schedule);
+
+// alert(isEmpty(schedule));// true 
+// schedule["8:30"]="get up";
+// alert(isEmpty(schedule));// false
 
 
 // 2)У нас есть объект, в котором хранятся 
