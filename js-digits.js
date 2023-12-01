@@ -512,45 +512,114 @@
 // Ann:160,
 // Pete:130}
 
-// // 3)Создайте объект
-// // calculator
-// // (калькулятор) с тремя методами:
-// // read()(читать) запрашивает два значения и сохраняет 
-// // их как свойства объекта.
-// // sum()(суммировать) возвращает сумму сохранённых 
-// // значений.
-// // mul()(умножить) перемножает сохранённые значения и 
-// // возвращает результат.
+// 3)Создайте объект
+// calculator
+// (калькулятор) с тремя методами:
+// read()(читать) запрашивает два значения и сохраняет 
+// их как свойства объекта.
+// sum()(суммировать) возвращает сумму сохранённых 
+// значений.
+// mul()(умножить) перемножает сохранённые значения и 
+// возвращает результат.
 
-// let
-//         calculator = {
+// let calculator = {
 //             // ... ваш код ... 
-                     
-//         };         
+//                      };         
 // calculator.read();
 // alert(calculator.sum());
 // alert(calculator. mul())
 
-// // 4)У нас есть объект
-// // ladder
-// // (лестница), который позволяет подниматься и 
-// // спускаться:
+// let calculator = {
+//     read: function() {
+//         this.a = parseFloat(prompt("Enter the first number:"));
+//         this.b = parseFloat(prompt("Enter the second number:"));
+//     },
+
+//     sum: function() {
+//         return this.a + this.b;
+//     },
+
+//     mul: function() {
+//         return this.a * this.b;
+//     }
+// };
+
+// calculator.read();
+// alert("Sum: " + calculator.sum());
+// alert("Multiplication: " + calculator.mul());
+// let calculator = {
+//     read: function(a, b) {
+//         this.a = a;
+//         this.b = b;
+//     },
+
+//     sum: function() {
+//         return this.a + this.b;
+//     },
+
+//     mul: function() {
+//         return this.a * this.b;
+//     }
+// };
+
+// calculator.read(5, 6);
+// console.log('RENDERING RESULT: ' + calculator.sum(), ',', calculator.mul());
+     
+
+
+
+
+        //  let read1 = function(a,b){
+        //   return console.log(a,b)
+        //    };
+        //   let sum1=  function(a,b){
+        //   return console.log(a+b)
+        //   };
+        //    let mul1=  function(a,b){
+        //  return console.log(a*b)
+        //   };
+
+
+// 4)У нас есть объект
+// ladder
+// (лестница), который позволяет подниматься и 
+// спускаться:
 // let ladder = {
 //     step: 0,
 //     up() {
-//       this.step++;
+//         this.step++;
+//         return this;  // return the ladder object for chaining
 //     },
 //     down() {
-//       this.step--;
+//         this.step--;
+//         return this;  // return the ladder object for chaining
 //     },
 //     showStep() {
-//       // показывает текущую ступеньку
-//       alert(this.step);
+//         // показывает текущую ступеньку
+//         console.log(this.step);
+//         return this;  // return the ladder object for chaining
 //     }
-//   };
-// //   Теперь, если нам нужно выполнить несколько 
-// //   последовательных вызовов,
-// //    мы можемсделать это так:
+// };
+
+// ladder
+//     .up()
+//     .up()
+//     .down()
+//     .showStep()
+//     .down()
+//     .showStep()
+//     .up()
+//     .up()
+//     .up()
+//     .up()
+//     .up()
+//     .showStep();
+
+
+
+//   Теперь, если нам нужно выполнить несколько 
+//   последовательных вызовов,
+//    мы можемсделать это так:
 // ladder.up();
 // ladder.up();
 // ladder.down();
@@ -569,14 +638,31 @@
 //   .showStep()
 //   .down()
 //   .showStep();
-// // 5)Создайте функцию-конструктор Calculator, 
-// // которая создаёт объекты с тремя методами:
-// // read()запрашивает два значения при помощи
-// // promptи сохраняет их значение всвойствах объекта.
-// // sum()возвращает сумму этих свойств.
-// // mul()возвращает произведение этих свойств.
+// 5)Создайте функцию-конструктор Calculator, 
+// которая создаёт объекты с тремя методами:
+// read()запрашивает два значения при помощи
+// promptи сохраняет их значение всвойствах объекта.
+// sum()возвращает сумму этих свойств.
+// mul()возвращает произведение этих свойств.
+// function Calculator() {
+//     this.read = function(a, b) {
+//         this.a = a;
+//         this.b = b;
+//     };
+
+//     this.sum = function() {
+//         return this.a + this.b;
+//     };
+
+//     this.mul = function() {
+//         return this.a * this.b;
+//     };
+// }
+
 // let calculator = new Calculator();
-// calculator.read();
+// calculator.read(5, 6);
+// console.log(calculator.mul());
+
 // alert("Sum=" + calculator.sum());
 // alert("Mul=" + calculator.mul());
 // // 6)Создайте функцию-конструкторAccumulator(startingValue)
