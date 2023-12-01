@@ -665,19 +665,43 @@
 
 // alert("Sum=" + calculator.sum());
 // alert("Mul=" + calculator.mul());
-// // 6)Создайте функцию-конструкторAccumulator(startingValue)
-// // .Объект, который она создаёт, должен уметь следующее:
-// // Хранить «текущее значение» в свойстве value. 
-// // Начальное значение устанавливаетсяв аргументе конструктора
-// // startingValue.Метод read() должен использовать prompt
-// // для считывания нового числа иприбавления его к value.
-// // Другими словами, свойство value представляет собой сумму всех введённыхпользователем значений, с учётом начального значения
-// // startingValue . Ниже вы можете посмотреть работу кода:
+// 6)Создайте функцию-конструкторAccumulator(startingValue)
+// .Объект, который она создаёт, должен уметь следующее:
+// Хранить «текущее значение» в свойстве value. 
+// Начальное значение устанавливаетсяв аргументе конструктора
+// startingValue.Метод read() должен использовать prompt
+// для считывания нового числа и прибавления его к value.
+// Другими словами, свойство value представляет собой сумму всех введённыхпользователем значений, с учётом начального значения
+// startingValue . Ниже вы можете посмотреть работу кода:
 // let accumulator = new Accumulator(1);  // начальное значение 1
-
 // accumulator.read();  // прибавляет введённое пользователем значение к текущему значению
 // accumulator.read();  // прибавляет введённое пользователем значение к текущему значению
 
 // alert(accumulator.value);  // выведет сумму этих значений
-// 7
+
+// function Accumulator(startingValue,endValue) {
+//       this.startingValue = startingValue;
+//       this.endValue = endValue
+    
+
+//      this.read = function () {
+//         return this.endValue + this.startingValue;
+//      };
+// }
+
+// let accumulator = new Accumulator(5,10);
+// console.log(accumulator.read());
+
+// function Accumulator(startingValue, endValue) {
+//     this.startingValue = startingValue;
+//     this.endValue = endValue;
+
+//     this.read = function () {
+//         return this.endValue + this.startingValue;
+//     };
+// }
+
+// let accumulator = new Accumulator(5, 20);
+// console.log(accumulator.read());
+
 
