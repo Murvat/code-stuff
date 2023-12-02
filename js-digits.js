@@ -761,7 +761,7 @@
 //         return b**2
 // }
 
-// // console.log(a(10));
+// console.log(a(10));
 // function counter() {
 //         let count = 0;
     
@@ -779,8 +779,59 @@
     
 //     // Вызываем функции несколько раз и выводим результаты в консоль
 //     console.log(counter1()); // Выведет 1
+//     console.log(counter1()); // Выведет 2
 //     console.log(counter1()); // Выведет 3
     
 //     console.log(counter2()); // Выведет 1 (для второго счетчика)
 //     console.log(counter2()); // Выведет 2 (для второго счетчика)
+    
+
+// // 6)Простой объект:
+// // Создайте объект person с тремя свойствами: name, age и gender. 
+// // Присвойте значения этим свойствам и выведите объект в консоль.
+// let human = {
+//         name,
+//         age,
+//         gender,
+// }
+
+//6) Объект с методом:
+// Создайте объект car с двумя свойствами: brand и speed, а также методом accelerate,
+// который увеличивает скорость автомобиля.
+// Вызовите метод accelerate несколько раз и выведите объект car в консоль.
+
+// let car = {
+//         brand:'BMW',
+//         speed:60,
+//         accelerate:function(){
+//                console.log(this.speed+=20)
+//         },
+// }
+
+// car.accelerate();
+// car.accelerate();car.accelerate();
+// let car = {
+//         brand: 'BMW',
+//         speed: 60,
+//         maxSpeed: 200, // Добавлено максимальное значение скорости
+//         accelerate: function () {
+//             if (this.speed < this.maxSpeed) {
+//                 this.speed += 20;
+//                 console.log(`Accelerated! Current speed: ${this.speed}`);
+//             } else {
+//                 console.log(`Cannot accelerate beyond the maximum speed of ${this.maxSpeed}`);
+//             }
+//         },
+//         brake: function () {
+//             this.speed -= 10;
+//             console.log(`Braked! Current speed: ${this.speed}`);
+//         }
+//     };
+    
+//     // Вызов методов несколько раз
+//     car.accelerate();
+//     car.accelerate();
+//     car.accelerate();
+//     car.accelerate();
+//     car.brake();
     
