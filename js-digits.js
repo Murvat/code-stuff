@@ -834,4 +834,17 @@
 //     car.accelerate();
 //     car.accelerate();
 //     car.brake();
+//    // Create an object person with a sayHello method
+// let person = {
+//         name: '',  // Assuming you want to have a 'name' property
+//         sayHello: function() {
+//             console.log('Hello', this.name);
+//         }
+//     };
+    
+//     // Set the name property
+//     person.name = 'MURVAT';
+    
+//     // Call the sayHello method
+//     person.sayHello();
     
