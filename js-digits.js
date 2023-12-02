@@ -689,19 +689,27 @@
 //      };
 // }
 
-let accumulator = new Accumulator(5,10);
-console.log(accumulator.read());
+// let accumulator = new Accumulator(5,10);
+// console.log(accumulator.read());
 
-function Accumulator(startingValue, endValue) {
-    this.startingValue = startingValue;
-    this.endValue = endValue;
+// function Accumulator(startingValue, endValue) {
+//     this.startingValue = startingValue;
+//     this.endValue = endValue;
 
-    this.read = function () {
-        return this.endValue + this.startingValue;
-    };
-}
+//     this.read = function () {
+//         return this.endValue + this.startingValue;
+//     };
+// }
 
 // let accumulator = new Accumulator(5, 20);
 // console.log(accumulator.read());
 
-
+// 1)Основное объявление функции:
+// Напишите функцию с именем greet, которая принимает один 
+// параметр name и возвращает строку приветствия. Вызовите функцию с 
+// вашим именем и выведите результат в консоль.
+function greet(name) {
+        name
+      console.log('HELLO!', name);
+}
+ greet('Murvat');
