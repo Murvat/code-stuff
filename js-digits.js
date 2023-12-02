@@ -761,4 +761,26 @@
 //         return b**2
 // }
 
-// console.log(a(10));
+// // console.log(a(10));
+// function counter() {
+//         let count = 0;
+    
+//         function innerCounter() {
+//             count++;
+//             return count;
+//         }
+    
+//         return innerCounter;
+//     }
+    
+//     // Создаем два счетчика
+//     const counter1 = counter();
+//     const counter2 = counter();
+    
+//     // Вызываем функции несколько раз и выводим результаты в консоль
+//     console.log(counter1()); // Выведет 1
+//     console.log(counter1()); // Выведет 3
+    
+//     console.log(counter2()); // Выведет 1 (для второго счетчика)
+//     console.log(counter2()); // Выведет 2 (для второго счетчика)
+    
