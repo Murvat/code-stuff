@@ -847,4 +847,25 @@
     
 //     // Call the sayHello method
 //     person.sayHello();
+//     let naytiSummu = ()=> {
+//          prompt('vvedi cislo:', a)
+//          prompt('vvedi vtoroe cislo:', b)
+//          return alert(a+b);
+//     }
+
+//     naytiSummu;
+// function readNumber() {
+//         let num;
     
+//         do {
+//             num = prompt("Введите число", 0);
+//         } while (!isFinite(num));
+    
+//         if (num === null || num === '') {
+//             return null;
+//         }
+    
+//         return +num;
+//     }
+    
+//     alert(`Число: ${readNumber()}`);
