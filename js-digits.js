@@ -881,8 +881,19 @@
 ///NunmberJS
 // let num = 123;
 // console.log(num.toString());
-let num =7.89;
-console.log(Math.floor(num));
-console.log(Math.ceil(num));
-let num2= 6.45;
-console.log(Math.round(num2));
+// let num =7.89;
+// console.log(Math.floor(num));
+// console.log(Math.ceil(num));
+// let num2= 6.45;
+// console.log(Math.round(num2));
+// let num = 9.75;
+// console.log(Math.trunc(num));
+// let num = 3.14159;
+// console.log(num.toFixed(1));
+
+// let num = '4.40$';
+// console.log(parseFloat(num));
+
+// let move =( Math.random() *100).toFixed()
+// console.log(move);
+
