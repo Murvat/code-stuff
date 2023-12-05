@@ -897,3 +897,25 @@
 // let move =( Math.random() *100).toFixed()
 // console.log(move);
 
+
+
+// let str  = 'Ya budu front';
+// console.log(str.indexOf('Ya'));
+// console.log(str.indexOf('budu'));
+// console.log(str.indexOf('ont'));
+
+// (() => {
+//         let str = 'My name is Murvat';
+//         let target = 'a';
+//         let pos = 0;
+    
+//         while (true) {
+//             let foundPos = str.indexOf(target, pos);
+//             if (foundPos === -1) break;
+    
+//             console.log(`Found here: ${foundPos}`);
+//             pos = foundPos + 1;
+//         }
+//     })();
+    
+
