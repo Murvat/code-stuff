@@ -869,3 +869,20 @@
 //     }
     
 //     alert(`Число: ${readNumber()}`);
+
+// function random(min, max) {
+//         return min + Math.random() * (max - min);
+//     }
+    
+//     alert(random(1, 5));
+//     alert(random(1, 5));
+//     alert(random(1, 5));
+
+///NunmberJS
+// let num = 123;
+// console.log(num.toString());
+let num =7.89;
+console.log(Math.floor(num));
+console.log(Math.ceil(num));
+let num2= 6.45;
+console.log(Math.round(num2));
