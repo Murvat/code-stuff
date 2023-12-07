@@ -949,3 +949,16 @@
 // }
 // console.log(checkSpam('Ne xx nikogda ne viagra'))    
 
+
+// function truncate(str, maxLength) {
+//         let newStr = str;
+    
+//         if (str.length > maxLength) {
+//             newStr = str.substring(0, maxLength - 3) + '...';
+//         }
+    
+//         console.log(newStr);
+//     }
+    
+//     truncate('men hele boyumemisem', 10);
+    
