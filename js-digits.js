@@ -895,7 +895,7 @@
 // console.log(parseFloat(num));
 
 // let move =( Math.random() *100).toFixed()
-// console.log(move);
+// console.log(move); 
 
 
 
@@ -917,5 +917,35 @@
 //             pos = foundPos + 1;
 //         }
 //     })();
+
+
+//     let str= "murvat";
+//      function ucFirst(){
+//             let newStr = str[0].toUpperCase()+str.slice(1);
+//             console.log(newStr);
+//      }
+//      ucFirst();
+
+// function ucFirst(str){
+//         if(!str) return str;
+//         return str[0].toUpperCase() + str.slice(1);
+// }
+// console.log(ucFirst('fuad'));
+
+// function checkSpam(str) {
+//         if (`${str}`.includes('viagra') || `${str}`.includes('xxx')) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
     
+//     console.log(checkSpam('viagra'));
+
+// function checkSpam(str){
+//         let lowerStr = str.toLowerCase();
+//         return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+
+// }
+// console.log(checkSpam('Ne xx nikogda ne viagra'))    
 
