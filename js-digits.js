@@ -961,4 +961,14 @@
 //     }
     
 //     truncate('men hele boyumemisem', 10);
+
+// let arr = ['jazz', 'Bluze'];
+// console.log(arr.push('rock and roll'));
+// console.log(arr);
+// console.log(arr[1]='Classic')
+// console.log(arr);
+// console.log(arr.shift(0))
+// console.log(arr);
+// console.log(arr.unshift('Rap', 'Raeggy'));
+// console.log(arr);
     
