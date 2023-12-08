@@ -971,4 +971,63 @@
 // console.log(arr);
 // console.log(arr.unshift('Rap', 'Raeggy'));
 // console.log(arr);
+
+
+
+// const people = [
+//         {name: 'Murvat', age: 25, budget: 4000},
+//         {name: 'Vlad', age: 17, budget: 220},
+//         {name: 'Tural', age: 15, budget: 39390},
+//         {name: 'Nikita', age: 45, budget: 402100},
+//         {name: 'Murad', age: 19, budget: 9000},
+//         {name: 'Evgen', age: 23, budget: 12000},
+// ]
+
+// for (let i = 0; i < people.length; i++){
+//         console.log(people[i])
+// }
+// for (let person of people){
+//         console.log(person);
+// }
+// people.forEach(function(person, index, pArrr){
+//         console.log(person)
+//         console.log(index)
+//         console.log(pArrr)
+// }) 
+// people.forEach(person =>console.log(person))
+
+// const newPeople = people.map(person =>{ return person.budget})
+// console.log(newPeople);
+// const adults = [];
+// for (let i = 0; i < people.length;i++) {
+//         if (people[i].age >= 18){
+//                 adults.push(people[i])
+//         } 
+// }
+// console.log(adults);
     
+// const adults = people.filter(person=> {
+//         if (person.age >= 18){
+//         return true}
+// })
+
+// console.log(adults);
+
+// let amount = 0
+// for (let i = 0; i< people.length; i++){
+//         amount += people[i].budget
+// }
+// console.log(amount);
+
+// const amount = people.reduce((total, person) => total + person.budget, 0)
+// console.log(amount)
+
+const a = [9, 8, 19, 5];
+// console.log(a.indexOf(4));
+// console.log(a.indexOf(9));
+// if(a.indexOf(-9) !== -1 ){
+//         console.log(true)
+// } else {
+//         console.log(false)
+// }
+
