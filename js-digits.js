@@ -1110,3 +1110,29 @@
 // console.log(browser);
 // console.log(browser.pop());
 // console.log(browser)
+
+// const a =[3,2,3,4,5,6,7,8];
+
+// let b = a.filter(item => {
+//         if(item> 5)
+//         return true;
+// })
+
+// console.log(b);
+// console.log(a);
+
+// let a = [
+//         {"id": 55, "city": "arc"},
+//         {"id": 75, "city": "rca"},
+//         {"id": 175, "city": "bra"},
+// ];
+
+// let b = a.reduce((accum, item) => {
+//         accum.push(item.id)
+//         return accum;
+
+// }, [])
+// console.log('=====');
+// console.log(b);
+
+
