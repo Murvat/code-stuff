@@ -1034,9 +1034,65 @@
 // const a = [];  
 // a[0]= 5;
 // a[4]=6;
-// const a = [5, 6, 8 ]
-//   let b = a.map((item,index) =>{
-//         console.log(index)
-//         return item*3
-//  });
-//  console.log(b)
+// const a = [5, 6, 8, 143, 45 ]
+// //   let b = a.map((item,index) =>{
+// //         console.log(index)
+// //         return item*3
+// //  });
+// //  console.log(b)
+
+//  let c = a.filter((item, index)=>{
+//         if(item% 2 === 0){
+//                 return index;
+//         }
+//  })
+
+//  console.log(c)
+
+
+// const users = [
+//         {"name": "Ivanov", "age": 44},
+//         {"name": "Petrov", "age": 14},
+//         {"name": "putrov", "age": 43},
+//         {"name": "alexeev", "age": 37},
+// ]
+
+
+// let newUsers = users.filter(item => {
+//         return item.name.includes('pu')
+// })
+// console.log(newUsers);
+
+
+// const temp= [0, 2, 4,5 ,6 ,7 ,0,-4, -3];
+// const z =[];
+
+// let tf = temp.map(item => {
+//         console.log(item)
+//         return item * 1.8;
+// });
+
+// console.log(tf);
+
+// let a = [33, 44 ,55];
+// let b =a.map((item,index, array)=>{
+//         if (index == 2){
+//                 array[index+1] = 66;
+//         }
+//         return item
+// })
+// console.log(b)
+// console.log(a);
+
+// const z = [
+//         {"name": "Ivanov", "age": 44},
+//         {"name": "Petrov", "age": 14},
+//         {"name": "putrov", "age": 43},
+//         {"name": "alexeev", "age": 37},
+// ]
+
+// const zBack = z.map(item => {
+//         item.name = item.name.trim().toLocaleLowerCase();
+//         return item;
+// })
+// console.log(zBack);
