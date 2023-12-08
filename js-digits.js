@@ -1096,3 +1096,17 @@
 //         return item;
 // })
 // console.log(zBack);
+
+// const browser = [       
+// ]
+
+// // let a = [99, 89];
+// // console.log(a);
+// // a[0] = 66;
+// // console.log(a)
+// // a[a.length] = 90;
+// // console.log(a);
+// browser.push(100, 20, 22, 30);
+// console.log(browser);
+// console.log(browser.pop());
+// console.log(browser)
