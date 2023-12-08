@@ -1022,7 +1022,7 @@
 // const amount = people.reduce((total, person) => total + person.budget, 0)
 // console.log(amount)
 
-const a = [9, 8, 19, 5];
+// const a = [9, 8, 19, 5];
 // console.log(a.indexOf(4));
 // console.log(a.indexOf(9));
 // if(a.indexOf(-9) !== -1 ){
@@ -1031,3 +1031,12 @@ const a = [9, 8, 19, 5];
 //         console.log(false)
 // }
 
+// const a = [];  
+// a[0]= 5;
+// a[4]=6;
+// const a = [5, 6, 8 ]
+//   let b = a.map((item,index) =>{
+//         console.log(index)
+//         return item*3
+//  });
+//  console.log(b)
