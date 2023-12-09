@@ -1135,4 +1135,31 @@
 // console.log('=====');
 // console.log(b);
 
+//findIndex
+//map
+//filter
 
+// const a = [
+//         {name: 'Murvat', age:54},
+//         {name: 'Vusal', age:30},
+//         {name: 'Mamed', age:18},
+//         {name: 'Nurlan', age:20},
+//         {name: 'Xeyal', age:21},
+//         {name: 'Ibrahim', age:22},
+//         {name: 'Laman', age:19},        
+// ];
+// //find
+// let b = a.find(item => {
+//         if(item.age <= 18){
+//                 return true 
+//         }
+// })
+// console.log(b);
+// //findindex
+// const c = [22,33,5,66,44,33,66]
+// let d  = c.findIndex(item =>{
+//         if(item> 48) {
+//                 return true
+//         }
+// })
+// console.log(d);
