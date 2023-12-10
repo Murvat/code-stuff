@@ -12,5 +12,5 @@
 // Поиск в массиве
 // array.indexOf(item, from)
 // array.includes(item, from)
-// 
+// n
 // 
