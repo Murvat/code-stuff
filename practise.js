@@ -1,4 +1,4 @@
-STRINGS
+// STRINGS
 // Объединение строк:
 // let firstName = "John";
 // let lastName = "Doe";
@@ -61,7 +61,7 @@ STRINGS
 
 
 
-ARRAYS
+// ARRAYS
 // Нахождение индекса элемента:
 // let fruitsArray = ["apple", "banana", "cherry", "date"];
 // let targetFruit = "banana";
@@ -226,3 +226,153 @@ ARRAYS
 // let a = arr.map(item => item *=2);
 // console.log(a);
 
+// Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в«myShortString».
+// То есть дефисы удаляются, а все слова после них получают заглавную букву.
+// Подсказка: используйте split , чтобы разбить строку на массив символов, потомпеределайте всё как нужно и методом
+// join соедините обратно
+// let str = 'my-short-string';
+// function camelize(str) {
+//     let words = str.split('-');
+//     for (let i = 1; i < words.length; i++) {
+//         words[i]=words[i][0].toUpperCase() + words[i].slice(1)
+//         }
+//     let camelCaseStr = words.join('');
+//     console.log(camelCaseStr);
+// }
+// camelize(str);
+
+// Напишите функцию
+// filterRange(arr, a, b), которая принимает массив arr , 
+// ищет элементы со значениями больше или равными
+// a и меньше или равными b и возвращаетрезультат в виде массива.
+// Функция должна возвращать новый массив и не изменять исходный.
+// let arr = [5, 7, 8, 2];
+// function filterRange(arr, a, b) {
+//     let result = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] >= a && arr[i] <= b) {
+//             result.push(arr[i]);
+//         }
+//     }
+//     return result;
+// }
+// let filteredArray = filterRange(arr, 4, 7);
+// console.log(filteredArray);
+
+// Написать функцию filterRangeInPlace(arr, a, b), 
+// которая принимает массив arr и удаляет из него все значения, кроме тех,
+// которые находятся между a и b. То есть, проверка имеет вид a ≤ arr[i] ≤ b.
+// Функция должна изменять принимаемый массив и ничего не возвращать.
+// let arr = [5, 7, 8, 2, 10, 12];
+// function filterRangeInPlace(arr, a, b) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < a || arr[i] > b) {
+//             arr.splice(i, 1);
+//             i--; 
+//         }
+//     }
+// }
+// filterRangeInPlace(arr, 9, 11);
+// console.log(arr);
+
+
+// Сортировать в порядке по убыванию
+// let arr = [1, -9, 10, -1, 3, 5, 6];
+// function sortNum() {
+//     arr.sort((a, b) => b - a);
+// }
+// sortNum();
+// console.log(arr);
+
+// Скопировать и отсортировать массив
+// У нас есть массив строк arr. Нужно получить отсортированную копию, но оставить
+// arr неизменённым.Создайте функцию copySorted(arr) ,которая будет возвращать такую копию.
+// function copySorted(arr) {
+//     // Используем slice() для создания копии массива
+//     let sortedCopy = arr.slice();
+//     // Используем sort() для сортировки копии
+//     sortedCopy.sort();
+//     return sortedCopy;
+// }
+// let arr = ["apple", "orange", "banana", "grape"];
+// let sortedArray = copySorted(arr);
+// console.log(sortedArray);  // Отсортированная копия
+// console.log(arr);          // Исходный массив остается неизменным
+
+// Реализовать функцию-конструктор Calculator, которая создает объекты калькулятора.
+// Реализовать метод calculate(str), который принимает строку в формате 
+// "ЧИСЛО оператор ЧИСЛО" (разделено пробелами) и возвращает результат. 
+// Метод должен понимать операторы "+" и "-".
+// Добавить метод addMethod(name, func), который добавляет в калькулятор новые операции.
+// Метод принимает оператор name и функцию с двумя аргументами func(a, b), описывающую ..его.
+// Трансформировать в массив имён:
+// let calc = new Calculator;
+// alert(calc.calculate("3 + 7")); // 10
+// let powerCalc = new Calculator;
+// powerCalc.addMethod("*", (a, b) => a * b);
+// powerCalc.addMethod("/", (a, b) => a / b);
+// powerCalc.addMethod("**", (a, b) => a ** b);
+// let result = powerCalc.calculate("2 ** 3");
+// alert(result); // 8
+
+// function Calculator() {
+//     // Хранилище для методов
+//     this.methods = {
+//         '+': (a, b) => a + b,
+//         '-': (a, b) => a - b,
+//     };
+
+//     // Метод для вычисления выражения
+//     this.calculate = function (str) {
+//         let split = str.split(' ');
+//         let a = +split[0];
+//         let operator = split[1];
+//         let b = +split[2];
+
+//         if (!this.methods[operator] || isNaN(a) || isNaN(b)) {
+//             return NaN; // Если оператор не поддерживается или введены некорректные значения, вернем NaN
+//         }
+
+//         return this.methods[operator](a, b);
+//     };
+
+//     // Метод для добавления новых операций
+//     this.addMethod = function (name, func) {
+//         this.methods[name] = func;
+//     };
+// }
+
+// // Пример использования
+// let calc = new Calculator();
+// alert(calc.calculate("3 + 7")); // 10
+// let powerCalc = new Calculator();
+// powerCalc.addMethod("*", (a, b) => a * b);
+// powerCalc.addMethod("/", (a, b) => a / b);
+// powerCalc.addMethod("**", (a, b) => a ** b);
+// let result = powerCalc.calculate("2 ** 3");
+// alert(result); // 8
+
+// У вас есть массив объектов user, и в каждом из них есть user.name. 
+// Напишите код, который преобразует их в массив имён.
+// let users = [
+//     { id: 1, name: 'John' },
+//     { id: 2, name: 'Alice' },
+//     { id: 3, name: 'Bob' }
+// ];
+// let names = users.map(user => user.name);
+// console.log(names); // ["John", "Alice", "Bob"]
+
+// Трансформировать в объекты:
+// У вас есть массив объектов user, и у каждого из объектов есть name, surname и id.
+// Напишите код, который создаст ещё один массив объектов с параметрами id и fullName,
+// где fullName – состоит из name и surname.
+// let users = [
+//     { id: 1, name: 'John', surname: 'Doe' },
+//     { id: 2, name: 'Alice', surname: 'Smith' },
+//     { id: 3, name: 'Bob', surname: 'Johnson' }
+// ];
+// let transformedUsers = users.map(user => ({
+//     id: user.id,
+//     fullName: `${user.name} ${user.surname}`
+// }));
+// console.log(transformedUsers);
