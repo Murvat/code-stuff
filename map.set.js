@@ -22,16 +22,16 @@
 
 // console.log(prices)
 
-let set = new Set();
-let john = {name: "John"}
-let pete = {name: "Pete"}
-let mary = {name: "Mary"}
+// let set = new Set();
+// let john = {name: "John"}
+// let pete = {name: "Pete"}
+// let mary = {name: "Mary"}
 
-set.add(john)
-set.add(mary)
-set.add(pete)
-set.add(mary)
-set.add(pete)
-set.add(john)
-console.log(set)
+// set.add(john)
+// set.add(mary)
+// set.add(pete)
+// set.add(mary)
+// set.add(pete)
+// set.add(john)
+// console.log(set)
 
