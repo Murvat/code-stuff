@@ -1944,3 +1944,81 @@
 //         console.log(`${key}:${value}`)
 // }
 
+// let name1 = "murvat";
+// let guest = "admiral";
+// [name1, guest]=[guest, name1];
+// console.log(`${name1}`)
+// console.log(`${guest}`)
+
+// let obj ={
+//         name1:"Murvat",
+//         speciality:"Enginner",
+//         exp:"2 years"
+// }
+
+// let{name1, spec, Exp}=obj
+// console.log(Exp) false
+// console.log(exp) true
+
+// let{age,age2, ...rest}= {age:10, age2:30, age3:50}
+// console.log(rest)
+
+
+// let goods = {
+//         gName:'SpiderMan',
+//         series:['Far from home', 'Homeless']
+// };
+
+//       function buy({ gName = 'Untitled' , price='300$', disc='50$',series=[] }){
+//         console.log(gName)
+//         console.log(series[1])
+// }
+
+// buy(goods)
+
+// let user = {
+//         name:"Murvat",
+//         years:30
+// };
+
+// let{name, years,isAdmin=false}=user
+// console.log(name)
+// console.log(years)
+// console.log(isAdmin)
+
+
+// let salaries = {
+//         "Mike": 100,
+//         "Pete": 300,
+//         "Mary": 250
+//       };
+      
+//       function topSalary(salaries) {
+//         // Проверка на пустой объект
+//         if (Object.keys(salaries).length === 0) {
+//           return null;
+//         }
+      
+//         // Инициализация переменных для отслеживания максимальной зарплаты и соответствующего имени
+//         let maxSalary = -Infinity;
+//         let maxName = null;
+      
+//         // Итерация по парам ключ/значение в объекте зарплат
+//         for (let [name, salary] of Object.entries(salaries)) {
+//           // Проверка, является ли текущая зарплата максимальной
+//           if (salary > maxSalary) {
+//             // Обновление переменных, если текущая зарплата выше предыдущей максимальной
+//             maxSalary = salary;
+//             maxName = name;
+//           }
+//         }
+      
+//         // Возвращение имени сотрудника с максимальной зарплатой
+//         return maxName;
+//       }
+      
+//       // Вызов функции и вывод результата в консоль
+//       let highestPaid = topSalary(salaries);
+//       console.log(highestPaid);
+      
+
