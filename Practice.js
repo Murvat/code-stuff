@@ -1913,5 +1913,10 @@
 //     id: user.id,
 //     fullName: `${user.name} ${user.surname}`
 // }));
-// console.log(transformedUsers);
+// // console.log(transformedUsers);
+// let arr = ['murvat', 'Mustafayev']
+// let[ima,nazwisko,wyma]=arr
+// let ima=arr[0]
+// let nazwisko=arr[1]
+// console.log(ima)
 
