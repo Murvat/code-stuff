@@ -1920,3 +1920,27 @@
 // let nazwisko=arr[1]
 // console.log(ima)
 
+// let arr=['Murvat','Ali','Aydan']
+// let[user1, , user2]=arr
+// console.log(user2)
+// let[a,b,c] = 'cba';
+// console.log(c)
+// let[a, b,c]=new Set([1, 2, 3]);
+// console.log(b)
+// let obj = {
+//         name:'Murvat',
+//         Surname:'Mustafa',
+// }
+
+// for(let[key,value] of Object.entries(obj)){
+//         console.log(`${key}:${value}`);
+// }
+
+// let arr = [
+//         ['name','Murvat'],
+//         ['age', '30'],]
+// let map = new Map(arr)
+// for(let[key, value] of map){
+//         console.log(`${key}:${value}`)
+// }
+
