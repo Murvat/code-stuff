@@ -24,7 +24,7 @@
 // console.log(typeof json)
 // console.log(json);
 
-
+ 
 
 // let user  ={
 //     sayHi(){
