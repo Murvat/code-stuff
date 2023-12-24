@@ -70,10 +70,10 @@ Function
 // f3();
 // console.log(out)
 
-function randomInteger(min, max) {
-    let rand = min + Math.random() *(max +1 -min);
-    return Math.floor(rand)
-}
+// function randomInteger(min, max) {
+//     let rand = min + Math.random() *(max +1 -min);
+//     return Math.floor(rand)
+// }
 
 // let s1 = 0;
 // function moneyRecursion(){
@@ -97,5 +97,22 @@ function randomInteger(min, max) {
 //     }
 // }
 // moneyCycle()
-
 // 
+
+function randomInteger(min, max) {
+    let rand = min + Math.random() *(max +1 -min);
+    return Math.floor(rand)
+}
+
+function CreateBeggar(){
+    let s = 0;
+    return function beggar() {
+        s += randomInteger(0, 100);
+        console.log(s);
+        if(s>= 250) return;
+        beggar()
+    }
+}
+
+let begg1 = CreateBeggar();
+begg1()
