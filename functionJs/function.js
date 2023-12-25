@@ -99,20 +99,137 @@ Function
 // moneyCycle()
 // 
 
-function randomInteger(min, max) {
-    let rand = min + Math.random() *(max +1 -min);
-    return Math.floor(rand)
-}
+// function randomInteger(min, max) {
+//     let rand = min + Math.random() *(max +1 -min);
+//     return Math.floor(rand)
+// }
 
-function CreateBeggar(){
-    let s = 0;
-    return function beggar() {
-        s += randomInteger(0, 100);
-        console.log(s);
-        if(s>= 250) return;
-        beggar()
-    }
-}
+// function CreateBeggar(){
+//     let s = 0;
+//     return function beggar() {
+//         s += randomInteger(0, 100);
+//         console.log(s);
+//         if(s>= 250) return;
+//         beggar()
+//     }
+// }
 
-let begg1 = CreateBeggar();
-begg1()
+// let begg1 = CreateBeggar();
+// begg1()
+
+// function inBetween(a, b){
+//     return function(x) {
+//         return x >= a && x <= b;
+//     };
+// }
+
+// let arr = [1, 2, 3 ,4, 5, 6, 7]
+// console.log(arr.filter(inBetween(3,6)))
+
+// function inArray(arr) {
+//     return function(x) {
+//         return arr.includes(x);
+//     };
+// }
+// let arr = [1, 2, 3 ,4, 5, 6, 7]
+
+// console.log(arr.filter(inArray([1,2,6,12])))
+// let users = [
+//     { name: "John", age: 20, surname: "Johnson" },
+//     { name: "Pete", age: 18, surname: "Peterson" },
+//     { name: "Ann", age: 19, surname: "Hathaway" }
+//   ];
+  
+//   function byField(field) {
+//     return (a, b) => (a[field] > b[field] ? 1 : -1);
+//   }
+  
+//   // Сортировка по имени
+//   users.sort(byField('name'));
+//   users.forEach(user => console.log(user.name));
+  
+//   // Ann, John, Pete
+  
+//   // Сортировка по возрасту
+//   users.sort(byField('age'));
+//   users.forEach(user => console.log(user.name));
+//   // Pete, Ann, John
+// function makeArmy() {
+//     let shooters = [];
+//     let i = 0;
+  
+//     while (i < 10) {
+//       let shooter = (function(index) {
+//         return function() {
+//           console.log(index);
+//         };
+//       })(i);
+  
+//       shooters.push(shooter);
+//       i++;
+//     }
+  
+//     return shooters;
+//   }
+  
+//   let army = makeArmy();
+  
+//   army[0](); // выведет 0
+//   army[5](); // выведет 5
+
+//    function makeCounter() {
+//     let count=0;
+//     function counter(){
+//         return count++;
+//     }
+//     counter.set = value=> count =value;
+//     counter.decrease = ()=>count--;
+//     return counter
+//     }
+//   let counter = makeCounter();
+//   console.log(counter());
+//   console.log(counter());
+//   console.log(counter());
+//   console.log( counter() );
+//   counter.set(10); 
+//   console.log( counter() ); 
+//   counter.decrease(); 
+//   console.log( counter() );
+// function createCounter() {
+//     let count = 0;
+
+//     return {
+//         getCount: () => count,
+//         increment: () => count++,
+//         setCount: (value) => count = value,
+//         decrement: () => count--
+//     };
+// }
+
+// let myCounter = createCounter();
+// console.log(myCounter.setCount(100))
+
+// let timerId = setTimeout(function tick(){
+//     console.log('tick');
+//     timerId = setTimeout(tick, 2000);
+// }, 1000)
+
+// function printNumbers(from, to){
+//     let current = from;
+//     let timerId = setInterval(function(){
+//         console.log(current);
+//         if(current ==to) {
+//             clearInterval(timerId);
+//         }
+//         current++;
+//     }, 1000);
+// } 
+// printNumbers(5, 10)
+
+// function showNumber(num){
+//     console.log(num);
+//     if(num<5){
+//         setTimeout(showNumber, 1000, ++num);
+//     }
+// }
+// setTimeout(showNumber, 1000, 1);
