@@ -234,22 +234,31 @@ Function
 // }
 // setTimeout(showNumber, 1000, 1);
 
-function goUp(x) {
-    return x;
-}
+// function goUp(x) {
+//     return x;
+// }
 
-function decorateWithUp(func) {
-    let cache = new Map();
-    return function(x) {
-        if (cache.has(x)) {
-            return cache.get(x); // return cached result if available
-        }
-        let result = func(x);
-        cache.set(x, result);
-        return result;
-    };
-}
-let up = decorateWithUp(goUp);
-    console.log(up(1))
-    console.log(up(3))
-    console.log(up(12))
+// function decorateWithUp(func) {
+//     let cache = new Map();
+//     return function(x) {
+//         if (cache.has(x)) {
+//             return cache.get(x); // return cached result if available
+//         }
+//         let result = func(x);
+//         cache.set(x, result);
+//         return result;
+//     };
+// }
+// let up = decorateWithUp(goUp);
+//     console.log(up(1))
+//     console.log(up(3))
+//     console.log(up(12))
+
+// function goUp(){
+//     console.log(this.name)
+// }
+
+// let user = {name: 'Murvat'}
+// let consumer  = {name: 'Kyrill'}
+
+// goUp.call(consumer)
