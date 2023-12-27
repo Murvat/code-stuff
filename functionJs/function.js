@@ -296,3 +296,88 @@ Function
 //     console.log(rand)
 // }
 // randomIn()
+// func();
+// func();
+// func();
+//  func();
+//  function func(){
+//     console.log(100);
+//  }
+//  func();
+//  func();
+//  func();
+
+// function testFunction(){
+//     function t3(){
+//         console.log('t3 function')
+//     }
+//     t3();
+//     console.log('test function2')
+// }
+
+// // testFunction()
+// unixTime();
+// unixTime();
+
+// function unixTime(){
+//     let time = Math.floor(new Date().getTime());
+//     console.log(time);
+// }
+// unixTime(console.log('mmmmm'))
+// function unixTime(){
+//     console.log('mmmm')
+// }
+// unixTime();
+
+// function Counter(){
+//     let count = 1;
+//     count++;
+//     console.log(count);
+// }
+// Counter();
+// Counter();
+// Counter();
+// Counter();
+
+// let count = 1;
+// function Counter(){
+//     count++;
+//     console.log(count*3);
+// }
+// Counter();
+// Counter();
+// Counter();
+// Counter();
+// document.querySelector('.out-1').addEventListener('mousemove', counter)
+
+
+
+// sum2();
+// function sum2(){
+//     let x = 55;
+//     let y = 66
+//     console.log(x + y)
+// }
+// sum2();
+// let x = 55;
+// let y = 66;
+// function sum2(){
+//     console.log(y+=(x+y))
+// }
+// sum2()
+// sum2()
+// sum2()
+// sum2()
+// function sum3(x, y){
+
+//     console.log(x+=(x+y))
+// }
+
+// sum3(55,66)
+// sum3(55,66)
+
+
+
+
+
+
