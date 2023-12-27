@@ -389,10 +389,22 @@ Function
 //     }
 //     console.log(sum);
 // }
-// renderAll(25675,3979,49089)
+// // renderAll(25675,3979,49089)
+// function renderAll(...args){
+//     console.log(args)
+//     let sum =args.reduce((accum,item)=> accum += item)
+//     console.log(sum);
+// }
+// renderAll(32,354,46)
 
+// function showNumber(num){
+//     return num
+// }
+// function showSum(x, func){
+//     console.log(func(x))
+// }
 
-
+// showSum(5,showNumber)
 
 
 
