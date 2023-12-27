@@ -288,3 +288,11 @@ Function
 // worker.slow = cachingDecorator(worker.slow);
 // console.log(worker.slow(2));
 // console.log(worker.slow(2));
+
+// function randomIn(){
+//     const min = 100;
+//     const max = 200;
+//     let rand = Math.floor(min + Math.random() * (max + 1 - min));
+//     console.log(rand)
+// }
+// randomIn()
