@@ -376,6 +376,21 @@ Function
 // sum3(55,66)
 // sum3(55,66)
 
+// function render(elem,x,y){
+//     document.querySelector(elem).textContent = x + y;
+// }
+
+
+// function renderAll(){
+//     console.log(arguments)
+//     let sum = 0;
+//     for(let i=0; i < arguments.length; i++){
+//         sum+=arguments[i];
+//     }
+//     console.log(sum);
+// }
+// renderAll(25675,3979,49089)
+
 
 
 
