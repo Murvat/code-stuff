@@ -415,10 +415,24 @@ Function
 //     let cache = new Map()
 //     return function(x){
 //         if(cache.has(x)){
+//         let time = Date.now()
+//         console.log(time)
 //         return cache.get(x)
 //         }
 //         let result = func(x);
+//         let time = Date.now()
+
+//         console.log(time)
+
 //         return result;
+
+// function getData(){
+//     console.log(this.name)
+// }
+// let user = {name: 'Murvat'}
+// let costumer = {name:'Vitaliy', age:'30'}
+// getData.call(costumer)
+// getData.call(user)
 
 //     }
 // }
@@ -428,6 +442,82 @@ Function
 // slow(1)
 // slow(2)
 // slow(3)
-// slow(4)
-// slow(1)
+
+// let boss = {
+//     name:'Murvat',
+// }
+
+// let data = Object.getOwnPropertyDescriptor(boss,'name')
+// console.log(JSON.stringify(data, null, 2));
+// let boss = {
+//     name:'Murvat',
+// }
+
+// Object.defineProperty(boss, 'age',{value: 38})
+// let data = Object.getOwnPropertyDescriptor(boss, 'age');
+// console.log(JSON.stringify(data, null, 2))
+// let boss = {
+//     name:'Murvat',
+// }
+
+// Object.defineProperty(boss, 'costumer',{
+// value:'Vlad',
+// witable:false,
+// configurable:false,})
+// Object.defineProperty(boss, 'costumer',{writable:false})
+
+
+// let data = Object.getOwnPropertyDescriptor(boss,'costumer')
+// console.log(JSON.stringify(data, null, 2))
+// console.log(boss.costumer)
+// console.log(boss.costumer='tural')
+// console.log(boss.name="Nikita")
+// console.log(boss.costumer="Tural")
+// let a = boss.costumer="Tural"
+// console.log(a)
+
+// console.log(JSON.stringify(data, null, 2))
+// let boss = {
+//     name:'Murvat',
+// }
+
+// Object.defineProperty(boss, 'name',{writable:false,
+// configurable:false});
+// console.log(boss.name="Vlad")
+// // console.log(boss.name)
+
+// let money = {
+//     dollar: 'five',
+//     manat: 'thirty',
+//     get fullAmount() {
+//         return `${this.dollar}+${this.manat} `
+//     },
+//     set fullAmount(value){
+//         [this.dollar, this.manat]= value.split(" ");
+//     }
+// }
+// console.log(money.fullAmount)
+// money.fullAmount='MILLION YUZ';
+// console.log(money.dollar);
+// console.log(money.manat);
+
+// function GetFullAge(name, birthday){
+//     this.name =name;
+//     this.birthday=birthday;
+
+
+//     Object.defineProperty(this, "age", {
+//         get(){
+//             let todayYear = new Date().getFullYear();
+//             return todayYear- this.birthday.getFullYear();
+//         }
+//     })
+// }
+
+// let murvat = new GetFullAge('Murvat', new Date(2002, 9, 2));
+// console.log(murvat)
+// console.log(murvat.name)
+// console.log(murvat.birthday)
+// console.log(murvat.age)
+
 
