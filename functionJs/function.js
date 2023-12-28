@@ -406,5 +406,28 @@ Function
 
 // showSum(5,showNumber)
 
+// function slow(x){
+//     console.log('number is:',x)
+//     return x;
+// }
 
+// function Decorator(func){
+//     let cache = new Map()
+//     return function(x){
+//         if(cache.has(x)){
+//         return cache.get(x)
+//         }
+//         let result = func(x);
+//         return result;
+
+//     }
+// }
+
+// slow = Decorator(slow)
+
+// slow(1)
+// slow(2)
+// slow(3)
+// slow(4)
+// slow(1)
 
