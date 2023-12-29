@@ -1986,7 +1986,7 @@
 // console.log(years)
 // console.log(isAdmin)
 
-
+ 
 // let salaries = {
 //         "Mike": 100,
 //         "Pete": 300,
