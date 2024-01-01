@@ -505,6 +505,7 @@ Function
 //     this.name =name;
 //     this.birthday=birthday;
 
+   
 
 //     Object.defineProperty(this, "age", {
 //         get(){
@@ -515,6 +516,10 @@ Function
 // }
 
 // let murvat = new GetFullAge('Murvat', new Date(2002, 9, 2));
+// console.log(murvat)
+// console.log(murvat.name)
+// console.log(murvat.birthday)
+// console.log(murvat.age)
 // console.log(murvat)
 // console.log(murvat.name)
 // console.log(murvat.birthday)
