@@ -1,5 +1,28 @@
-class MyClass{
-    constructor(){}
-    method(){}
+// class MyClass{
+//     constructor(){}
+//     method(){}
+// }
+// new MyClass()
+
+// class User{
+//     constructor(name){
+//         this.name = name;
+//     }
+
+//     sayHi() {
+//         console.log(this.name)
+//     }
+// }
+
+// let user = new User("Murvat")
+// user.sayHi();
+
+class User {
+    constructor(name){this.name=name;}
+    sayHi(){console.log(this.name);}
 }
-new MyClass()
+
+// console.log(typeof User)
+// console.log(User===User.prototype.constructor)
+// console.log(User.prototype.sayHi)
+console.log(Object.getOwnPropertyNames(User.prototype))
