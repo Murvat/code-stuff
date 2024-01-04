@@ -120,23 +120,23 @@
 // rabbit.hide()
 
 
-class User {
-    constructor(username, password){
-        this.username = username;
-        this.password= password
-    }
+// class User {
+//     constructor(username, password){
+//         this.username = username;
+//         this.password= password
+//     }
 
-    validatePassword(){
-        console.log('HELOOO')
-        if(this.password.length > 6){
-            return true;
-        }
-        return false;
-    }
-}
+//     validatePassword(){
+//         console.log('HELOOO')
+//         if(this.password.length > 6){
+//             return true;
+//         }
+//         return false;
+//     }
+// }
 
-let a = 'Murvat';
-let b = '777699u9';
+// let a = 'Murvat';
+// let b = '777699u9';
 
 // const gamer = new User(a, b);
 // console.log(gamer )
@@ -149,28 +149,77 @@ let b = '777699u9';
 //     }
 // }
 
-class Student extends User {
-    constructor(username, password, nickname) {
-        super(username, password)
-        this.nickname = nickname;
-    }
+// class Student extends User {
+//     constructor(username, password, nickname) {
+//         super(username, password)
+//         this.nickname = nickname;
+//     }
 
-    getStudentCourse() {
-        return [1, 2];
-    }
-    validatePassword(){
-        super.validatePassword()
-        if(this.password.length > 10){
-            return true;
-        }
-        return false;
-    }
+//     getStudentCourse() {
+//         return [1, 2];
+//     }
+//     validatePassword(){
+//         super.validatePassword()
+//         if(this.password.length > 10){
+//             return true;
+//         }
+//         return false;
+//     }
 
+// }
+
+// let firstStudent = new Student('a', 'b', 'I123');
+// console.log(firstStudent);
+// console.log(firstStudent.getStudentCourse());
+// console.log(firstStudent.validatePassword());
+
+// class User{
+//     constructor(name){
+//         this.name = name;
+//     }
+//     sayHello(){
+//         console.log(this.name + ' Hello')
+//     }
+// }
+
+// const murvat = new User('Murvat');
+// // murvat.sayHello()
+
+// class Person extends User{
+//     constructor(name, email){
+//         super();
+//         this.name=name
+//         this.email = email;
+//     }
+// }
+
+// let person = new Person('murvat', 'asdsd')
+// console.log(person)
+// console.log(person.name)
+
+ 
+// class User{
+//     static staticMethdo(){
+//         console.log(this==User);
+//     }
+// }
+
+// User.staticMethdo()
+
+class Article{
+    constructor(title, date){
+        this.title = title;
+        this.date = date;
+    }
+    static compare(articleA, articleB){
+        return articleA.date - articleB.date;    }
 }
 
-let firstStudent = new Student('a', 'b', 'I123');
-console.log(firstStudent);
-console.log(firstStudent.getStudentCourse());
-console.log(firstStudent.validatePassword());
+let articles = [
+    new Article('HTML', new Date(2019, 1, 1)),
+    new Article('Css', new Date(2029, 0, 1)),
+    new Article('Js', new Date(2011, 11, 1)),
+];
 
-
+articles.sort(Article.compare)
+console.log(articles[1].title)
