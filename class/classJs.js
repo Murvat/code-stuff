@@ -223,3 +223,25 @@
 
 // articles.sort(Article.compare)
 // console.log(articles[1].title)
+
+class CoffeeMachine {
+    _waterAmount = 0;
+    // constructor(power){
+    //     this.power = power;
+    //     console.log(`Have been created coffee machine ${power}`)
+    // }
+    set waterAmount(value){
+        if(value< 0) throw new Error('Negative value');
+        this._waterAmount=value
+    }
+    get waterAmount(){
+        return this._waterAmount
+    }
+    constructor(power){
+        this._power = power;
+    }
+}
+
+let coffeeMachine = new CoffeeMachine(100);
+coffeeMachine.waterAmount=200;
+console.log(coffeeMachine.waterAmount)
