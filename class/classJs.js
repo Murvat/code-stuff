@@ -206,20 +206,20 @@
 
 // User.staticMethdo()
 
-class Article{
-    constructor(title, date){
-        this.title = title;
-        this.date = date;
-    }
-    static compare(articleA, articleB){
-        return articleA.date - articleB.date;    }
-}
+// class Article{
+//     constructor(title, date){
+//         this.title = title;
+//         this.date = date;
+//     }
+//     static compare(articleA, articleB){
+//         return articleA.date - articleB.date;    }
+// }
 
-let articles = [
-    new Article('HTML', new Date(2019, 1, 1)),
-    new Article('Css', new Date(2029, 0, 1)),
-    new Article('Js', new Date(2011, 11, 1)),
-];
+// let articles = [
+//     new Article('HTML', new Date(2019, 1, 1)),
+//     new Article('Css', new Date(2029, 0, 1)),
+//     new Article('Js', new Date(2011, 11, 1)),
+// ];
 
-articles.sort(Article.compare)
-console.log(articles[1].title)
+// articles.sort(Article.compare)
+// console.log(articles[1].title)
