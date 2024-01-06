@@ -224,24 +224,76 @@
 // articles.sort(Article.compare)
 // console.log(articles[1].title)
 
-class CoffeeMachine {
-    _waterAmount = 0;
-    // constructor(power){
-    //     this.power = power;
-    //     console.log(`Have been created coffee machine ${power}`)
-    // }
-    set waterAmount(value){
-        if(value< 0) throw new Error('Negative value');
-        this._waterAmount=value
-    }
-    get waterAmount(){
-        return this._waterAmount
-    }
-    constructor(power){
-        this._power = power;
-    }
-}
+// class CoffeeMachine {
+//     _waterAmount = 0;
+//     // constructor(power){
+//     //     this.power = power;
+//     //     console.log(`Have been created coffee machine ${power}`)
+//     // }
+//     set waterAmount(value){
+//         if(value< 0) throw new Error('Negative value');
+//         this._waterAmount=value
+//     }
+//     get waterAmount(){
+//         return this._waterAmount
+//     }
+//     constructor(power){
+//         this._power = power;
+//     }
+// }
 
-let coffeeMachine = new CoffeeMachine(100);
-coffeeMachine.waterAmount=200;
-console.log(coffeeMachine.waterAmount)
+// let coffeeMachine = new CoffeeMachine(100);
+// coffeeMachine.waterAmount=200;
+// console.log(coffeeMachine.waterAmount)
+
+
+// let objectToString = Object.prototype.toString;
+// let arr = [];
+// console.log(objectToString.call(arr));
+
+// let sayHiMixin = {
+//     sayHi(){
+//         console.log(`Hello, ${this.name}`);
+//     },
+//     sayBye(){
+//         console.log(`Bye, ${this.name}`);
+//     }
+// };
+
+// class User {
+//     constructor(name){
+//         this.name = name;
+//     }
+// }
+
+// Object.assign(User.prototype, sayHiMixin);
+
+// new User("Murvat").sayHi();
+// new User("Murvat").sayBye();
+
+// let sayMixin = {
+//     say(phrase){
+//         console.log(phrase);
+//     }
+// }
+// let sayHiMixin = {
+//     __proto__:sayMixin,
+//     sayHi(){
+//         super.say(`Hello, ${this.name}`);
+//     },
+//     sayBye(){
+//         super.say(`Bye, ${this.name}`);
+//     }
+// }
+
+// class User {
+//     constructor(name){
+//         this.name = name;
+//     }
+// }
+// Object.assign(User.prototype, sayHiMixin);
+
+// new User('Murvat').sayHi();
+// console.log(this)
+
+
