@@ -6,53 +6,75 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="b-1">Button</button>
-    <p>1</p>
+    <button class="b-1">Button1</button>
+    <button class="b-2">Button2</button>
+    <!-- <p>1</p>
     <p>2</p>
     <p>3</p>
-    <p>4</p>
+    <p>4</p> -->
 <script>
-console.log(this)
-document.querySelector('.b-1').addEventListener('click', f1)
 
+    let b1 = document.querySelector('.b-1');
+    let b2 = document.querySelector('.b-2');
 
-    function f1(){
-        this.style.background = 'orange';
+    function test(color){
+        console.log(this);
+        this.style.background = color;
     }
 
-
-    let p = document.querySelectorAll('p');
-    for (let i = 0; i < p.length; i++){
-        p[i].onclick = f1
+    // test.call(b1);
+    // test.call(b2);
+    // b1.onclick=test;
+    // b2.onclick=test;
+    b1.onclick= function(){
+        test.call(b2,'red');
     }
 
-
-    class U2{
-        constructor(model){
-            this.model = model;
-        }
-        showThis(){
-            console.log(this);
-        }
+    b2.onclick= function(){
+        test.call(b1,'green');
     }
-     const boat = new U2(744);
-     const boat2 = new U2(333)
-     console.log(boat);
-     console.log(boat2);
-     boat.showThis();
-     boat2.showThis()
+
+// console.log(this)
+// document.querySelector('.b-1').addEventListener('click', f1)
 
 
-     class YellowSubmarine extends U2 {
-        constructor(model, color){
-            super(model);
-            this.color = color;
-            console.log(this.model)
-        }
-     }
-     let b = new YellowSubmarine(666, 'red');
-     console.log(b);
-     console.log(b.model)
+//     function f1(){
+//         this.style.background = 'orange';
+//     }
+
+
+//     let p = document.querySelectorAll('p');
+//     for (let i = 0; i < p.length; i++){
+//         p[i].onclick = f1
+//     }
+
+
+//     class U2{
+//         constructor(model){
+//             this.model = model;
+//         }
+//         showThis(){
+//             console.log(this);
+//         }
+//     }
+//      const boat = new U2(744);
+//      const boat2 = new U2(333)
+//      console.log(boat);
+//      console.log(boat2);
+//      boat.showThis();
+//      boat2.showThis()
+
+
+//      class YellowSubmarine extends U2 {
+//         constructor(model, color){
+//             super(model);
+//             this.color = color;
+//             console.log(this.model)
+//         }
+//      }
+//      let b = new YellowSubmarine(666, 'red');
+//      console.log(b);
+//      console.log(b.model)
      </script>
 </body>
 </html>
