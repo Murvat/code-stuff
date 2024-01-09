@@ -78,11 +78,57 @@
 //     console.log(a);
 // });
 
-let promise = new Promise((resolve, reject)=>{
+// let promise = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//     // resolve("PROMISE IS WORKIN");
+//     reject(new Error("OUPSS"));
+// }, 1000)
+// });
+// // promise.then((data)=> console.log(data));
+// promise.catch((error) => console.log(error));
+
+
+// let promise = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         resolve('asdsadasd');
+//         reject('asasfdsdf')
+//     },1000)
+// })
+
+// promise.then((ata)=>console.log(aga))
+// .catch((error)=>console.log(error))
+
+// function readFileAsync(filePath, callback){
+//     setTimeout(()=>{
+//        let  fakeFileContent = 'File Content';
+//        callback(null,fakeFileContent);
+//     },1000)
+// }
+
+// function callback(error,content){
+//     if(error){
+//         console.log("Read mistake",error);
+//     }else{
+//         console.log('Content',content)
+//     }
+// }
+
+
+// readFileAsync('/path/to/file.txt',callback)
+
+function fetchDataFromServer(url, callback){
     setTimeout(()=>{
-    // resolve("PROMISE IS WORKIN");
-    reject(new Error("OUPSS"));
-}, 1000)
-});
-// promise.then((data)=> console.log(data));
-promise.catch((error) => console.log(error));
+        const responseData= {name:"Murvat", age:23};
+        callback(null,responseData)
+    },1500);
+}
+
+function processServerData(error, data){
+    if(error){
+        console.error('MISTAKE TO GET DATA', error)}
+        else{
+        console.log('Recevied DATA',data)
+    }
+}
+
+fetchDataFromServer('https://example.com',processServerData)
