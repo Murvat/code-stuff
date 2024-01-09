@@ -116,19 +116,76 @@
 
 // readFileAsync('/path/to/file.txt',callback)
 
-function fetchDataFromServer(url, callback){
-    setTimeout(()=>{
-        const responseData= {name:"Murvat", age:23};
-        callback(null,responseData)
-    },1500);
-}
+// function fetchDataFromServer(url, callback){
+//     setTimeout(()=>{
+//         const responseData= {name:"Murvat", age:23};
+//         callback(null,responseData)
+//     },1500);
+// }
 
-function processServerData(error, data){
-    if(error){
-        console.error('MISTAKE TO GET DATA', error)}
-        else{
-        console.log('Recevied DATA',data)
-    }
-}
+// function processServerData(error, data){
+//     if(error){
+//         console.error('MISTAKE TO GET DATA', error)}
+//         else{
+//         console.log('Recevied DATA',data)
+//     }
+// }
 
-fetchDataFromServer('https://example.com',processServerData)
+// fetchDataFromServer('https://example.com',processServerData)
+
+
+// let p2 = new Promise((relove,reject)=>{
+//     fetch('https://gipofiz.ua')
+//     .then(response => {
+//         if(response.ok) resolve(response.json());
+//         else reject(response);
+//     })
+//     .catch(error => reject(error));
+// });
+
+// console.log(p2);
+
+// p2.then(f1,f2);
+
+// function f1(data){
+//     console.log(p2);
+//     console.log('success');
+//     console.log(data);
+// }
+
+// function f2(data){
+//     console.log(p2);
+//     console.log('problem');
+//     console.log(data);
+// }
+// console.log(p2);
+// 8VrexFFeFmMMvD9Y
+// const requestHeaders = new Headers();
+// requestHeaders.append('apikey',"6b7ab7dc1d4a505");
+
+// fetch('https://api.itgid.info/api/27/random/random-string',{
+//     headers: requestHeaders
+// })
+//     .then(response => response.json())
+//     .then(response=>{
+//         console.log(response)
+//     })
+
+// let promise = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve(1)
+//     },1000)
+// })
+
+// promise.then(function(result){
+//     console.log(result)
+//     return result*2
+// }).then(function(result){
+//     console.log(result)
+//     return result*2
+// }).then(function(result){
+//     console.log(result)
+//     return result*2
+// }).then(function(result){
+//     console.log(result)
+//     return result*2})
