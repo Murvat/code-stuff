@@ -171,7 +171,7 @@
 //         console.log(response)
 //     })
 
-// let promise = new Promise((resolve,reject)=>{
+// let pr`omise = new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
 //         resolve(1)
 //     },1000)
@@ -189,3 +189,30 @@
 // }).then(function(result){
 //     console.log(result)
 //     return result*2})
+// Promise.all([
+//     new Promise(resolve=>setTimeout(()=>resolve(1),1000)),
+//     new Promise(resolve=>setTimeout(()=>resolve(2),1000)),
+//     new Promise(resolve=>setTimeout(()=>resolve(3),1000))
+// ]).then(console.log)
+
+
+let urls = [
+    'https://api.github.com/users/iliakan',
+    'https://api.github.com/users/iliakan',
+    'https://api.github.com/users/iliakan',
+];
+
+// let requests = urls.map(url => fetch(url));
+// Promise.all(requests)
+// .then(responses=>responses.forEach(
+//     response=>console.log(`${response.url}: ${response.status}`)
+// ));
+
+// let names = ['iliakan', 'remy', 'jeresig'];
+// let requests = names.map(name=> fetch(`https://api.github.com/users/${name}`));
+// Promise.all(requests).then(responses=>{
+//     for(let response of responses)[
+//         console.log(`${response.url}: ${response.status}`)
+//     ]
+//     return responses;
+// })
