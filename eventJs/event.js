@@ -196,11 +196,11 @@
 // ]).then(console.log)
 
 
-let urls = [
-    'https://api.github.com/users/iliakan',
-    'https://api.github.com/users/iliakan',
-    'https://api.github.com/users/iliakan',
-];
+// let urls = [
+//     'https://api.github.com/users/iliakan',
+//     'https://api.github.com/users/iliakan',
+//     'https://api.github.com/users/iliakan',
+// ];
 
 // let requests = urls.map(url => fetch(url));
 // Promise.all(requests)
@@ -216,3 +216,12 @@ let urls = [
 //     ]
 //     return responses;
 // })
+// function f1(){
+//     console.log(10)
+// };
+async function f2(){
+    console.log(20);
+}
+/// f1()
+f2()
+console.log(21)
