@@ -223,5 +223,5 @@ async function f2(){
     console.log(20);
 }
 /// f1()
-f2()
+f2() 
 console.log(21)
