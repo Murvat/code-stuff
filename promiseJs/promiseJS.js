@@ -190,21 +190,56 @@
 // /// f1()
 // f2() 
 // console.log(21)
-function promisify(f, manyArgs = false){
-    return function(...args){
-        return new Promise((resolve, reject)=> {
-            function callback(err, ...results){
-                if(err) {
-                    reject(err);
-                } else{
-                    resolve(manyArgs ? results: results[0]);
-                }
-            }
-            args.push(callback);
-            f.call(this, ...args);
-        });
-    };
-};
+// function promisify(f, manyArgs = false){
+//     return function(...args){
+//         return new Promise((resolve, reject)=> {
+//             function callback(err, ...results){
+//                 if(err) {
+//                     reject(err);
+//                 } else{
+//                     resolve(manyArgs ? results: results[0]);
+//                 }
+//             }
+//             args.push(callback);
+//             f.call(this, ...args);
+//         });
+//     };
+// };
 
-f = promisify(f, true);
-f(...).then(arrayOfResults => ..., err=>)
+// f = promisify(f, true);
+// f(...).then(arrayOfResults => ..., err=>)
+
+// function loadJson(url){
+//     return fetch(url)
+//     .then(response =>{ 
+        // if(response.status==200){
+        // return response.json();
+//     }else{
+        // throw new Error(response.status);
+//     }
+//     })
+// // }
+// let loadJson = async function f (url){
+//     await fetch(url);
+//     if(response.status==200){
+//         return response.json();
+//     } else {
+//         throw new Error(response.status);
+//     }
+// }
+// loadJson('no-such-user.json')
+// .catch(console.log)
+
+// function* generateSequence(){
+//     yield 1;
+//     yield 2;
+//     return 3;
+// }
+
+// let generator = generateSequence();
+// let one = generator.next();
+//  console.log(JSON.stringify(one));
+//  let two = generator.next();
+//  console.log(JSON.stringify(two));
+//  let th = generator.next();
+//  console.log(JSON.stringify(th));
