@@ -233,13 +233,58 @@
 // function* generateSequence(){
 //     yield 1;
 //     yield 2;
-//     return 3;
+//     yield 3;
 // }
 
 // let generator = generateSequence();
+// for(let value of generator){
+//     console.log(value);
+// }
+
+// let sequence =[0, ...generateSequence()]
+// console.log(sequence)
 // let one = generator.next();
 //  console.log(JSON.stringify(one));
 //  let two = generator.next();
 //  console.log(JSON.stringify(two));
 //  let th = generator.next();
 //  console.log(JSON.stringify(th));
+
+
+// let range = {
+//     from: 1,
+//     to: 5,
+//     [Symbol.iterator](){
+//         return {
+//             current: this.from,
+//             last: this.to,
+//             next(){
+//                 if (this.current <= this.last){
+//                     return {done: false, value: this.current++};
+//                 }else {
+//                     return { done: true};
+//                 }
+//             }
+//         }
+//     }
+// }
+// console.log([...range])
+// 
+// function* generateSequence(start, end){
+//     for (let i=start; i <=end; i++) yield i;
+// }
+
+// function* generatePasswordCodes(){
+//     yield* generateSequence(48, 57);
+//     yield* generateSequence(65, 90);
+//     yield* generateSequence(87, 122);
+// }
+
+// let str = ''
+// for(let code of generatePasswordCodes()){
+//     str += String.fromCharCode(code)
+
+// }
+// console.log(str)
+// console.log (generateSequence(2, 9));
+// console.log(new String)
