@@ -6,33 +6,91 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="b-1">Button1</button>
+    <!-- <button class="b-1">Button1</button>
     <button class="b-2">Button2</button>
-    <!-- <p>1</p>
+    <p>1</p> -->
     <p>2</p>
     <p>3</p>
-    <p>4</p> -->
+    <p>4</p>
 <script>
 
-    let b1 = document.querySelector('.b-1');
-    let b2 = document.querySelector('.b-2');
+//     function* genfn(){
+//     yield* [10, 20, 30];
+// }
+// const c= genfn();
+// const val1 = c.next();
+// const val2 = c.next();
+// const val3 = c.next();
+// const val4 = c.next();
+// console.log({c, val1, val2, val3,val4})
+//     function* ids(...args) {
+//     let i =0;
+//     while(args.length > i){
+//         const id = args[i++];
+//         if(id === undefined) return -1;
+//         yield id;
+//     }
+// }
 
-    function test(color){
-        console.log(this);
-        this.style.background = color;
-    }
+// const id = ids(1011, 1078, 1292, 1731, undefined, 1501, 1550);
+// let val;
+// do {
+//     val =id.next();
+//     console.log({val});
+// } while (!val.done);
+//     function* counter(begin, end, delta = 1) {
+//     let value = begin;
+//     while (end> value) {
+//         value += delta;
+//         if(value>end) return 
+//         yield value;
+//     }
+// }
 
-    // test.call(b1);
-    // test.call(b2);
-    // b1.onclick=test;
-    // b2.onclick=test;
-    b1.onclick= function(){
-        test.call(b2,'red');
-    }
+// const c = counter(0, 30, 12);
+// const val1 = c.next();
+// const val2 = c.next();
+// const val3 = c.next();
+// const val4 = c.next();
+// console.log({c, val1, val2, val3, val4});
+// function* genFn(x){
+//     return x *2;
+// }
 
-    b2.onclick= function(){
-        test.call(b1,'green');
-    }
+// console.log('genFn= ', [genFn]);
+// console.log('genFn.toString()= ', [genFn.toString()]);
+// console.log('typeof(genfn)', typeof(genFn));
+// const fnProto = Object.getPrototypeOf(genFn);
+// console.log('fnProto.constructor.name = ', fnProto.constructor.name);
+
+// console.log('typeof(genFn(5))= ', typeof(genFn(5)));
+// console.log('genFn(5).toString()=', genFn(5).toString());
+// const genProto = Object.getPrototypeOf(genFn(5));
+// console.log('genProto= ', genProto);
+// console.log('genProto[Symbol.Iterator=', genProto[Symbol.iterator]);
+// console.log('genFn(5)=', genFn(5));
+
+
+
+    // let b1 = document.querySelector('.b-1');
+    // let b2 = document.querySelector('.b-2');
+
+    // function test(color){
+    //     console.log(this);
+    //     this.style.background = color;
+    // }
+
+    // // test.call(b1);
+    // // test.call(b2);
+    // // b1.onclick=test;
+    // // b2.onclick=test;
+    // b1.onclick= function(){
+    //     test.call(b2,'red');
+    // }
+
+    // b2.onclick= function(){
+    //     test.call(b1,'green');
+    // }
 
 // console.log(this)
 // document.querySelector('.b-1').addEventListener('click', f1)
