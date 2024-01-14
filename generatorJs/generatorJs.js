@@ -3,17 +3,17 @@
 //    const a =  yield 2
 //     yield 3 + a
 // }
-// // const g = getNumbers()
+// const g = getNumbers()
 
-// // console.log(g.next().value)
-// // console.log(g.next().value)
-// // console.log(g.next().value)
-// // console.log([...g]) 
-// // function* getMoreNumbers(){
-// //     yield* getNumbers()
-// //     yield* getNumbers()
-// // }
-// // console.log([...getMoreNumbers()])
+// console.log(g.next().value)
+// console.log(g.next().value)
+// console.log(g.next().value)
+// console.log([...g]) 
+// function* getMoreNumbers(){
+//     yield* getNumbers()
+//     yield* getNumbers()
+// }
+// console.log([...getMoreNumbers()])
 
 // console.log([...getNumbers()])
 
@@ -103,21 +103,21 @@
 // const val3 = c.next();
 // console.log({c, val1, val2, val3,val4})
 
-function* gen1(){
-    yield 10;
-    yield 20;
-    yield 30;
-}
+// function* gen1(){
+//     yield 10;
+//     yield 20;
+//     yield 30;
+// }
 
-function* gen2(){
-    yield 40;
-    yield 50;
-    yield 60;
-}
+// function* gen2(){
+//     yield 40;
+//     yield 50;
+//     yield 60;
+// }
 
-function* genFn(){
-    yield* gen1();
-    yield* gen2();
-}
+// function* genFn(){
+//     yield* gen1();
+//     yield* gen2();
+// }
 
-console.log([...genFn()]);
+// console.log([...genFn()]);
