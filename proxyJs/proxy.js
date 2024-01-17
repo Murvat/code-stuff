@@ -138,22 +138,22 @@
 
 
 
-const targetObject = {
-    name: "John",
-    age: 25
-};
+// const targetObject = {
+//     name: "John",
+//     age: 25
+// };
 
-const handler = {
-    get: function(target, prop){
-        console.log(`reading of property ${prop} `)
-    return target[prop];
-    },
-    set: function(target, prop, value) {
-        console.log(`Setting new value of prtoperty ${prop} to ${value}`)
-    target[prop] = value;
-    }
-};
+// const handler = {
+//     get: function(target, prop){
+//         console.log(`reading of property ${prop} `)
+//     return target[prop];
+//     },
+//     set: function(target, prop, value) {
+//         console.log(`Setting new value of prtoperty ${prop} to ${value}`)
+//     target[prop] = value;
+//     }
+// };
 
-const proxyObject = new Proxy(targetObject, handler)
-console.log(proxyObject.name);
-proxyObject.age = 26;
+// const proxyObject = new Proxy(targetObject, handler)
+// console.log(proxyObject.name);
+// proxyObject.age = 26;
