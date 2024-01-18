@@ -14,15 +14,15 @@
     <p>4</p>
 <script>
 
-//     function* genfn(){
-//     yield* [10, 20, 30];
-// }
-// const c= genfn();
-// const val1 = c.next();
-// const val2 = c.next();
-// const val3 = c.next();
-// const val4 = c.next();
-// console.log({c, val1, val2, val3,val4})
+    function* genfn(){
+    yield* [10, 20, 30];
+}
+const c= genfn();
+const val1 = c.next();
+const val2 = c.next();
+const val3 = c.next();
+const val4 = c.next();
+console.log({c, val1, val2, val3,val4})
 //     function* ids(...args) {
 //     let i =0;
 //     while(args.length > i){
