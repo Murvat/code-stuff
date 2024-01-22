@@ -339,6 +339,7 @@
 
 // console.log(curriedSum(5)(6))
 
+
 // function curry(func){
 //     return function curried(...args){
 //         if(args.length >= func.length){
