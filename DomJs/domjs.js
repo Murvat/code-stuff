@@ -84,15 +84,23 @@
 
 // ul.append(getListContent());
 
-function getListContent() {
-    let result = [];
+// function getListContent() {
+//     let result = [];
 
-    for(let i=1; i<=3; i++){
-        let li = document.createElement('li');
-        li.append(i);
-        result.push(li);
+//     for(let i=1; i<=3; i++){
+//         let li = document.createElement('li');
+//         li.append(i);
+//         result.push(li);
+//     }
+//     return result;
+// }
+
+// ul.append(...getListContent())
+
+function clear(elem){
+    while (elem.firstChild){
+        elem.firstChild.remove();
     }
-    return result;
 }
 
-ul.append(...getListContent())
+clear(ol)
