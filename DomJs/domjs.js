@@ -97,10 +97,116 @@
 
 // ul.append(...getListContent())
 
-function clear(elem){
-    while (elem.firstChild){
-        elem.firstChild.remove();
-    }
-}
+// function clear(elem){
+//     while (elem.firstChild){
+//         elem.firstChild.remove();
+//     }
+// }
 
-clear(ol)
+// clear(ol)
+
+// const childElement = document.getElementById('child');
+// const parentElement = childElement.parentNode;
+// console.log(parentElement);
+
+// const listElement = document.getElementById('list');
+// const childNodes = listElement.childNodes;
+// console.log(childNodes);
+
+// const parentElement = document.getElementById('parent2');
+// const firstChild = parentElement.firstChild;
+// const firstElementChild = parentElement.firstElementChild;
+// console.log(firstChild);
+// console.log(firstChild.nextElementSibling);
+// console.log(firstElementChild)
+// const parentElement2 = document.getElementById('parent2');
+// const lastChild = parentElement2.lastChild;
+
+// console.log(lastChild); // Может вывести: #text
+// console.log(lastChild.previousSibling); // Может вывести: null или <p>Второй параграф</p>
+// const firstElement = document.getElementById('first');
+// const nextSibling=firstElement.nextSibling;
+// console.log(nextSibling.previousSibling)
+
+
+
+
+
+// Задание 1:
+// Создайте переменную firstParagraph и присвойте ей первый дочерний 
+// элемент внутри контейнера (#container).
+// const firstParagraph = document.getElementById('container');
+// const childElement = firstParagraph.firstElementChild;
+// console.log(childElement)
+// Задание 2:
+// Создайте переменную nextSiblingOfFirst и присвойте ей следующий 
+// соседний узел после firstParagraph.
+// const firstParagraph =document.getElementById('first')
+// const nextSiblingOfFirst = firstParagraph.nextElementSibling;
+// console.log(nextSiblingOfFirst)
+// Задание 3:
+// Создайте переменную secondParagraph и присвойте ей следующий
+//  дочерний элемент после firstParagraph.
+// const firstParagraph =document.getElementById('first')
+// const secondParagraph = firstParagraph.nextSibling;
+// console.log(secondParagraph)
+
+
+// Задание 4:
+// Создайте переменную parentOfSecond и присвойте ей родительский 
+// элемент для secondParagraph.
+// const secondParagraph = document.getElementById('second')
+// const parentOfSecond = secondParagraph.parentElement;
+// console.log(parentOfSecond)
+
+
+
+// Задание 5:
+// Создайте переменную innerElement и присвойте ей дочерний элемент 
+// // внутри подконтейнера (#sub-container).
+// const innerElement =document.getElementById('sub-container').children;
+// console.log(innerElement)
+// Задание 6:
+// Создайте переменную previousSiblingOfInner и присвойте ей 
+// предыдущий соседний узел перед innerElement.
+// const previousSiblingofInner =innerElement[0].previousSibling;
+// console.log(previousSiblingofInner)
+// Задание 7:
+// Создайте переменную nextElementOfInner и присвойте ей 
+// следующий HTML-элемент после innerElement.
+// const innerElement =document.getElementById('sub-container').children;
+// const nextElementOfInner = innerElement[0].nextElementSibling;
+// console.log(nextElementOfInner);
+
+// Задание 8:
+// Создайте переменную parentOfContainer и присвойте ей 
+// родительский элемент для #container.
+// const parentOfContainer = document.getElementById('container').parentElement;
+// console.log(parentOfContainer)
+// Задание 9:
+// Создайте переменную nextSiblingOfContainer и присвойте ей 
+// следующий соседний узел после #container.
+// const nextSiblingOfContainer = document.getElementById('container').nextSibling.nextSibling;
+// console.log(nextSiblingOfContainer)
+// Задание 10:
+// Создайте переменную nextElementSiblingOfContainer и 
+// присвойте ей следующий HTML-элемент после #container.
+// const nextElementSiblingOfContainer = document.getElementById('container').nextElementSibling;
+// console.log(nextElementSiblingOfContainer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
