@@ -196,10 +196,141 @@
 
 
 
+// document.addEventListener('DOMContentLoaded', function () {
+    // const table = document.getElementById('exampleTable');
 
+    // // Проверка наличия дочерних узлов
+    // console.log(table.hasChildNodes()); // Должно вернуть true
 
+    // // Доступ к дочерним элементам
+    // const children = table.children;
+    // console.log(children); // Коллекция дочерних элементов
 
+    // // Первый и последний дочерние элементы
+    // console.log(table.firstElementChild); // Заголовок
+    // console.log(table.lastElementChild); // Подвал
 
+    // // Остальной код...
+
+// const table = document.getElementById('exampleTable');
+// console.log(table);
+// console.log(table.hasChildNodes());
+// const children = table.children;
+// console.log(children);
+
+// console.log(table.firstElementChild);
+// console.log(table.lastElementChild)
+// const firstRow = table.rows[1];
+// console.log(firstRow.previousElementSibling); // null, так как это первая строка
+// console.log(firstRow.nextElementSibling); // Вторая строка
+// console.log(firstRow)
+// Работа с ячейками
+// const firstCell = firstRow.cells[0];
+// console.log(firstCell.cellIndex); // Номер ячейки в строке (0)
+// console.log(firstCell.parentNode); // Ссылка на строку
+// console.log(firstCell.parentNode.sectionRowIndex); // Номер строки в секции (0)
+// console.log(firstCell.parentNode.rowIndex); // Номер строки в таблице (1)
+// });
+
+// Задание 1: Получить элемент по его id "mainHeading" с помощью getElementById и вывести его текстовое содержание в консоль.
+// const mainHeading = document.getElementById('mainHeading');
+// console.log(mainHeading.textContent);
+
+// Задание 2: Получить все абзацы с классом "highlight" с помощью getElementsByClassName и выделить их, добавив класс "highlight".
+// const paragraphs = document.getElementsByClassName('highlight');
+    // Задание 3: Получить первый абзац внутри элемента с классом "container" с помощью querySelector и вывести его текстовое содержание в консоль.
+// Задание 3: Получить первый абзац внутри элемента с классом "container" с помощью querySelector и вывести его текстовое содержание в консоль.
+// const inElement = document.querySelector('.container p:first-child');
+// console.log(inElement.textContent);
+    // Задание 4: Получить все элементы списка с помощью getElementsByTagName и вывести их количество в консоль.
+    // const elemList = document.getElementsByTagName('li') ;
+    // console.log(elemList.length)
+    // Задание 5: Получить первый элемент списка с помощью querySelector и выделить его, добавив класс "highlight".
+    // const firstElem = document.querySelector('li:first-child').classList.add('highlight')
+    // Задание 5: Получить первый элемент списка с помощью querySelector и выделить его, добавив класс "highlight".
+// const firstElem = document.querySelector('li:first-child');
+
+// if (firstElem) {
+//     firstElem.classList.add('highlight');
+// }
+
+    // Задание 6: Проверить, соответствует ли первый элемент списка селектору "li.highlighted" с помощью matches.
+    // const firstListItem = document.querySelector('li:first-child');
+    // if(firstListItem&&firstListItem.matches('li.highlighted')){
+    //     console.log('Первый элемент списка соответствует селектору "li.highlighted".');
+    // } else {
+    //     console.log('Первый элемент списка НЕ соответствует селектору "li.highlighted".');
+    // }
+
+// Задание 7: Найти ближайший родительский элемент для первого элемента списка с классом "highlight" с помощью closest и выделить его, добавив класс "highlight".
+// const elemList = document.querySelectorAll('.highlight');
+// elemList.forEach((element)=>{
+//     const closeElem = element.closest('.highlight').parentNode;
+//     console.log(closeElem)
+//     closeElem.classList.add('highlight');
+
+// })
+// const closeElem = elemList[0].closest('.highlight');
+
+    // Задание 8: Получить все абзацы внутри элемента с классом "container" с помощью elem.querySelectorAll и вывести их количество в консоль.
+    // const abElem = document.querySelectorAll('.container');
+    // console.log(abElem.length)
+    // Задание 9: Получить все элементы с тегом "li" внутри элемента с классом "container" с помощью elem.getElementsByTagName и выделить их, добавив класс "highlight".
+ // Задание 9: Получить все элементы с тегом "li" внутри элемента с классом "container" с помощью elem.getElementsByTagName и выделить их, добавив класс "highlight".
+// const containerElement = document.querySelector('.container');
+// // Проверка наличия элемента с классом "container"
+// if (containerElement) {
+//   const allLi = containerElement.getElementsByTagName('li');
+//   // Перебор всех элементов li и добавление класса "highlight"
+//   for (let i = 0; i < allLi.length; i++) {
+//     allLi[i].classList.add('highlight');
+//   }
+// }
+ 
+       // Задание 10: Получить все элементы с классом "highlight" с помощью document.querySelectorAll и вывести их количество в консоль.
+    //    const listItem = document.querySelectorAll('.highlight');
+    //    console.log(listItem.length);
+       // Задание 11: Получить первый абзац с классом "highlight" внутри элемента с классом "container" с помощью elem.querySelector и вывести его текстовое содержание в консоль.
+    //    const containerElement = document.querySelector('.container');
+    //    if (containerElement) {
+    //     const firstElem = document.querySelector('.highlight')
+    //     console.log(firstElem.textContent);
+    //    }
+
+    // Задание 12: Получить все элементы с атрибутом name с помощью document.getElementsByName и вывести их количество в консоль.
+    // const listName = document.getElementsByName('name');
+    // console.log(listName.length)
+    // Задание 13: Получить все элементы списка с классом "highlight" с помощью document.querySelectorAll и вывести их текстовое содержание в консоль.
+    // const listElem = document.querySelectorAll('.highlight');
+    // if(listElem){
+    //     listElem.forEach((elem)=>{
+    //         console.log(elem.textContent);
+    //     })
+    // }
+    // Задание 14: Получить все элементы с тегом "p" внутри элемента с id "mainHeading" с помощью document.getElementById и querySelectorAll, 
+    // и выделить их, добавив класс "highlight".
+// Задание 14: Получить все элементы с тегом "p" внутри элемента с id "mainHeading" с помощью document.getElementById и querySelectorAll, 
+// и выделить их, добавив класс "highlight".
+// const mainHeading = document.getElementById('mainHeading');
+// if (mainHeading) {
+//     const listElem = mainHeading.getElementsByTagName('p');
+//     // Преобразование HTMLCollection в массив с помощью оператора распространения
+//     const listArray = [...listElem];
+//     listArray.forEach((element) => {
+//         element.classList.add('highlight');
+//     });
+// }
+    // Задание 15: Получить первый элемент с атрибутом name равным "username" с помощью document.getElementsByName и вывести его значение в консоль.
+ // Задание 15: Получить первый элемент с атрибутом name равным "username" с помощью document.getElementsByName и вывести его значение в консоль.
+const elements = document.getElementsByName('username');
+
+// Проверяем, существует ли элемент с атрибутом name "username"
+if (elements.length > 0) {
+    const firstElement = elements[0];
+    console.log(firstElement.value);
+} else {
+    console.log('Элемент с атрибутом name "username" не найден.');
+}
 
 
 
