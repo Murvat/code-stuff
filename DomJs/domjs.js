@@ -322,15 +322,99 @@
 // }
     // Задание 15: Получить первый элемент с атрибутом name равным "username" с помощью document.getElementsByName и вывести его значение в консоль.
  // Задание 15: Получить первый элемент с атрибутом name равным "username" с помощью document.getElementsByName и вывести его значение в консоль.
-const elements = document.getElementsByName('username');
+// const elements = document.getElementsByName('username');
 
 // Проверяем, существует ли элемент с атрибутом name "username"
-if (elements.length > 0) {
-    const firstElement = elements[0];
-    console.log(firstElement.value);
-} else {
-    console.log('Элемент с атрибутом name "username" не найден.');
-}
+// if (elements.length > 0) {
+//     const firstElement = elements[0];
+//     console.log(firstElement.value);
+// } else {
+//     console.log('Элемент с атрибутом name "username" не найден.');
+// }
+
+
+// let  divElement = document.getElementById('exampleDiv');
+// let paragraphElement = document.getElementById('exampleParagraph')
+
+
+// console.log(divElement.nodeType);
+// console.log(paragraphElement.nodeType);
+// console.log(divElement.nodeName);
+// console.log(paragraphElement.nodeName);
+// console.log(divElement.textContent);
+// console.log(paragraphElement.textContent);
+// console.log(divElement.innerHTML);
+// console.log(paragraphElement.innerHTML);
+// console.log(divElement.outerHTML);
+// console.log(paragraphElement.outerHTML);
+// divElement.hidden=true;
+
+// Обход DOM-дерева:
+
+// Используйте цикл для обхода всех элементов внутри определенного узла DOM.
+// Выведите в консоль тип, имя и текст каждого узла.
+// let example = document.getElementById('exampleDiv');
+
+//         function traverseDom(node) {
+//             for (let i = 0; i < node.childNodes.length; i++) {
+//                 let childNode = node.childNodes[i];
+//                 console.log('Node type:', childNode.nodeType);
+
+//                 if (childNode.nodeType === 1) {
+//                     console.log('Element Name:', childNode.nodeName);
+//                 } else if (childNode.nodeType === 3) {
+//                     console.log('Text Content:', childNode.nodeValue.trim());
+//                 }
+
+//                 if (childNode.childNodes.length > 0) {
+//                     traverseDom(childNode);
+//                 }
+//             }
+//         }
+
+//         traverseDom(example);
+
+// Манипуляции с содержимым:
+// Найдите параграф внутри div с id "exampleDiv".
+// Измените текст внутри параграфа на "New Content".
+// Выведите в консоль полный HTML div с id "exampleDiv" после изменений.
+// let elemParagraph = document.getElementById('exampleDiv');
+// elemParagraph.textContent= 'Hello Murvat!!';
+// console.log(elemParagraph.outerHTML)
+
+// Скрытие элементов:
+// Найдите все элементы с тегом "p" на странице.
+// Сделайте их скрытыми (используя свойство hidden) с помощью цикла.
+// Проверьте, что элементы действительно скрыты, выведя в консоль их состояние.
+// Создание новых элементов:
+// let neHid = document.querySelectorAll('p');
+// neHid.forEach(function(paragraph) {
+//     paragraph.hidden = true;
+// });
+// console.log(neHid);
+// Создайте новый элемент "span".
+// Установите текст внутри этого элемента на "Dynamic Element".
+// Добавьте этот элемент внутрь div с id "exampleDiv".
+// Выведите в консоль обновленный HTML div с id "exampleDiv".
+// let newSpan = document.createElement('span');
+// newSpan.textContent = 'Dynamic Element';
+// let elemN = document.getElementById('exampleDiv');
+// elemN.appendChild(newSpan); // Use appendChild to add the new span inside the div
+// console.log(elemN.outerHTML); // Log the outer HTML of the container element (exampleDiv)
+// Удаление элементов:
+// Найдите элемент "strong" внутри параграфа с id "exampleParagraph".
+// Удалите этот элемент из DOM.
+// Выведите в консоль обновленный HTML параграфа с id "exampleParagraph".
+// let paragraph = document.getElementById('exampleParagraph');
+// let strongElement = paragraph.querySelector('strong');
+// // Check if the "strong" element exists before attempting to remove it
+// if (strongElement) {
+//     strongElement.remove();
+//     console.log(paragraph.outerHTML); // Log the updated HTML of the paragraph
+// } else {
+//     console.log('No <strong> element found in the paragraph.');
+// }
+
 
 
 

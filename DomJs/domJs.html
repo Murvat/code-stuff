@@ -104,7 +104,7 @@
 </html> -->
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -131,6 +131,78 @@
   <script src="./domjs.js"></script>
 
 </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal</title>
+</head>
+<body>
+    <div id="exampleDiv">
+        <p id="exampleParagraph">Hello, <strong>world</strong>!</p>
+        <p>Another paragraph</p>
+        <div>
+            <span>Some text</span>
+        </div>
+    </div>
+
+    <script src="./domjs.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример HTML</title>
+</head>
+<body>
+
+    Пример использования атрибутов
+    <div id="myDiv" class="example" data-custom="123">Это пример блока с атрибутами</div>
+
+    <script>
+        // Получаем элемент по id
+        var myDiv = document.getElementById("myDiv");
+
+        // Проверяем наличие атрибута 'class'
+        var hasClassAttribute = myDiv.hasAttribute("class");
+        console.log("Наличие атрибута 'class':", hasClassAttribute);
+
+        // Получаем значение атрибута 'data-custom'
+        var customAttributeValue = myDiv.getAttribute("data-custom");
+        console.log("Значение атрибута 'data-custom':", customAttributeValue);
+
+        // Устанавливаем новое значение атрибута 'data-custom'
+        myDiv.setAttribute("data-custom", "456");
+        console.log("Новое значение атрибута 'data-custom':", myDiv.getAttribute("data-custom"));
+
+        // Удаляем атрибут 'class'
+        myDiv.removeAttribute("class");
+        console.log("После удаления атрибута 'class':", myDiv.outerHTML);
+
+        // Получаем коллекцию всех атрибутов
+        var allAttributes = myDiv.attributes;
+        console.log("Коллекция всех атрибутов:", allAttributes);
+    </script>
+
+    <!-- Пример использования методов для создания узлов -->
+    <script>
+        // Создаем новый элемент 'p'
+        var newParagraph = document.createElement("p");
+        newParagraph.textContent = "Это новый абзац";
+
+        // Создаем текстовый узел
+        var textNode = document.createTextNode("Это текстовый узел");
+
+        // Добавляем созданные узлы в body
+        document.body.appendChild(newParagraph);
+        document.body.appendChild(textNode); -->
+    </script>
+
+</body>
 </html>
-
-

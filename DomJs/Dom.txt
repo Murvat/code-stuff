@@ -90,8 +90,8 @@ elem.getElementsByClassName(className)
 
 document.getElementsByName(name)
 // возвращает коллекцию элементов с заданным атрибутом name.
-Свойства узлов:
 
+Свойства узлов:
 nodeType: Тип DOM-узла.
 nodeName/tagName: Название тега у элемента (только для чтения).
 nodeValue/data: Содержимое узла-неэлемента (можно изменять).
@@ -99,17 +99,16 @@ textContent: Текст внутри элемента (можно изменят
 innerHTML: Внутреннее HTML-содержимое узла-элемента (можно изменять).
 outerHTML: Полный HTML узла-элемента (запись не изменяет элемент, а заменяет его во внешнем контексте).
 hidden: Скрывает элемент при значении true (аналог display: none в CSS).
+
+++++
 Атрибуты и свойства:
 Методы для работы с атрибутами:
 elem.hasAttribute(name)
 // проверить на наличие.
-
 elem.getAttribute(name)
 // получить значение.
-
 elem.setAttribute(name, value)
-// установить значение.
-
+// установить значение.=
 elem.removeAttribute(name)
 // удалить атрибут.
 
