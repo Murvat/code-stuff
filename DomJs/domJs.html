@@ -1,5 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
+ <!-- <!DOCTYPE html> -->
+<!-- <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
 
     <script src="./domjs.js"></script>
 </body>
-</html> -->
+</html>  -->
 
 
 
@@ -163,10 +163,10 @@
 <body>
 
     Пример использования атрибутов
-    <div id="myDiv" class="example" data-custom="123">Это пример блока с атрибутами</div>
-
-    <script>
-        // Получаем элемент по id
+    <div id="myDiv" class="example" data-custom="123">Это пример блока с атрибутами</div> 
+<script src="./domjs.js"></script> -->
+    <!-- <script> -->
+        <!-- // Получаем элемент по id
         var myDiv = document.getElementById("myDiv");
 
         // Проверяем наличие атрибута 'class'
@@ -188,10 +188,10 @@
         // Получаем коллекцию всех атрибутов
         var allAttributes = myDiv.attributes;
         console.log("Коллекция всех атрибутов:", allAttributes);
-    </script>
+     </script> -->
 
-    <!-- Пример использования методов для создания узлов -->
-    <script>
+    <!-- Пример использования методов для создания узлов
+     <script>
         // Создаем новый элемент 'p'
         var newParagraph = document.createElement("p");
         newParagraph.textContent = "Это новый абзац";
@@ -201,8 +201,55 @@
 
         // Добавляем созданные узлы в body
         document.body.appendChild(newParagraph);
-        document.body.appendChild(textNode); -->
-    </script>
+        document.body.appendChild(textNode);  -->
+    <!-- </script> -->
+
+<!-- </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Примеры методов для создания узлов и вставки/удаления элементов</title>
+</head>
+<body>
+<script src="./domjs.js"></script>
+
+<!-- <script>
+    // Методы для создания узлов
+    var newElement = document.createElement('div'); // создаёт элемент с заданным тегом
+    var textNode = document.createTextNode('Пример текстового узла'); // создаёт текстовый узел
+    var clonedElement = newElement.cloneNode(true); // клонирует элемент со всеми дочерними элементами
+
+    // Вставка и удаление
+    document.body.append(newElement); // вставляет в конец body
+    document.body.prepend(textNode); // вставляет в начало body
+    textNode.before(clonedElement); // вставляет перед textNode
+    clonedElement.after('Новый текстовый узел'); // вставляет после clonedElement
+    clonedElement.replaceWith('<p>Замена элемента</p>'); // заменяет clonedElement
+    textNode.remove(); // удаляет textNode
+
+    // Устаревшие методы
+    var parentElement = document.createElement('div');
+    var oldChild = document.createElement('span');
+    var newChild = document.createElement('p');
+    parentElement.appendChild(oldChild); // добавляет oldChild в конец parentElement
+    parentElement.insertBefore(newChild, oldChild); // вставляет newChild перед oldChild
+    parentElement.removeChild(oldChild); // удаляет oldChild из parentElement
+    parentElement.replaceChild(newChild, oldChild); // заменяет oldChild на newChild
+
+    // Вставка фрагмента HTML
+    var targetElement = document.createElement('div');
+    targetElement.insertAdjacentHTML('beforebegin', '<p>HTML вставлено перед элементом</p>');
+    targetElement.insertAdjacentHTML('afterbegin', '<p>HTML вставлено в начало элемента</p>');
+    targetElement.insertAdjacentHTML('beforeend', '<p>HTML вставлено в конец элемента</p>');
+    targetElement.insertAdjacentHTML('afterend', '<p>HTML вставлено после элемента</p>');
+
+    // Добавление HTML на страницу до завершения её загрузки
+    document.write('<p>Этот HTML добавлен до завершения загрузки страницы</p>');
+</script> -->
 
 </body>
 </html>

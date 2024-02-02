@@ -415,9 +415,62 @@
 //     console.log('No <strong> element found in the paragraph.');
 // }
 
+// let myDiv = document.getElementById('myDiv');
+// let hasClassAttribute = myDiv.hasAttribute('class');
+// console.log('Answer:', hasClassAttribute)
+
+// let customAttributeValue = myDiv.getAttribute('data-custom');
+// console.log('Answer:', customAttributeValue)
+
+// myDiv.setAttribute('data-custom', '456');
+// console.log('New Answer:', myDiv.getAttribute('data-custom'))
+
+// myDiv.removeAttribute('class');
+// console.log('new answer: ', myDiv.outerHTML)
+// let allAttributes = myDiv.attributes;
+// console.log(allAttributes)
+
+// let newParagraph = document.createElement('p');
+// newParagraph.textContent = 'New Abzas';
+
+// let textNode = document.createTextNode('this is text node');
+
+// document.body.appendChild(newParagraph);
+// document.body.appendChild(textNode);
+
+// console.log(newParagraph)
+// console.log(textNode)
 
 
+// let newElem = document.createElement('div');
+// let textNode = document.createTextNode('Example of text');
+// let clonedElement = newElem.cloneNode(true);
 
+// document.body.append(newElem);
+// document.body.prepend(textNode);
+// textNode.before(clonedElement);
+
+// clonedElement.replaceWith('<p>Change<p>');
+// textNode.remove();
+
+// let parentElement = document.createElement('div');
+// console.log(parentElement)
+// let oldCHild = document.createElement('span');
+// let newChild = document.createElement('p');
+// console.log(oldCHild)
+// parentElement.appendChild(oldCHild);
+// parentElement.insertBefore(newChild, oldCHild);
+// // parentElement.removeChild(oldCHild)
+// console.log(parentElement)
+// parentElement.replaceChild(newChild, oldCHild);
+
+
+// let targetElement = document.createElement('div');
+// document.body.appendChild(targetElement)
+//     targetElement.insertAdjacentHTML('beforebegin', '<p>HTML вставлено перед элементом</p>');
+//     targetElement.insertAdjacentHTML('afterbegin', '<p>HTML вставлено в начало элемента</p>');
+//     targetElement.insertAdjacentHTML('beforeend', '<p>HTML вставлено в конец элемента</p>');
+//     targetElement.insertAdjacentHTML('afterend', '<p>HTML вставлено после элемента</p>');
 
 
 
