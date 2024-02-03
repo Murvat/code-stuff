@@ -474,7 +474,32 @@
 
 
 
+// let element = document.getElementById('exampleElement');
+// console.log('classList:', element.classList);
+// element.classList.remove('exampleClass');
+// console.log('After remove:', element.classList)
+
+// element.classList.toggle('toggleClass');
+// console.log('After toggle:', element.classList)
+
+// console.log('Contains "New class"', element.classList.contains('New class'));
+
+// element.style.backgroundColor = 'yellow';
 
 
+// let computedStyle = window.getComputedStyle(element);
+// console.log('Computed Style:', computedStyle)
 
-
+// console.log('offsetParent', element.offsetParent)
+// console.log('offsetLeft', element.offsetLeft)
+// console.log('offsetTop', element.offsetTop)
+// console.log('offsetWidth', element.offsetWidth);
+// console.log('offsetHeight', element.offsetHeight)
+// console.log('clientTop', element.clientTop)
+// console.log('clientLeft', element.clientLeft)
+// console.log('clientHeight', element.clientHeight)
+// console.log('clientWidth', element.clientWidth)
+// console.log('scrollWidth:', element.scrollWidth);
+// console.log('scrollHeight:', element.scrollHeight);
+// console.log('scrollLeft:', element.scrollLeft);
+// console.log('scrollTop:', element.scrollTop);
