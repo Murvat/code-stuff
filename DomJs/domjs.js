@@ -503,3 +503,38 @@
 // console.log('scrollHeight:', element.scrollHeight);
 // console.log('scrollLeft:', element.scrollLeft);
 // console.log('scrollTop:', element.scrollTop);
+
+ // Функция для вывода информации о прокрутке
+
+//  function logScrollInfo(){
+//     let scrollableDiv = document.getElementById('scrollableDiv');
+
+//     console.log('scrollWidth:', scrollableDiv.scrollWidth)
+//     console.log('scrollHeight:', scrollableDiv.scrollHeight)
+//     console.log('scrollLeft:', scrollableDiv.scrollLeft)
+//     console.log('scrollTop:', scrollableDiv.scrollTop)
+//  }
+
+ // Вызываем функцию для вывода информации о прокрутке
+//  logScrollInfo();
+  // Функция, которая будет вызвана при изменении прокрутки
+//   function handleScroll() {
+//     alert(logScrollInfo());
+    // Здесь вы можете добавить любую другую логику, которая должна выполняться при изменении прокрутки
+// }
+
+// Добавление обработчика события на прокрутку
+// document.getElementById('scrollableDiv').addEventListener('scroll', handleScroll);
+// handleScroll()
+// Пример использования цикла и оператора
+function logScrollInfo() {
+    var scrollableDiv = document.getElementById('scrollableDiv');
+
+    console.log('scrollWidth:', scrollableDiv.scrollWidth);
+    console.log('scrollHeight:', scrollableDiv.scrollHeight);
+    console.log('scrollLeft:', scrollableDiv.scrollLeft);
+    console.log('scrollTop:', scrollableDiv.scrollTop);
+}
+
+// Добавление обработчика события на прокрутку
+document.getElementById('scrollableDiv').onscroll = logScrollInfo;
