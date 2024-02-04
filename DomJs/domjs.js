@@ -527,14 +527,14 @@
 // document.getElementById('scrollableDiv').addEventListener('scroll', handleScroll);
 // handleScroll()
 // Пример использования цикла и оператора
-function logScrollInfo() {
-    var scrollableDiv = document.getElementById('scrollableDiv');
+// function logScrollInfo() {
+//     var scrollableDiv = document.getElementById('scrollableDiv');
 
-    console.log('scrollWidth:', scrollableDiv.scrollWidth);
-    console.log('scrollHeight:', scrollableDiv.scrollHeight);
-    console.log('scrollLeft:', scrollableDiv.scrollLeft);
-    console.log('scrollTop:', scrollableDiv.scrollTop);
-}
+//     console.log('scrollWidth:', scrollableDiv.scrollWidth);
+//     console.log('scrollHeight:', scrollableDiv.scrollHeight);
+//     console.log('scrollLeft:', scrollableDiv.scrollLeft);
+//     console.log('scrollTop:', scrollableDiv.scrollTop);
+// }
 
-// Добавление обработчика события на прокрутку
-document.getElementById('scrollableDiv').onscroll = logScrollInfo;
+// // Добавление обработчика события на прокрутку
+// document.getElementById('scrollableDiv').onscroll = logScrollInfo;

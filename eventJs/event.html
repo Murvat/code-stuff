@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body> -->
     <!-- <button class="b-1">Button1</button>
     <button class="b-2">Button2</button>
     <p>1</p> -->
@@ -23,7 +23,7 @@ const val2 = c.next();
 const val3 = c.next();
 const val4 = c.next();
 console.log({c, val1, val2, val3,val4}) -->
-//     function* ids(...args) {
+<!-- //     function* ids(...args) {
 //     let i =0;
 //     while(args.length > i){
 //         const id = args[i++];
@@ -135,4 +135,196 @@ console.log({c, val1, val2, val3,val4}) -->
 //      console.log(b.model)
      </script>
 </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="one">PRESS!</button> -->
+    <!-- <div id="parent">
+        <button id="child">Click me</button>
+      </div>
+    
+    <script src="./event.js"></script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ba-Gua Table</title>
+  <style>
+bagua-table th {
+  text-align: center;
+  font-weight: bold;
+}
+
+#bagua-table td {
+  width: 150px;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+
+#bagua-table .nw {
+  background: #999;
+}
+
+#bagua-table .n {
+  background: #03f;
+  color: #fff;
+}
+
+#bagua-table .ne {
+  background: #ff6;
+}
+
+#bagua-table .w {
+  background: #ff0;
+}
+
+#bagua-table .c {
+  background: #60c;
+  color: #fff;
+}
+
+#bagua-table .e {
+  background: #09f;
+  color: #fff;
+}
+
+#bagua-table .sw {
+  background: #963;
+  color: #fff;
+}
+
+#bagua-table .s {
+  background: #f60;
+  color: #fff;
+}
+
+#bagua-table .se {
+  background: #0c3;
+  color: #fff;
+}
+
+#bagua-table .highlight {
+  background: red;
+}  </style>
+</head>
+<body>
+
+    <table id="bagua-table">
+        <tr>
+          <th colspan="3"><em>Bagua</em> Chart: Direction, Element, Color, Meaning</th>
+        </tr>
+        <tr>
+          <td class="nw"><strong>Northwest</strong>
+            <br>Metal
+            <br>Silver
+            <br>Elders
+          </td>
+          <td class="n"><strong>North</strong>
+            <br>Water
+            <br>Blue
+            <br>Change
+          </td>
+          <td class="ne"><strong>Northeast</strong>
+            <br>Earth
+            <br>Yellow
+            <br>Direction
+          </td>
+        </tr>
+        <tr>
+          <td class="w"><strong>West</strong>
+            <br>Metal
+            <br>Gold
+            <br>Youth
+          </td>
+          <td class="c"><strong>Center</strong>
+            <br>All
+            <br>Purple
+            <br>Harmony
+          </td>
+          <td class="e"><strong>East</strong>
+            <br>Wood
+            <br>Blue
+            <br>Future
+          </td>
+        </tr>
+        <tr>
+          <td class="sw"><strong>Southwest</strong>
+            <br>Earth
+            <br>Brown
+            <br>Tranquility
+          </td>
+          <td class="s"><strong>South</strong>
+            <br>Fire
+            <br>Orange
+            <br>Fame
+          </td>
+          <td class="se"><strong>Southeast</strong>
+            <br>Wood
+            <br>Green
+            <br>Romance
+          </td>
+        </tr>
+    
+      </table>
+    <script src="./event.js"></script>    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Action Example</title>
+  <style>
+    .action-button {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="action-button" data-action="edit" onclick="performAction(this)">Edit</button>
+  <button class="action-button" data-action="delete" onclick="performAction(this)">Delete</button>
+
+  <script>
+    function performAction(button) {
+      // Получаем значение атрибута data-action
+      var action = button.getAttribute('data-action');
+
+      // Выполняем действие в зависимости от значения data-action
+      switch (action) {
+        case 'edit':
+          alert('Редактирование...');
+          // Здесь могут быть дополнительные действия для редактирования
+          break;
+        case 'delete':
+          alert('Удаление...');
+          // Здесь могут быть дополнительные действия для удаления
+          break;
+        default:
+          // Действие по умолчанию, если data-action не определено
+          break;
+      }
+    }
+  </script>
+
+</body>
 </html>
+

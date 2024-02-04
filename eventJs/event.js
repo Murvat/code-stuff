@@ -69,5 +69,48 @@
 // console.log(m1.genMethod(2).next())
 
 
+// class Menu{
+//     handleEvent(event){
+//         switch(event.type){
+//             case 'mousedown':
+//                 one.innerHTML = 'Has been pressed'
+//             break;
+//         case 'mouseup':
+//             one.innerHTML +='was pressed while ago' 
+//         break;     }
+//     }
 
+// }
+// let menu = new Menu();
+// one.addEventListener('mousedown', menu);
+// one.addEventListener('mouseup', menu)
 
+// function HandleClick(event){alert(event.target);}
+
+// let myButton = document.getElementById('one');
+
+// myButton.addEventListener('click', HandleClick)
+// document.getElementById('parent').addEventListener('click', function(){
+//     alert('parent clicked');
+// })
+// document.getElementById('child').addEventListener('click', function(){
+//     alert('child element');
+//     event.stopPropagation();
+// })
+
+// let selectedTd; // Исправление: опечатка в названии переменной
+
+// // Исправление: заменить table.onClick на table.addEventListener
+// document.querySelector('table').addEventListener('click', function(event) {
+//   let target = event.target;
+//   if (target.tagName !== 'TD') return;
+//   highlight(target);
+// });
+
+// function highlight(td) {
+//   if (selectedTd) {
+//     selectedTd.classList.remove('highlight');
+//   }
+//   selectedTd = td;
+//   selectedTd.classList.add('highlight');
+// }
