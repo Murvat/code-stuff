@@ -114,3 +114,147 @@
 //   selectedTd = td;
 //   selectedTd.classList.add('highlight');
 // }
+
+// const btn = document.querySelectorAll('.btn');
+
+// const handleClick= (event) =>{
+//     alert('click')
+// }
+
+// btn.forEach(button => {
+//     button.addEventListener('click', handleClick)
+// })
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     document.getElementById('listContainer').addEventListener('click', function (event) {
+//         if (event.target.tagName === 'LI') {
+//             alert('Вы кликнули на элемент списка: ' + event.target.textContent);
+//         }
+//     });
+// });
+
+
+// document.getElementById('buttonContainer').addEventListener('click', function(event){
+//     if(event.target.tagName === 'BUTTON');
+//     alert('You pressed:' + event.target.textContent)
+// })
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     const dynamicList = document.getElementById('dynamicList');
+//     const addItemButton = document.getElementById('addItemButton');
+//     const newItemInput = document.getElementById('newItemInput');
+//     addItemButton.addEventListener('click', function(){
+//         const newItemText = newItemInput.value.trim();
+
+
+//         if (newItemText !== ''){
+//             const newItem = document.createElement('li');
+//             newItem.textContent = newItemText;
+//             dynamicList.appendChild(newItem);
+//             newItemInput.value = '';
+//         }
+//     });
+
+//     dynamicList.addEventListener('click', function(event){
+//         if(event.target.tagName === 'LI'){
+//             const confirmed = confirm('Are you sure?')
+
+//             if(confirmed){
+//                 event.target.remove();
+//             }
+//         }
+//     })
+// })
+
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     const filterList = document.getElementById('filterList');
+//     const filterButtons = document.getElementById('filterButtons');
+
+//     filterButtons.addEventListener('click', function(event){
+//         if(event.target.tagName === 'BUTTON'){
+//             const category = event.target.dataset.category;
+
+//             Array.from(filterList.children).forEach(function(item){
+//                 const itemCategory = item.dataset.category;
+//                 if(category === 'all' || category === itemCategory){
+//                     item.style.display = 'block';
+//                 }else {
+//                     item.style.display = 'none';
+//                 }
+//             });
+//         }
+//     })
+// });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const taskList = document.getElementById('taskList');
+    const newTaskInput = document.getElementById('newTaskInput');
+    const addTaskButton = document.getElementById('addTaskButton');
+
+    addTaskButton.addEventListener('click', function () {
+        const taskText = newTaskInput.value.trim();
+
+        if (taskText !== '') {
+            const taskItem = createTaskElement(taskText);
+            taskList.appendChild(taskItem);
+            newTaskInput.value = '';
+        }
+    });
+
+    // Делегирование для редактирования и удаления задач
+    taskList.addEventListener('click', function (event) {
+        const target = event.target;
+
+        if (target.classList.contains('edit-task')) {
+            editTask(target);
+        } else if (target.classList.contains('delete-task')) {
+            deleteTask(target);
+        }
+    });
+
+    function createTaskElement(text) {
+        const taskItem = document.createElement('li');
+        taskItem.textContent = text;
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Редактировать';
+        editButton.classList.add('edit-task');
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Удалить';
+        deleteButton.classList.add('delete-task');
+
+        taskItem.appendChild(editButton);
+        taskItem.appendChild(deleteButton);
+
+        return taskItem;
+    }
+
+    function editTask(editButton) {
+        const taskItem = editButton.parentElement;
+        const newText = prompt('Введите новый текст задачи:', taskItem.textContent);
+
+        if (newText !== null) {
+            taskItem.textContent = newText;
+
+            // Добавляем кнопки редактирования и удаления снова
+            const editButton = document.createElement('button');
+            editButton.textContent = 'Редактировать';
+            editButton.classList.add('edit-task');
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Удалить';
+            deleteButton.classList.add('delete-task');
+
+            taskItem.appendChild(editButton);
+            taskItem.appendChild(deleteButton);
+        }
+    }
+
+    function deleteTask(deleteButton) {
+        const taskItem = deleteButton.parentElement;
+        taskItem.remove();
+    }
+});
