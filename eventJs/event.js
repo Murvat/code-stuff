@@ -188,73 +188,167 @@
 // });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const taskList = document.getElementById('taskList');
-    const newTaskInput = document.getElementById('newTaskInput');
-    const addTaskButton = document.getElementById('addTaskButton');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const taskList = document.getElementById('taskList');
+//     const newTaskInput = document.getElementById('newTaskInput');
+//     const addTaskButton = document.getElementById('addTaskButton');
 
-    addTaskButton.addEventListener('click', function () {
-        const taskText = newTaskInput.value.trim();
+//     addTaskButton.addEventListener('click', function () {
+//         const taskText = newTaskInput.value.trim();
 
-        if (taskText !== '') {
-            const taskItem = createTaskElement(taskText);
-            taskList.appendChild(taskItem);
-            newTaskInput.value = '';
-        }
-    });
+//         if (taskText !== '') {
+//             const taskItem = createTaskElement(taskText);
+//             taskList.appendChild(taskItem);
+//             newTaskInput.value = '';
+//         }
+//     });
 
-    // Делегирование для редактирования и удаления задач
-    taskList.addEventListener('click', function (event) {
-        const target = event.target;
+//     // Делегирование для редактирования и удаления задач
+//     taskList.addEventListener('click', function (event) {
+//         const target = event.target;
 
-        if (target.classList.contains('edit-task')) {
-            editTask(target);
-        } else if (target.classList.contains('delete-task')) {
-            deleteTask(target);
-        }
-    });
+//         if (target.classList.contains('edit-task')) {
+//             editTask(target);
+//         } else if (target.classList.contains('delete-task')) {
+//             deleteTask(target);
+//         }
+//     });
 
-    function createTaskElement(text) {
-        const taskItem = document.createElement('li');
-        taskItem.textContent = text;
+//     function createTaskElement(text) {
+//         const taskItem = document.createElement('li');
+//         taskItem.textContent = text;
 
-        const editButton = document.createElement('button');
-        editButton.textContent = 'Редактировать';
-        editButton.classList.add('edit-task');
+//         const editButton = document.createElement('button');
+//         editButton.textContent = 'Редактировать';
+//         editButton.classList.add('edit-task');
 
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Удалить';
-        deleteButton.classList.add('delete-task');
+//         const deleteButton = document.createElement('button');
+//         deleteButton.textContent = 'Удалить';
+//         deleteButton.classList.add('delete-task');
 
-        taskItem.appendChild(editButton);
-        taskItem.appendChild(deleteButton);
+//         taskItem.appendChild(editButton);
+//         taskItem.appendChild(deleteButton);
 
-        return taskItem;
+//         return taskItem;
+//     }
+
+//     function editTask(editButton) {
+//         const taskItem = editButton.parentElement;
+//         const newText = prompt('Введите новый текст задачи:', taskItem.textContent);
+
+//         if (newText !== null) {
+//             taskItem.textContent = newText;
+
+//             // Добавляем кнопки редактирования и удаления снова
+//             const editButton = document.createElement('button');
+//             editButton.textContent = 'Редактировать';
+//             editButton.classList.add('edit-task');
+
+//             const deleteButton = document.createElement('button');
+//             deleteButton.textContent = 'Удалить';
+//             deleteButton.classList.add('delete-task');
+
+//             taskItem.appendChild(editButton);
+//             taskItem.appendChild(deleteButton);
+//         }
+//     }
+
+//     function deleteTask(deleteButton) {
+//         const taskItem = deleteButton.parentElement;
+//         taskItem.remove();
+//     }
+// });
+
+
+// const target= document.getElementById('target');
+// const container = document.getElementById('container');
+
+// target.addEventListener('mousedown', function(event) {
+//     console.log('mousedown');
+// });
+// target.addEventListener('mouseup', function(event){
+//     console.log('mouseup')
+// })
+
+// container.addEventListener('mousemove', function(event){
+//     console.log(`mousemove-clientX: ${event.clientX}, clientY: ${event.clientY}`)
+// })
+// 4. mouseover event
+// target.addEventListener('mouseover', function(event) {
+//     console.log('mouseover');
+// });
+// // 5. mouseout event
+// target.addEventListener('mouseout', function(event) {
+//     console.log('mouseout');
+// });
+// // 6. mouseenter event
+// target.addEventListener('mouseenter', function(event) {
+//     console.log('mouseenter');
+// });
+// container.addEventListener('mousemove', function(event) {
+//     console.log(`clientX: ${event.clientX}, clientY: ${event.clientY}`);
+//     console.log(`pageX: ${event.pageX}, pageY: ${event.pageY}`);
+//     console.log(`target: ${event.target.id}`);
+//     console.log(`relatedTarget: ${event.relatedTarget ? event.relatedTarget.id : 'null'}`);
+// });
+// let isDragging = false;
+// let initialX;
+// let initialY;
+// target.addEventListener('mousedown', function(event){
+//     isDragging = true;
+//     initialX = event.clientX - target.offsetLeft;
+//     initialX = event.clientY - target.offsetTop;
+// });
+
+
+// container.addEventListener('mousedown', function(event){
+//     isDragging = true;
+//     initialX = event.clientX-target.offsetLeft;
+//     initialy = event.clientY - target.offsetTop;
+// });
+
+// container.addEventListener('mousemove', function(event){
+//     if(isDragging){
+//         const newX = event.clientX - initialX;
+//         const newY = event.clientY- initialY;
+
+//         const maxX = container.clientWidth - target.offsetWidth;
+//         const maxY = container.clientHeight - target.offsetHeight;
+
+//         const boundedX = Math.min(Math.max(0, newX), maxX);
+//         const boundedY = Math.min(Math.max(0, newY), maxY);
+
+//         target.style.left = `${boundedX}px`;
+//         target.style.top = `${boundedY}px`;
+//     }
+// });
+
+// container.addEventListener('mouseup', function(event) {
+//     isDragging = false
+// }
+// )
+// document.addEventListener('keydown', function(event) {
+//     console.log(`keydown - Key pressed: ${event.key}, Code: ${event.code}`);
+// });
+// document.addEventListener('keyup', function(event) {
+//     console.log(`keyup - Key released: ${event.key}, Code: ${event.code}`);
+// });
+
+// window.addEventListener('scroll', function(event) {
+//     console.log('scroll');
+// });
+
+// document.addEventListener('keydown', function(event){
+//     if(event.key === 'ArrowDown'){
+//         console.log('Arrow donw key pressed');
+//     } 
+//     if(event.code === 'KeyA'){
+//         console.log('key A pressed')
+//     }
+// })
+
+document.addEventListener('keydown', function(event){
+    if(event.key === 'Arrowdown' || event.key === 'ArrowUp') {
+        event.preventDefault(); // Prevent scrolling when arrow keys are pressed
     }
-
-    function editTask(editButton) {
-        const taskItem = editButton.parentElement;
-        const newText = prompt('Введите новый текст задачи:', taskItem.textContent);
-
-        if (newText !== null) {
-            taskItem.textContent = newText;
-
-            // Добавляем кнопки редактирования и удаления снова
-            const editButton = document.createElement('button');
-            editButton.textContent = 'Редактировать';
-            editButton.classList.add('edit-task');
-
-            const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Удалить';
-            deleteButton.classList.add('delete-task');
-
-            taskItem.appendChild(editButton);
-            taskItem.appendChild(deleteButton);
-        }
-    }
-
-    function deleteTask(deleteButton) {
-        const taskItem = deleteButton.parentElement;
-        taskItem.remove();
-    }
-});
+})
