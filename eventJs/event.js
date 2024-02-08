@@ -347,8 +347,83 @@
 //     }
 // })
 
-document.addEventListener('keydown', function(event){
-    if(event.key === 'Arrowdown' || event.key === 'ArrowUp') {
-        event.preventDefault(); // Prevent scrolling when arrow keys are pressed
-    }
-})
+// document.addEventListener('keydown', function(event){
+//     if(event.key === 'Arrowdown' || event.key === 'ArrowUp') {
+//         event.preventDefault(); // Prevent scrolling when arrow keys are pressed
+//     }
+// })
+// const forms = document.forms;
+// console.log(forms);
+// const form = document.getElementById('form2');
+// const elements = form.elements;
+// console.log(elements);
+// const usernameInput = document.getElementById('username');
+// const agreeCheckbox = document.getElementById('agree');
+
+// usernameInput.value = 'John Doe';
+// agreeCheckbox.checked = true;
+
+
+// const messageTextarea = document.getElementById('message');
+// messageTextarea.value = 'This is a sample message';
+
+// const colorsSelect = document.getElementById('colors');
+// console.log(colorsSelect.options);
+// console.log(colorsSelect.value);
+// console.log(colorsSelect.selectedIndex);
+document.addEventListener('DOMContentLoaded', function(){
+//     const input1 = document.getElementById('input1');
+//     input1.addEventListener('focus', function(){
+//         this.classList.add('highlight')
+//     });
+//     input1.addEventListener('blur', function(){
+//         this.classList.remove('highlight');
+//     })
+
+// const input2 = document.getElementById('input2');
+// input2.addEventListener('focusin', function(){
+//     this.classList.add('highlight');
+//     input2.addEventListener('focusout', function(){
+//         this.classList.remove('highlight');
+//     })
+// const button1 = document.getElementById('button1');
+// const button2 = document.getElementById('button2');
+// button1.addEventListener('focus', function(){
+//     this.style.background = 'red';
+// })
+
+// button1.addEventListener('blur', function(){
+//     this.style.backgroundColor='';
+// })
+
+// button2.addEventListener('focus', function(){
+//     this.style.backgroundColor = 'blue'
+// });
+// button2.addEventListener('blur', function(){
+//     this.style.backgroundColor='';
+// })
+
+// const div1 = document.getElementById('div1');
+// div1.addEventListener('focusin', function(){
+//     this.style.border = '2px solid green';
+// })
+// div1.addEventListener('focusout', function(){
+//     this.style.border = '';
+// });
+
+// const list = document.getElementById('list');
+// list.addEventListener('focusin', function(event){
+//     const target = event.target;
+//     if(target.tagName === 'LI') {
+//         target.style.backgroundColor = 'yellow';
+//     }
+// });
+
+// list.addEventListener('focusout', function(){
+//     const target = event.target;
+//     if(target.tagName === "LI"){
+//         target.style.backgroundColor = '';
+//     }
+// })
+
+// });
