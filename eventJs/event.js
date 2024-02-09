@@ -371,7 +371,7 @@
 // console.log(colorsSelect.options);
 // console.log(colorsSelect.value);
 // console.log(colorsSelect.selectedIndex);
-document.addEventListener('DOMContentLoaded', function(){
+// document.addEventListener('DOMContentLoaded', function(){
 //     const input1 = document.getElementById('input1');
 //     input1.addEventListener('focus', function(){
 //         this.classList.add('highlight')
@@ -427,3 +427,60 @@ document.addEventListener('DOMContentLoaded', function(){
 // })
 
 // });
+
+// document.getElementById('selectElement').addEventListener('change', function(event){
+//     console.log('Selected option:', event.target.value);
+// });
+
+// document.getElementById('inputElement').addEventListener('input', function(event){
+//     console.log('Input:', event.target.value);
+// });
+
+// document.getElementById('cutElement').addEventListener('cut', function(event){
+//     console.log('Text cut')
+// })
+
+// document.getElementById('copyElement').addEventListener('copy', function(event){
+//     console.log('text copied');
+// })
+
+// document.getElementById('pasteElement').addEventListener('paste', function(event){
+//     console.log('Text pasted');
+// });
+// document.getElementById('formElement').addEventListener('submit', function(event){
+//     // event.preventDefault();
+// })
+
+
+// Пример обработчика события submit на элементе формы
+document.getElementById('formElement').addEventListener('submit', function(event) {
+    event.preventDefault(); // Отмена отправки формы по умолчанию
+
+    // Валидация данных перед отправкой
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const usernameError = document.getElementById('usernameError');
+    const passwordError = document.getElementById('passwordError');
+    let isValid = true;
+
+    if (username.trim() === '') {
+        usernameError.textContent = 'Username is required';
+        isValid = false;
+    } else {
+        usernameError.textContent = '';
+    }
+
+    if (password.trim() === '') {
+        passwordError.textContent = 'Password is required';
+        isValid = false;
+    } else {
+        passwordError.textContent = '';
+    }
+
+    if (isValid) {
+        const formData = new FormData(event.target);
+        console.log('Form submitted with data:', Object.fromEntries(formData.entries()));
+    } else {
+        console.log('Form submission aborted due to validation errors.');
+    }
+});
