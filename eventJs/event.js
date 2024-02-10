@@ -484,3 +484,4 @@ document.getElementById('formElement').addEventListener('submit', function(event
         console.log('Form submission aborted due to validation errors.');
     }
 });
+
