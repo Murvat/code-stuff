@@ -477,6 +477,8 @@ document.getElementById('formElement').addEventListener('submit', function(event
         passwordError.textContent = '';
     }
 
+    
+
     if (isValid) {
         const formData = new FormData(event.target);
         console.log('Form submitted with data:', Object.fromEntries(formData.entries()));
