@@ -114,7 +114,6 @@
 //     yield 50;
 //     yield 60;
 // }
-
 // function* genFn(){
 //     yield* gen1();
 //     yield* gen2();
