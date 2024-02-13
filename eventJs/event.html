@@ -581,7 +581,7 @@ bagua-table th {
 </html>
 
  -->
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
  <html lang="en">
  <head>
  <meta charset="UTF-8">
@@ -598,27 +598,27 @@ bagua-table th {
  </head>
  <body>
  
- <!-- Пример события change на элементе select -->
- <select id="selectElement">
+  Пример события change на элементе select -->
+ <!-- <select id="selectElement">
      <option value="option1">Option 1</option>
      <option value="option2">Option 2</option>
      <option value="option3">Option 3</option>
  </select>
  
- <!-- Пример события input на элементе input -->
- <input type="text" id="inputElement" placeholder="Type something...">
+  Пример события input на элементе input -->
+ <!-- <input type="text" id="inputElement" placeholder="Type something..."> -->
  
  <!-- Пример события cut на элементе input -->
- <input type="text" id="cutElement" placeholder="Try to cut this text">
+ <!-- <input type="text" id="cutElement" placeholder="Try to cut this text"> -->
  
  <!-- Пример события copy на элементе input -->
- <input type="text" id="copyElement" value="Copy this text">
+ <!-- <input type="text" id="copyElement" value="Copy this text"> -->
  
  <!-- Пример события paste на элементе input -->
- <input type="text" id="pasteElement" placeholder="Try to paste here">
+ <!-- <input type="text" id="pasteElement" placeholder="Try to paste here"> -->
  
  <!-- Пример события submit на элементе формы -->
- <form id="formElement">
+ <!-- <form id="formElement">
      <input type="text" name="username" id="username" placeholder="Enter username">
      <span class="error-message" id="usernameError"></span><br>
      <input type="password" name="password" id="password" placeholder="Enter password">
@@ -630,5 +630,429 @@ bagua-table th {
  </script>
  
  </body>
- </html>
+ </html> -->
+
+ <!-- <!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 3px 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>1:1</td>
+      <td>2:1</td>
+      <td>3:1</td>
+      <td>4:1</td>
+      <td>5:1</td>
+    </tr>
+    <tr>
+      <td>1:2</td>
+      <td>2:2</td>
+      <td>3:2</td>
+      <td>4:2</td>
+      <td>5:2</td>
+    </tr>
+    <tr>
+      <td>1:3</td>
+      <td>2:3</td>
+      <td>3:3</td>
+      <td>4:3</td>
+      <td>5:3</td>
+    </tr>
+    <tr>
+      <td>1:4</td>
+      <td>2:4</td>
+      <td>3:4</td>
+      <td>4:4</td>
+      <td>5:4</td>
+    </tr>
+    <tr>
+      <td>1:5</td>
+      <td>2:5</td>
+      <td>3:5</td>
+      <td>4:5</td>
+      <td>5:5</td>
+    </tr>
+  </table>
+  <script>
+    let table = document.body.firstElementChild;
+    console.log(table);
+    for(let i = 0; i< table.rows.length; i++) {
+      let row = table.rows[i];
+      row.cells[i].style.backgroundColor = 'red';
+    }
+  </script>
+ </body>
+ </html> -->
+ <!-- <!DOCTYPE HTML>
+ <html>
+ <body>
  
+   <ul>
+     <li>Животные
+       <ul>
+         <li>Млекопитающие
+           <ul>
+             <li>Коровы</li>
+             <li>Ослы</li>
+             <li>Собаки</li>
+             <li>Тигры</li>
+           </ul>
+         </li>
+         <li>Другие
+           <ul>
+             <li>Змеи</li>
+             <li>Птицы</li>
+             <li>Ящерицы</li>
+           </ul>
+         </li>
+       </ul>
+     </li>
+     <li>Рыбы
+       <ul>
+         <li>Аквариумные
+           <ul>
+             <li>Гуппи</li>
+             <li>Рыба-ангел</li>
+           </ul>
+         </li>
+         <li>Морские
+           <ul>
+             <li>Морская форель</li>
+           </ul>
+         </li>
+       </ul>
+     </li>
+   </ul>
+ 
+   <script>
+    for(let li of document.querySelectorAll('li')){
+      let title = li.firstChild.data;
+      title = title.trim();
+      let count = li.getElementsByTagName('li').length;
+      console.log(title + ':' + count)
+    }
+   </script>
+ 
+ </body>
+ </html> -->
+ <!-- <!DOCTYPE HTML>
+ <html>
+ <head>
+   <meta charset="utf-8">
+   <title>Каталог животных</title>
+ </head>
+ <body>
+ 
+ <section id="animals">
+   <h1>Каталог животных</h1>
+ 
+   <div class="category">
+     <h2>Млекопитающие</h2>
+     <ul>
+       <li>Коровы</li>
+       <li>Ослы</li>
+       <li>Собаки</li>
+       <li>Тигры</li>
+     </ul>
+   </div>
+ 
+   <div class="category">
+     <h2>Другие</h2>
+     <ul>
+       <li>Змеи</li>
+       <li>Птицы</li>
+       <li>Ящерицы</li>
+     </ul>
+   </div>
+ 
+   <div class="category">
+     <h2>Рыбы</h2>
+     <ul>
+       <li>Аквариумные</li>
+         <ul>
+           <li>Гуппи</li>
+           <li>Рыба-ангел</li>
+         </ul>
+       </li>
+       <li>Морские</li>
+         <ul>
+           <li>Морская форель</li>
+         </ul>
+       </li>
+     </ul>
+   </div>
+ </section>
+ 
+ <script> -->
+  <!-- //  const categories = document.querySelectorAll('.category');
+  //  for (let category of categories) {
+  //    const title = category.querySelector('h2').textContent.trim();
+  //    const count = category.querySelectorAll('li').length;
+  //    console.log(`${title}: ${count}`);
+  //  } -->
+<!-- //  </script>
+ 
+//  </body>
+//  </html>
+ 
+
+ <!DOCTYPE HTML>
+<html>
+<body>
+
+<ul id="animalList">
+  <li>Животные
+    <ul>
+      <li>Млекопитающие
+        <ul>
+          <li>Коровы</li>
+          <li>Ослы</li>
+          <li>Собаки</li>
+          <li>Тигры</li>
+        </ul>
+      </li>
+      <li>Другие
+        <ul>
+          <li>Змеи</li>
+          <li>Птицы</li>
+          <li>Ящерицы</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Рыбы
+    <ul>
+      <li>Аквариумные
+        <ul>
+          <li>Гуппи</li>
+          <li>Рыба-ангел</li>
+        </ul>
+      </li>
+      <li>Морские
+        <ul>
+          <li>Морская форель</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+</script>
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Примеры методов поиска элементов</title>
+</head>
+<body>
+  <h1>Примеры методов поиска элементов</h1>
+
+  <section id="main-section">
+    <h2>Раздел "Главный"</h2>
+    <p>Этот раздел содержит несколько элементов, которые мы будем использовать для демонстрации методов поиска.</p>
+
+    <ul class="list-items">
+      <li>Пункт 1</li>
+      <li>Пункт 2</li>
+      <li class="active">Пункт 3 (активный)</li>
+      <li>Пункт 4</li>
+    </ul>
+
+    <button id="my-button">Кнопка</button>
+
+    <input type="text" name="user-name" placeholder="Введите имя">
+  </section>
+
+  <script>
+    const myButton = document.getElementById('my-button');
+    console.log('getElementByIDd: ', myButton);
+
+    const listItems = document.getElementsByTagName('li');
+    console.log('getElementByTagName: ', listItems[0]);
+
+    const activeItem = document.getElementsByClassName('active')[0];
+    console.log('getElementsByClassName: ', activeItem)
+
+    const userNameInput = document.getElementsByName('user-name'
+    )[0]
+    console.log(userNameInput)
+
+    const mainSection = document.querySelector('#main-section');
+    console.log('querySelector:' , mainSection)
+
+    myButton.textContent = 'Нажата';
+    activeItem.classList.add('selected');
+
+    const userName =  userNameInput.value;
+    // mainSection.style.display = 'none'
+  </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Примеры методов поиска элементов</title>
+</head>
+<body>
+  <h1>Примеры методов поиска элементов</h1>
+
+  <h2>1. matches</h2>
+
+  <p>
+    Этот метод позволяет проверить, соответствует ли элемент заданному CSS-селектору.
+  </p>
+
+  <div class="box">
+    <p>Я - элемент "box"</p>
+  </div>
+  <script>
+    const boxElement = document.querySelector('.box');
+    console.log('matches:', boxElement.matches('.box'));
+  </script>
+
+  <h2>2. closest</h2>
+
+  <p>
+    Этот метод позволяет найти ближайший к текущему элементу родительский элемент, 
+    который соответствует заданному CSS-селектору.
+  </p>
+
+  <div class="container">
+    <div class="inner-box">
+      <p>Я - элемент "inner-box"</p>
+    </div>
+  </div>
+<script> -->
+  <!-- // const innerBoxElement = document.querySelector('inner-box');
+  // const closestContainer = innerBoxElement.closest('.container');
+  // console.log('closest: ', closestContainer)
+
+  const innerBoxElement = document.querySelector('.inner-box');
+    const closestContainer = innerBoxElement.closest('.container');
+    console.log('closest:', closestContainer);
+</script>
+  <h2>3. tr.cells</h2>
+
+  <p>
+    Этот метод позволяет получить коллекцию всех ячеек (<td>) в строке таблицы (<tr>).
+  </p>
+
+  <table>
+    <tr>
+      <td>Ячейка 1</td>
+      <td>Ячейка 2</td>
+      <td>Ячейка 3</td>
+    </tr>
+  </table>
+
+  <script>
+    const tableRow = document.querySelector('tr');
+    const cells = tableRow.cells;
+    console.log('cells:', cells[1])
+  </script>
+  <h2>4. tr.sectionRowIndex</h2>
+
+  <p>
+    Этот метод позволяет получить индекс строки (<tr>) в секции (tbody) таблицы.
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Ячейка 1</td>
+        <td>Ячейка 2</td>
+        <td>Ячейка 3</td>
+      </tr>
+      <tr>
+        <td>Ячейка 4</td>
+        <td>Ячейка 5</td>
+        <td>Ячейка 6</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    const tableRow2 = document.querySelector('tr');
+    const sectionRowIndex2 = tableRow2.sectionRowIndex;
+    console.log('sectionRowIndex', sectionRowIndex2)
+  </script>
+  <table>
+    <tr>
+      <td>Ячейка 1</td>
+      <td>Ячейка 2</td>
+      <td>Ячейка 3</td>
+    </tr>
+  </table>
+  <script>
+    const tableCell = document.querySelector('td');
+    const cellIndex = tableCell.cellIndex;
+    console.log('cellIndex:', cellIndex);
+  </script>
+  <table>
+    <tr>
+      <td>Ячейка 1</td>
+      <td>Ячейка 2</td>
+      <td>Ячейка 3</td>
+    </tr>
+    <tr>
+      <td>Ячейка 4</td>
+      <td>Ячейка 5</td>
+      <td>Ячейка 6</td>
+    </tr>
+  </table>
+  
+  <script>
+    const table = document.querySelector('table');
+    const rows = table.rows;
+    console.log('rows:', rows); // Выводит коллекцию всех элементов <tr>
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attribute Methods Example</title>
+</head>
+<body>
+
+<button id="myButton" data-custom-attribute="example">Click me</button>
+
+<script>
+  const button = document.getElementById('myButton');
+  const attributeValue = button.getAttribute('data-custom--attribute');
+  console.log('Attriute value: ', attributeValue);
+
+  button.setAttribute('data-custom-attribute', 'new-value');
+
+  const hasAttribute = button.hasAttribute('data-custom-attribute');
+  console.log('Has attribute', hasAttribute);
+
+  // button.removeAttribute('data-custom-attribute');
+
+  const hasAttributeAfterRemove = button.hasAttribute('data-custom-attribute');
+  console.log('Has attribute after remove: ', hasAttributeAfterRemove)
+</script>
+
+</body>
+</html>

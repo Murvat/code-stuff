@@ -453,37 +453,54 @@
 
 
 // Пример обработчика события submit на элементе формы
-document.getElementById('formElement').addEventListener('submit', function(event) {
-    event.preventDefault(); // Отмена отправки формы по умолчанию
+// document.getElementById('formElement').addEventListener('submit', function(event) {
+//     event.preventDefault(); // Отмена отправки формы по умолчанию
 
-    // Валидация данных перед отправкой
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const usernameError = document.getElementById('usernameError');
-    const passwordError = document.getElementById('passwordError');
-    let isValid = true;
+//     // Валидация данных перед отправкой
+//     const username = document.getElementById('username').value;
+//     const password = document.getElementById('password').value;
+//     const usernameError = document.getElementById('usernameError');
+//     const passwordError = document.getElementById('passwordError');
+//     let isValid = true;
 
-    if (username.trim() === '') {
-        usernameError.textContent = 'Username is required';
-        isValid = false;
-    } else {
-        usernameError.textContent = '';
-    }
+//     if (username.trim() === '') {
+//         usernameError.textContent = 'Username is required';
+//         isValid = false;
+//     } else {
+//         usernameError.textContent = '';
+//     }
 
-    if (password.trim() === '') {
-        passwordError.textContent = 'Password is required';
-        isValid = false;
-    } else {
-        passwordError.textContent = '';
-    }
+//     if (password.trim() === '') {
+//         passwordError.textContent = 'Password is required';
+//         isValid = false;
+//     } else {
+//         passwordError.textContent = '';
+//     }
 
     
 
-    if (isValid) {
-        const formData = new FormData(event.target);
-        console.log('Form submitted with data:', Object.fromEntries(formData.entries()));
-    } else {
-        console.log('Form submission aborted due to validation errors.');
-    }
-});
+//     if (isValid) {
+//         const formData = new FormData(event.target);
+//         console.log('Form submitted with data:', Object.fromEntries(formData.entries()));
+//     } else {
+//         console.log('Form submission aborted due to validation errors.');
+//     }
+// });
 
+
+// let table = document.getElementById('age-table');
+
+// table.getElementsByTagName('lable');
+
+// document.querySelectorAll('#age-table label'
+// )
+// table.rows[0].cells[0]
+
+// table.getElementsByTagName('td')[0];
+
+// table.querySelector('td');
+
+// let form  =document.getElementsByName('search')[0];
+
+// document.querySelector('form[name = search]');
+// form.getElementsByTagName('in')
