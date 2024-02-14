@@ -160,7 +160,7 @@ console.log('Index of the cell in the row:', cell.cellIndex);        </script>
     </script>
 </body>
 </html> -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -190,8 +190,8 @@ console.log('Index of the cell in the row:', cell.cellIndex);        </script>
             </tr>
         </thead>
         <tbody>
-            <!-- Здесь будут добавлены строки с данными студентов -->
-        </tbody>
+             Здесь будут добавлены строки с данными студентов -->
+        <!-- </tbody> 
     </table>
 
     <script>
@@ -225,4 +225,119 @@ console.log('Index of the cell in the row:', cell.cellIndex);        </script>
         form.reset();
         }</script>
 </body>
-</html>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Attributes and Methods Example</title>
+</head>
+<body>
+    <div id="container" data-role="parent">
+        <span class="highlight" data-value="1">Item 1</span>
+        <span class="highlight" data-value="2">Item 2</span>
+        <span class="highlight" data-value="3">Item 3</span>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+    //     const hasDataRoleAttribute = container.hasAttribute('data-role');
+    //     console.log(hasDataRoleAttribute);
+
+    //     const dataRoleValue = container.getAttribute('data-role');
+    //     console.log('Value of data-role:', dataRoleValue)
+
+    //     container.setAttribute('data-type', 'container');
+    //     console.log('Updated attributes', container.attributes)
+    //    container.removeAttribute(container.attributes)
+    //    for(let i = 0; i<container.attributes.length;i++ ){
+    //    container.removeAttribute('data-role')
+    //    }
+    //    console.log(container.attributes)
+    // const newElement = document.createElement('div');
+    // newElement.textContent = 'New Element';
+
+    // const clonedElement = newElement.cloneNode(true);
+    // container.append(newElement);
+    // container.prepend(clonedElement);
+    // const highlightSpan = document.querySelector('.highlight')
+    // highlightSpan.before('<span>New span before highlight</span>')   
+    // highlightSpan.after('<span>New span after highlight</span>')
+    // const replacementElement = document.createElement('p');
+    // replacementElement.textContent = 'Replaced Element';
+    // highlightSpan.replaceWith(replacementElement);
+
+    // const removeElement = document.querySelector('div');
+    // const removedElement = document.querySelector('div');
+    //     removedElement.remove();
+    </script>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <form id="todoForm">
+        <input type="text" id="todoInput" placeholder="Enter a new task">
+        <button type="submit">Add Task</button>
+    </form>
+    <ul id="todoList">
+        <!-- Список дел будет отображаться здесь -->
+    </ul>
+
+    <script>
+        const todoForm= document.getElementById('todoForm');
+        const todoInput = document.getElementById('todoInput');
+        const todoList = document.getElementById('todoList')
+
+        todoForm.addEventListener('submit', function(event){
+            event.preventDefault();
+            const taskText = todoInput.value.trim();
+
+            if(taskText !== ''){
+                const taskItem = document.createElement('li');
+                const taskCheckbox =document.createElement('input');
+
+                taskCheckbox.type = 'checkbox';
+                taskCheckbox.addEventListener('change', function(){
+                    if(taskCheckbox.checked){
+                        taskTextElement.classList.add('completed');
+                    } else {
+                        taskTextElement.classList.remove('completed');
+                    }
+                });
+
+                const taskTextElement = document.createElement('span');
+                taskTextElement.textContent = taskText;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent='delete';
+
+                deleteButton.addEventListener('click', function(){
+                    taskItem.remove();
+                });
+
+                taskItem.append(taskCheckbox);
+                taskItem.append(taskTextElement);
+                taskItem.append(deleteButton);
+
+                todoList.appendChild(taskItem);
+
+                todoInput.value  =''
+            }
+        })
+    </script>
+</body>
+</html> -->
+
