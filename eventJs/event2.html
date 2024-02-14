@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table DOM Properties Examples</title>
+</head>
+<body>
+    <table id="myTable">
+        <caption>My Table</caption>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        const myTable = document.getElementById('myTable')
+        console.log('Rows of the table:', myTable.rows[2].innerHTML);
+        console.log('caption:', myTable.caption);
+        console.log('Thead', myTable.tHead);
+        console.log('tfoot:', myTable.tFoot);
+        const tbody = myTable.tBodies[0];
+        console.log('Rows of tbody:', tbody.rows);
+        const row = tbody.rows[0];
+        console.log('Index of the row in the table:', row.rowIndex);
+
+const cell = row.cells[0];
+console.log('Index of the cell in the row:', cell.cellIndex);        </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Table DOM Operations</title>
+</head>
+<body>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Math Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>22</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>20</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>21</td>
+                <td>85</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+    const studentTable = document.getElementById('studentTable');
+    const tbody = studentTable.tBodies[0];
+    const rows = tbody.rows;
+    console.log(studentTable)
+    console.log(tbody)
+    console.log(rows)
+    const studentCount = rows.length;
+    console.log(studentCount);
+    let totalAge = 0;
+    for(let i = 0; i< studentCount; i++){
+        totalAge += parseInt(rows[i].cells[1].textContent);
+    }
+    const averageAge = totalAge / studentCount;
+    console.log('Average:', averageAge);
+
+    let mathAbove80Count = 0;
+    for(let i =0; i<studentCount;i++){
+        const mathScore = parseInt(rows[i].cells[2].textContent);
+        if (mathScore >  80){
+            mathAbove80Count++
+        }
+    }
+    console.log('Number', mathAbove80Count)
+
+    let youngestAge = Infinity;
+    let youngestStudentName = '';
+    for(let i = 0; i< studentCount; i++){
+        const age = parseInt(rows[i].cells[1].textContent)
+        if(age < youngestAge){
+            youngestAge = age;
+            youngestStudentName = rows[i].cells[0].textContent;
+        }
+    }
+    console.log('youngest student', youngestStudentName, 'with age:', youngestAge)
+    </script>
+</body>
+</html>
+

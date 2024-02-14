@@ -1027,7 +1027,7 @@ bagua-table th {
 </body>
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -1055,4 +1055,92 @@ bagua-table th {
 </script>
 
 </body>
-</html>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Menu Item</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        .selected {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li onclick="selectItem(this)">Item 1</li>
+        <li onclick="selectItem(this)">Item 2</li>
+        <li onclick="selectItem(this)">Item 3</li>
+        <li onclick="selectItem(this)">Item 4</li>
+        <li onclick="selectItem(this)">Item 5</li>
+    </ul>
+
+    <button onclick="moveMenuItem('up')">Move Up</button>
+    <button onclick="moveMenuItem('down')">Move Down</button>
+
+    <script>
+        function selectItem(item) {
+            const menu = document.getElementById('menu');
+            const items = menu.getElementsByTagName('li');
+            for (let i = 0; i < items.length; i++) {
+                items[i].classList.remove('selected');
+            }
+            item.classList.add('selected');
+        }
+
+        function moveMenuItem(direction) {
+            const selectedItem = document.querySelector('#menu li.selected');
+
+            if (!selectedItem) return; // Ничего не делаем, если пункт не выбран
+
+            const sibling = direction === 'up' ? selectedItem.previousElementSibling : selectedItem.nextElementSibling;
+
+            if (sibling) {
+                if (direction === 'up') {
+                    selectedItem.parentNode.insertBefore(selectedItem, sibling);
+                } else {
+                    selectedItem.parentNode.insertBefore(sibling, selectedItem);
+                }
+            }
+        }
+    </script>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Properties Tasks</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Task 1</h2>
+        <p>This is the first task</p>
+        <h2>Task 2</h2>
+        <p>This is the second task</p>
+        <h2>Task 3</h2>
+        <p>This is the third task</p>
+    </div>
+    <script>
+      const task1 = document.querySelector('h2:first-of-type + p');
+      console.log('Parent Node of the <p>', task1.parentNode)
+    const task2 = document.getElementById('container');
+    console.log('ChildNodes of div', task2.childNodes)
+   const task3 = document.getElementById('container');
+   console.log('First child of div elem:', task3.firstChild, task3.childNodes[0] )
+   console.log('First child of div elem:', task3.lastChild, task3.childNodes[0] )
+   const lastH2 = document.querySelector("h2:last-of-type")
+   console.log('Previous Sibling of the Last <h2>:', lastH2.previousElementSibling, lastH2.previousSibling)
+   const firstP = document.querySelector('p');
+   console.log('next sibling', firstP.nextElementSibling, firstP.nextSibling)
+   </script>
+</body>
+</html> -->
+
