@@ -47,7 +47,8 @@ const cell = row.cells[0];
 console.log('Index of the cell in the row:', cell.cellIndex);        </script>
 </body>
 </html> -->
-<!DOCTYPE html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -119,5 +120,43 @@ console.log('Index of the cell in the row:', cell.cellIndex);        </script>
     console.log('youngest student', youngestStudentName, 'with age:', youngestAge)
     </script>
 </body>
-</html>
+</html> -->
 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Methods and Properties Examples</title>
+</head>
+<body>
+    <div id="parent">
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+    </div>
+
+    <script>
+        const parent = document.getElementById('parent');
+        const child1 = document.querySelector('.child')
+        console.log('Does match the selector:', child1.matches('.child'))
+        const closestParent = child1.closest('#parent');
+        console.log(closestParent)
+        const divElements = parent.getElementsByTagName('div');
+        console.log(divElements);
+
+        const node = document.createElement('p');
+
+        node.textContent = 'Example Text content';
+        console.log('Node type:', node.nodeType);
+        console.log('Node name: ', node.nodeName);
+        console.log('Node Value: ', node.nodeValue);
+        console.log('TextContent: ', node.textContent);
+        console.log('InnerHtml: ', node.innerHTML);
+        console.log('OuterHtml: ', node.outerHTML);
+        console.log('hiddenAttribute: ', node.hidden);
+        node.hidden = true;
+        console.log('Hidden attribute after setting to true:', node.hidden);
+    </script>
+</body>
+</html> -->
