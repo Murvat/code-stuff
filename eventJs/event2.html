@@ -293,8 +293,8 @@ console.log('Index of the cell in the row:', cell.cellIndex);        </script>
         <button type="submit">Add Task</button>
     </form>
     <ul id="todoList">
-        <!-- Список дел будет отображаться здесь -->
-    </ul>
+        Список дел будет отображаться здесь -->
+    <!-- </ul>
 
     <script>
         const todoForm= document.getElementById('todoForm');
@@ -337,6 +337,103 @@ console.log('Index of the cell in the row:', cell.cellIndex);        </script>
                 todoInput.value  =''
             }
         })
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Elements Properties</title>
+    <style>
+        #container {
+            width: 300px;
+            height: 200px;
+            overflow: auto;
+            border: 1px solid black;
+        }
+        #inner {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="inner">
+            Inner content -->
+        <!-- </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const inner = document.getElementById('inner');
+        console.log('Offset Parent:', inner.offsetParent);
+        console.log('offset left:', inner.offsetLeft);
+        console.log('offsetATop', inner.offsetTop);
+        console.log('offsetheigth', inner.offsetHeight);
+        console.log('offsetwidth', inner.offsetWidth);
+
+        console.log('client left:', inner.clientLeft);
+        console.log('client top', inner.clientTop);
+        console.log('client width', inner.clientHeight);
+        console.log('client height', inner.clientWidth);
+        container.scrollTop = 100;
+        container.scrollLeft = 50;
+        console.log("Scroll Top: ", container.scrollTop);
+        console.log("Scroll Left: ", container.scrollLeft);
+    </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Position</title>
+    <style>
+        #container {
+            width: 300px;
+            height: 200px;
+            overflow: auto;
+            border: 1px solid black;
+            position: relative;
+        }
+        #inner {
+            width: 600px;
+            height: 400px;
+            background-color: lightblue;
+        }
+        #scroll-info {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" onscroll="updateScrollInfo()">
+        <div id="inner">
+            <!-- Large content here to enable scrolling -->
+        </div>
+    </div>
+    <div id="scroll-info">
+        <p>Scroll Top: <span id="scroll-top"></span></p>
+        <p>Scroll Left: <span id="scroll-left"></span></p>
+    </div>
+
+    <script>
+        function updateScrollInfo(){
+            const container = document.getElementById('container');
+
+            const scrollTop = container.scrollTop;
+            const scrollLeft = container.scrollLeft;
+            document.getElementById('scroll-top').textContent = scrollTop;
+            document.getElementById('scroll-left').textContent = scrollLeft
+        }
     </script>
 </body>
 </html> -->
