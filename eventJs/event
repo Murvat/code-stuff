@@ -1,34 +1,9 @@
-Общие:
-nodeType: Возвращает тип узла (1 - элемент, 2 - атрибут, 3 - текст и т.д.).
-nodeName: Возвращает имя узла.
-nodeValue: Возвращает текстовое содержимое узла.
-attributes: Возвращает коллекцию атрибутов элемента.
-textContent: Возвращает или устанавливает текстовое содержимое элемента.
-innerHTML: Возвращает или устанавливает HTML-код внутри элемента.
-outerHTML: Возвращает или устанавливает HTML-код элемента, включая его теги.
 
-Получение и установка атрибутов:
-getAttribute(name): Возвращает значение атрибута с указанным именем.
-setAttribute(name, value): Устанавливает значение атрибута с указанным именем.
-removeAttribute(name): Удаляет атрибут с указанным именем.
-hasAttribute(name): Проверяет, существует ли атрибут с указанным именем.
-
-Работа с классами:
-classList.add(value): Добавляет класс к элементу.
-classList.remove(value): Удаляет класс из элемента.
-classList.toggle(value): Переключает класс элемента (добавляет, если его нет, и удаляет, если есть).
-classList.contains(value): Проверяет, содержит ли элемент указанный класс.
-
-Работа со стилями:
-style.getPropertyValue(name): Возвращает значение свойства CSS с указанным именем.
-style.setProperty(name, value): Устанавливает значение свойства CSS с указанным именем.
-style.removeProperty(name): Удаляет свойство CSS с указанным именем.
 Работа с формой:
-
 submit(): Отправляет форму.
 reset(): Сбрасывает форму к исходному состоянию.
-Работа с изображениями:
 
+Работа с изображениями
 complete: Возвращает true, если изображение загружено.
 naturalWidth: Возвращает исходную ширину изображения.
 naturalHeight: Возвращает исходную высоту изображения.
@@ -46,69 +21,6 @@ deleteCell(index): Удаляет ячейку из строки таблицы.
 Работа с ячейками таблицы:
 colSpan: Возвращает или устанавливает количество столбцов, занимаемых ячейкой.
 rowSpan: Возвращает или устанавливает количество строк, занимаемых ячейкой.
-
-Свойства:
-id: Возвращает или устанавливает ID элемента.
-className: Возвращает или устанавливает имя класса элемента.
-classList: Возвращает объект, представляющий список классов элемента.
-style: Возвращает объект, представляющий стиль элемента.
-tagName: Возвращает имя тега элемента.
-parentNode: Возвращает родительский элемент.
-childNodes: Возвращает коллекцию дочерних элементов.
-firstChild: Возвращает первый дочерний элемент.
-lastChild: Возвращает последний дочерний элемент.
-nextSibling: Возвращает следующий элемент.
-previousSibling: Возвращает предыдущий элемент.
-
-Методы:
-addEventListener: Добавляет обработчик события к элементу.
-removeEventListener: Удаляет обработчик события с элемента.
-querySelector: Находит первый элемент, соответствующий CSS-селектору.
-querySelectorAll: Находит все элементы, соответствующие CSS-селектору.
-getElementsByTagName: Находит все элементы с заданным тегом.
-getElementsByClassName: Находит все элементы с заданным классом.
-getElementById: Находит элемент по его ID.
-insertBefore: Вставляет новый элемент перед заданным элементом.
-appendChild: Добавляет новый элемент в конец списка дочерних элементов.
-removeChild: Удаляет элемент из списка дочерних элементов.
-replaceChild: Заменяет один элемент другим.
-cloneNode: Клонирует элемент.
-normalize: Убирает лишние пробелы из текстового содержимого элемента.
-
-Свойства и методы CSS:
-style.width: Возвращает или устанавливает ширину элемента.
-style.height: Возвращает или устанавливает высоту элемента.
-style.color: Возвращает или устанавливает цвет элемента.
-style.backgroundColor: Возвращает или устанавливает фоновый цвет элемента.
-style.display: Возвращает или устанавливает видимость элемента.
-style.position: Возвращает или устанавливает позиционирование элемента.
-classList.add: Добавляет класс к элементу.
-classList.remove: Удаляет класс из элемента.
-classList.contains: Проверяет, содержит ли элемент заданный класс.
-
-Создание элемента:
-document.createElement(tag)
-document.createTextNode(text)
-Методы вставки
-parentElem.appendChild(node)
-parentElem.insertBefore(node, nextSibling)
-parentElem.replaceChild(node, oldChild)
-node.append(...nodes or strings)– добавляет узлы или строки вконец node
-node.prepend(...nodes or strings)– вставляет узлы или строки вначало node
-node.before(...nodes or strings) - вставляет узлы или строки до node
-node.after(...nodes or strings)- вставляет узлы или строки после node
-node.replaceWith(...nodes or strings)- заменяет node заданными узлами или строками.
-elem.insertAdjacentHTML(where, html):
-"beforebegin" – вставить html непосредственно перед elem , 
-"afterbegin" – вставить html в начало elem , 
-"beforeend" – вставить html в конец elem , 
-"afterend" – вставить html непосредственно после elem
-elem.insertAdjacentText(where, text) – такой же синтаксис, нострока text вставляется
- «как текст», вместо HTML,
-elem.insertAdjacentElement(where, elem)– такой же синтаксис, новставляет элемент elem
-node.remove().
-elem.cloneNode(true).
-document.write()
 
 События:
 click: Событие, которое происходит при щелчке по элементу.
@@ -215,52 +127,11 @@ popstate
 storage
 message
 
-Методы:
-Получение элементов:
-getElementById()
-getElementsByClassName()
-getElementsByTagName()
-querySelector()
-querySelectorAll()
-
-Манипуляции с классами:
-classList.add()
-classList.remove()
-classList.toggle()
-classList.contains()
-
-Работа с атрибутами:
-getAttribute()
-setAttribute()
-removeAttribute()
-
-Стили и CSS:
-style.setProperty()
-style.getPropertyValue()
-getComputedStyle()
-
-Добавление и удаление элементов:
-appendChild()
-removeChild()
-createElement()
-cloneNode()
-insertBefore()
-
 События:
 addEventListener()
 removeEventListener()
 dispatchEvent()
 
-Свойства:
-Свойства элементов:
-innerHTML
-textContent
-value
-src
-href
-className
-id
- 
 Свойства окна и документа:
 window.location
 window.navigator
@@ -268,21 +139,36 @@ document.cookie
 document.title
 document.URL
 
-offsetParent – ближайший CSS-позиционированный родитель или ближайший td, th , table, body .
-offsetLeft/offsetTop – позиция в пикселях верхнего левого углаотносительно offsetParent .
-offsetWidth/offsetHeight – «внешняя» ширина/высота элемента,включая рамки.
-clientLeft/clientTop – расстояние от верхнего левого внешнего угла довнутренного.
- Для операционных систем с ориентацией слева-направо этисвойства равны ширинам левой/верхней рамки. 
- Если язык ОС таков, чтоориентация справа налево, так что вертикальная полоса прокрутки находитсяне справа, а слева, то
-clientLeft- включает в своё значение её ширину.
-clientWidth/clientHeight – ширина/высота содержимого вместе свнутренними отступами padding , но без полосы прокрутки.
-scrollWidth/scrollHeight – ширины/высота содержимого, аналогично clientWidth/Height , но учитывают прокрученную, невидимую областьэлемента.
-scrollLeft/scrollTop – ширина/высота прокрученной сверху частиэлемента, считается от верхнего левого угла.
-Прокрутка: scrollTo, scrollBy, scrollIntoView.
-Прокрутку окна можно получить так:
-window.pageYOffset/pageXOffset.
-Изменить текущую прокрутку:
-window.scrollTo(pageX,pageY) – абсолютные координаты,
-window.scrollBy(x,y) – прокрутка относительно текущего места,
-elem.scrollIntoView(top) – прокрутить страницу так, чтобы сделать elem видимым
-(выровнять относительно верхней/нижней части окна).
+
+
+Объект-обработчик: handleEvent
+Всплытие и погружение
+event.stopPropagation()
+Делегирование событий
+Приём проектирования «поведение
+event.defaultPrevented
+Конструктор Event
+Метод dispatchEvent
+Пользовательские события
+Алгоритм Drag’n’Drop
+document.elementFromPoint(clientX, clientY)
+shiftX/shiftY .
+getBoundingClientRect()
+event.repeat
+
+form.elements
+form.elements[name]
+input.value
+input.checked
+select.options– коллекция из подэлементов<option>
+
+select.value– значение выбранного в данный момент <option>
+select.selectedIndex – номер выбранного<option>
+new Option
+DOMContentLoaded, load, beforeunload, unload
+Скрипты: async, defer
+script.onerror
+range.setStart(node,offset)
+range.setEnd(node, offset)
+Методы Range
+Свойства Selection
