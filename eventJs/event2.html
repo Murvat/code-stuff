@@ -452,5 +452,105 @@ console.log('Index of the cell in the row:', cell.cellIndex);        </script>
 
 </body>
 </html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Properties and Methods Exercise</title>
+<style>
+    #target {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 50px;
+    }
+</style>
+</head>
+<body>
+
+<div id="target">Click me!</div>
+
+<script>
+    const targetElement = document.getElementById('target');
+    targetElement.addEventListener('click', function(event){
+        console.log('Type of event:', event.type);
+        console.log('Target element:' , event.target);
+        console.log('Mouse coordinates (X/Y)"', event.clientX, event.clientY)
+        console.log('Key code:', event.keyCode);
+        event.preventDefault();
+        event.stopPropagation();
+        console.log('Event details:', event.detail)
+    })
+</script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Even More Complex Event Handling Exercise</title>
+<style>
+    .draggable {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="draggable" id="draggable">Drag Me!</div>
+
+<script>
+    const draggable = document.getElementById('draggable');
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    function handleMouseDown(event){
+        isdragging = true;
+        const { clientX, clientY} = event;
+        const {left, top} = draggable.getBoundingClientRect();
+        offsetX = clientX - left;
+        offsetY = clientX - top;
+    }
+
+    function handleMouseMove(event){
+        if(!isDragging) return;
+        const {clientX , clientY}=  event;
+        draggable.style.left = clientX- offsetX + 'px';
+        draggable.style.top = clientY - offsetY+ 'px'
+    }
+
+    function handleMouseUp(){
+        isDragging = false;
+    }
+
+    function handleKeyDown(event){
+        console.log('Key pressed:', event.key);
+    }s
+    function handleKeyUp(event){
+        console.log('key released:', event.key)
+    }
+
+    draggable.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keyup', handleKeyUp)
+</script>
+
+</body>
+</html>
 
 
