@@ -489,7 +489,7 @@ console.log('Index of the cell in the row:', cell.cellIndex);        </script>
 
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -551,6 +551,78 @@ console.log('Index of the cell in the row:', cell.cellIndex);        </script>
 </script>
 
 </body>
-</html>
+</html> -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Handling Examples</title>
+</head>
+<body>
+
+<button id="btn">Нажми меня</button>
+<div id="container">
+    <button id="delegateBtn">Делегированный кнопка</button>
+    <button id="stopPropagationBtn">Остановить всплытие</button></div>
+    <button id="behaviorBtn">Поведение</button>
+
+<script>
+    const handleObject = {
+        handleEvent(event){
+            console.log('Obyekt obrabotcik srabotal', event.type);
+        }            
+    };
+
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener('click', handleObject);
+    const container = document.getElementById('container');
+    container.addEventListener('click', function(){
+        console.log('Kliknuli na konteyner');
+    });
+    container.addEventListener('click', function(){
+        console.log('Kliknuli na konteynere (vtoroy obrabotcik)');
+    }, true);
+    
+    const stopPropagationBtn = document.getElementById('stopPropagationBtn');
+    stopPropagationBtn.addEventListener('click', function(event){
+        event.stopPropagation();
+        console.log('Sobitie ostanovleno na elemente', event.target.id)
+    })
+
+    const containerDelegate = document.getElementById('container');
+    container.addEventListener('click', function(event){
+        if(event.target && event.target.id === 'delegateBtn'){
+            console.log('Kliknul na delegirovannuyu knopku');
+        }
+    })
+
+
+    const behaviorBtn = document.getElementById('behaviorBtn');
+    behaviorBtn.addEventListener('click', function(event){
+        event.preventDefault();
+        console.log('Standart prekrawen')
+    })
+
+    const customEvent = new Event('custom');
+    window.addEventListener('custom', function(){
+        console.log('User event handed');
+    });
+    window.dispatchEvent(customEvent);
+
+    const customBtn = document.getElementById('customBtn');
+    customBtn.addEventListener('click', function(){
+        const customEvent = new CustomEvent('customEvent',{
+            detail: {
+                message: 'Hello: it/s user event'
+            }
+        });
+        window.dispatchEvent(customEvent);
+    })
+</script>
+
+</body>
+</html>
 
