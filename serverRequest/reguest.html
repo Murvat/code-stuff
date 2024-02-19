@@ -11,29 +11,68 @@
 
         // xhr.open('GET', requestURL)
         // xhr.send() 
-        function sendrequest(method, url){
-            return new Promise((resolve, reject) => {
-                const xhr = new XMLHttpRequest()
-                xhr.open(method, requestURL)
-                xhr.responseType = 'json'
+        // function sendrequest(method, url){
+        //     return new Promise((resolve, reject) => {
+        //         const xhr = new XMLHttpRequest()
+        //         xhr.open(method, requestURL)
+        //         xhr.responseType = 'json'
 
-                xhr.onload= () => {
-                    if(xhr.status >= 400) {
-                        reject(xhr.response)
-                    } else {
-                        resolve(xhr.response)
-                    }
-                }
-                xhr.onerror = () =>{
-                    reject(xhr.response)
-                }
-                xhr.send()
-            })
-        }
-        sendrequest('GET', requestURL)
-            .then(data => console.log(data))
-            .catch(err => console.log(err))
+        //         xhr.onload= () => {
+        //             if(xhr.status >= 400) {
+        //                 reject(xhr.response)
+        //             } else {
+        //                 resolve(xhr.response)
+        //             }
+        //         }
+        //         xhr.onerror = () =>{
+        //             reject(xhr.response)
+        //         }
+        //         xhr.send()
+        //     })
+        // }
+        // sendrequest('GET', requestURL)
+        //     .then(data => console.log(data))
+        //     .catch(err => console.log(err))
 
-    </script>
+        // function sendRequest(method, url, body = null){
+        //     return fetch(url).then(response => {
+        //         return response.json()
+        //     })
+        // }
+
+        // sendRequest('GET', requestURL)
+        // .then(data=> console.log(data))
+        // .catch(err=> console.log(err))
+        // let promise = fetch(url, [options])
+        // let response = await fetch(url);
+        // if (response.ok) {
+        //     let json = await response.json();
+        // }else {
+        //     alert('Mistake HTTP:' + response.status);
+        // }
+
+        // fetch('url')
+        // .then(response => response.json())
+        // .then(commits => alert(commits[0].author.login))
+//    let response = fetch(protectedUrl, {
+//     headers: {
+//         Authentication: 'secret'
+//     }
+//    })
+
+//    formData.set(name, value);
+//    formData.set((name, blob, fileName))
+
+//    let formData = new FormData();
+//    formData.append('key1', 'value1');
+//    formData.append('key2', 'value2');
+//    for(let [name, value] of formData){
+//     alert(`${name} = ${value}`)
+//    }
+// fetch ('url', {method: 'GET'})
+// .then(data => data.json)
+// .then(response => console.lo)
+   </script>
+
 </body>
 </html>
