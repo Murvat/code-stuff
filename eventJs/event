@@ -46,6 +46,7 @@ shiftX/shiftY .
 getBoundingClientRect()
 event.repeat
 
+
 Работа со ссылками:
 click(): Имитирует щелчок по ссылке.
 hreflang: Возвращает или устанавливает язык страницы, на которую ссылается ссылка.
