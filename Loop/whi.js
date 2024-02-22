@@ -3,3 +3,6 @@ while(n<=10){
     console.log(n);
     n++;
 };
+function sad(){
+    console.log('sdfsd')
+}
