@@ -54,9 +54,77 @@
 // }
 // arr = [3, 4,5, 6,9, 12, 15]
 // getSpecialNumber(arr);
-const getFlatArray = (arr) =>{
-    let floatArray = arr.reduce((acc, num)=>acc.concat(num), [])
-    console.log(floatArray);
-}
-numbers = [1,2,[3,5], [6],[5,6,7,8]]
-getFlatArray(numbers)
+// const getFlatArray = (arr) =>{
+//     let floatArray = arr.reduce((acc, num)=>acc.concat(num), [])
+//     console.log(floatArray);
+// }
+// numbers = [1,2,[3,5], [6],[5,6,7,8]]
+// getFlatArray(numbers)
+// const transformToObj = arr =>{
+//     let obj = {};
+//     arr.forEach(element => {
+//         obj[element]=element
+//     });
+//     console.log(obj)
+// }
+
+// let massiv = [1, '8', [2,4,5]]
+// transformToObj(massiv)
+// const getArrayFrom = obj =>{
+//     let arr = [];
+//     for(val in obj){
+//         arr.push(obj[val]);
+//     }
+//     console.log(arr)
+// }
+
+
+// let building = {
+//     name: 'Pietro',
+//     floor:1
+// }
+// getArrayFrom(building)
+
+
+// const getFileteredArr = obj =>{
+//     let filteredArray=Object.entries(obj);
+//     let getArr = filteredArray.filter(arr=>{
+//         for(elem in arr){
+//             if (arr[1]>=18){
+//                 console.log(arr)
+//             }
+//         }}
+//     )
+
+//     getArr.map(arr=>arr[0])
+//     console.log(getArr)
+// }
+
+// let students={
+// Murvat:18,
+// NIkita:17,
+// Vlad: 22,
+// }
+// getFileteredArr(students)
+
+
+let students={
+    Murvat:18,
+    NIkita:17,
+    Vlad: 22,
+    }
+
+    const getAdults = userObject =>{
+        const userArray = Object.entries(userObject);
+
+        const filteredUserArray = userArray
+        .filter(user=>user[1]>=18)
+
+        const userNames = filteredUserArray
+        .map(user=>user[0])
+
+        console.log(userNames)
+
+    }
+    getAdults(students)
+    
