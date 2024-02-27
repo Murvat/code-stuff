@@ -108,23 +108,33 @@
 // getFileteredArr(students)
 
 
-let students={
-    Murvat:18,
-    NIkita:17,
-    Vlad: 22,
-    }
+// let students={
+//     Murvat:18,
+//     NIkita:17,
+//     Vlad: 22,
+//     }
 
-    const getAdults = userObject =>{
-        const userArray = Object.entries(userObject);
+    // const getAdults = userObject =>{
+    //     const userArray = Object.entries(userObject);
 
-        const filteredUserArray = userArray
-        .filter(user=>user[1]>=18)
+    //     const filteredUserArray = userArray
+    //     .filter(user=>user[1]>=18)
 
-        const userNames = filteredUserArray
-        .map(user=>user[0])
+    //     const userNames = filteredUserArray
+    //     .map(user=>user[0])
 
-        console.log(userNames)
+    //     console.log(userNames)
 
-    }
-    getAdults(students)
+    // }
+    // getAdults(students)
+    // let students={
+    //     Murvat:18,
+    //     NIkita:17,
+    //     Vlad: 22,
+    //     }
+    //     console.log(Murvat)
+    //     let { Vlad:Murvat}= students
+    //     console.log(Murvat)
+    //     console.log(Murvat)
+    
     
