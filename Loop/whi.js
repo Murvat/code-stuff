@@ -136,5 +136,44 @@
     //     let { Vlad:Murvat}= students
     //     console.log(Murvat)
     //     console.log(Murvat)
+
+    // const splitText = (text, len) =>{
+    //     const strArr = [];
+    //     let startPosition =0;
+
+    //     while(true){
+    //         let chunk =text.substr(startPosition, len);
+
+    //         if(chunk.length === 0) {
+    //             break;
+    //         }
+    //         // console.log(chunk)
+    //         strArr.push(chunk[0].toUpperCase()+ chunk.slice(1));
+    //         startPosition += len;
+    //     }
+    //     // console.log(strArr)
+    //     return strArr.join('\n');
+
+    // };
+
+    // console.log(splitText('abcdefg', 4))
+
+    // const calRes = expression =>{
+    //     let sExp = expression.split(' ');
+    //     let result;
+    //     switch(sExp[1]){
+    //         case '+':
+    //             result = Number(sExp[0]) + +sExp[2];
+    //             break
+    //         case '-':
+    //            result= Number(sExp[0]) - sExp[2];
+    //            break
+    //     }
+    //     console.log(expression + '='+ result  )
+    // }
+
+    // calRes('2 + 5');
+    // calRes('7 - 2')
+
     
     
