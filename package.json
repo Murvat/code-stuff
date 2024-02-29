@@ -11,4 +11,13 @@
   "devDependencies": {
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0"
+    
+  } ,
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   }
+  
+  
+}

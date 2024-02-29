@@ -181,12 +181,6 @@
     //     expect(17).not.toEqual(18);
     // });
 
-    import { getOddNumbers, getSquaredNumbers } from "./new";
-    
-    it('should get squared number', ()=>{
-        const result = getSquaredNumbers([1, 2 ,3])
-        expect(result).toEqual([1,4,9])
-    })
     
     // const getEvenNumbers = numbers =>
     // numbers.filter(num => (num% 2 == 0));
@@ -197,6 +191,46 @@
     //     expect(result).toEqual([2,4 ])
     // }
     // )
+    // import GetSum, { getOddNumbers, getSquaredNumbers } from "./new";
+    
+    // it('should get squared number', ()=>{
+    //     const result = getSquaredNumbers([1, 2 ,3])
+    //     expect(result).toEqual([1,4,9])
+    // })
+
+    // it('should keep odd numbers', ()=>{
+    //     const result = getOddNumbers([1, 2 ,3, 4 ,9]);
+
+    //     expect(result).toEqual([1, 3, 9]);
+    // })
+
+    // it('should get sum of numbers', ()=>{
+    //     const result = GetSum(4 , 9);
+
+    //     expect(result).toEqual(13);
+    // })
+
+const message='Bye'
+    function setMessenger(){
+        function sendMessage(name){
+            const sender = "Groomcod";
+
+            console.log(`${name}, ${message}, ${sender}`)
+        };
+
+
+        function setMessage(text){
+            message = text
+        };
+
+        return {
+            sendMessage,
+            setMessage
+        }
+    }
+const messenger  = setMessenger();
+
+messenger.sendMessage('Halo')
 
     
     
