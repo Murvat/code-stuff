@@ -288,16 +288,38 @@
 // deferredSum(1, 4);
      
 
-const event = {
-    guest:[{name:'Murvat', mail:"m@gmail.com", age:30},
-    {name:'Nikolay', mail:"nik@gmail.com", age:17},
-],
-    message:'Welcome to the party',
-    getInvitations(){
-        return this.guest
-        .filter(({age})=>age >= 18)
-        .map(({name, mail})=>{console.log(`Hej ${name} `+` ${this.message}` + `${mail}`)}) 
+// const event = {
+//     guest:[{name:'Murvat', mail:"m@gmail.com", age:30},
+//     {name:'Nikolay', mail:"nik@gmail.com", age:17},
+// ],
+//     message:'Welcome to the party',
+//     getInvitations(){
+//         return this.guest
+//         .filter(({age})=>age >= 18)
+//         .map(({name, mail})=>{console.log(`Hej ${name} `+` ${this.message}` + `${mail}`)}) 
+//     }
+// }
+
+// event.getInvitations();
+//  const user = {
+//     firstName: 'Vaue',
+//     lastName: 'Nihao',
+//     get getFullName(){
+//         console.log(`${this.firstName} + ${this.lastName}`)
+//     }
+//  }
+
+//  user.getFullName;
+
+function User(name, age){
+    this.name = name;
+    this.age = age;
+    this.howOldIsHe = function(){
+        console.log( `${this.name}` ,`${this.age}`)
     }
 }
 
-event.getInvitations();
+const taleh = new User('Taleh', 29);
+taleh.howOldIsHe();
+const murad = new User('Murad', 30);
+murad.howOldIsHe()
