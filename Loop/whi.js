@@ -210,28 +210,94 @@
     //     expect(result).toEqual(13);
     // })
 
-const message='Bye'
-    function setMessenger(){
-        function sendMessage(name){
-            const sender = "Groomcod";
+// const message='Bye'
+//     function setMessenger(){
+//         function sendMessage(name){
+//             const sender = "Groomcod";
 
-            console.log(`${name}, ${message}, ${sender}`)
-        };
+//             console.log(`${name}, ${message}, ${sender}`)
+//         };
 
 
-        function setMessage(text){
-            message = text
-        };
+//         function setMessage(text){
+//             message = text
+//         };
 
-        return {
-            sendMessage,
-            setMessage
-        }
-    }
-const messenger  = setMessenger();
+//         return {
+//             sendMessage,
+//             setMessage
+//         }
+//     }
+// const messenger  = setMessenger();
 
-messenger.sendMessage('Halo')
+// messenger.sendMessage('Halo')
 
+// let count;
+// function makeCounter(){
+//     let count=0;
+//     return function(){
+//         console.log( count++);
+//     }
+// }
+
+// const counter1 = makeCounter();
+// const counter2 = makeCounter();
+// counter1();
+// counter1();
+// counter1();
+// counter1();
+// counter1();
+// counter2()
+// counter2()
+// counter2()
+// counter2()
+// var vara = 15;
+// console.log(vara);
+// if(vara){
+//     var vara = 21;
+// }
+// function result(vara){
+//     var vara  = 21;
+//     console.log() ;
+// }
+// console.log(vara)
+
+// const user = {
+//     Name: 'Murvat',
+//     Surname: 'Mustfayv',
+//     getFullName()
+//     {console.log(`${this.Name}, ${this.Surname}`)},}
     
-    
+//     // const getF = user.getFullName.bind(user);
+//     const getF = user.getFullName;
+
+//     getF.apply({Name: 'Fuad'});
+
+// function defer(func, ms){
+//     return function(){
+//         setTimeout(()=>func(...arguments), ms);
+//     }
+// }
+
+// const sum = (a, b) => {
+//     console.log(a+b);
+// }
+
+// const deferredSum = defer(sum, 1000);
+
+// deferredSum(1, 4);
      
+
+const event = {
+    guest:[{name:'Murvat', mail:"m@gmail.com", age:30},
+    {name:'Nikolay', mail:"nik@gmail.com", age:17},
+],
+    message:'Welcome to the party',
+    getInvitations(){
+        return this.guest
+        .filter(({age})=>age >= 18)
+        .map(({name, mail})=>{console.log(`Hej ${name} `+` ${this.message}` + `${mail}`)}) 
+    }
+}
+
+event.getInvitations();
