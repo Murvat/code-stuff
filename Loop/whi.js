@@ -311,15 +311,126 @@
 
 //  user.getFullName;
 
-function User(name, age){
-    this.name = name;
-    this.age = age;
-    this.howOldIsHe = function(){
-        console.log( `${this.name}` ,`${this.age}`)
-    }
-}
+// function User(name, age){
+//     this.name = name;
+//     this.age = age;
+//     this.howOldIsHe = function(){
+//         console.log( `${this.name}` ,`${this.age}`)
+//     }
+// }
 
-const taleh = new User('Taleh', 29);
-taleh.howOldIsHe();
-const murad = new User('Murad', 30);
-murad.howOldIsHe()
+// const taleh = new User('Taleh', 29);
+// taleh.howOldIsHe();
+// const murad = new User('Murad', 30);
+// murad.howOldIsHe()
+
+
+// class User{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     static compare(user1, user2){
+//         console.log(user1.age-user2.age);
+//     }
+
+//     sayHI(){
+//         console.log(hello `${this.name}`);
+
+//     }
+
+//     requestNewPhoto(){
+//         console.log(`New photo request was sent to your email`)
+//     }
+
+//     setAge(value){
+//         if(value < 0){
+//             return false;
+//         }
+//         this.age = value;
+//         if(value>= 25){
+//             this.requestNewPhoto();
+//         }
+//         return value;
+//     }
+// }
+
+// const user1 = new User('Tom', 30)
+// const user2 = new User('Murvat', 12)
+// User.compare(user1, user2)
+// console.log(user1);
+
+// user1.setAge(35);
+
+// class Vehicle{
+//     constructor(name, hasWheels){
+//         this.hasWheels = hasWheels;
+//         this.name = name;
+//     }
+
+//     move(){
+//         console.log(`${this.name} is moving`);
+//     }
+
+//     stop(){
+//         console.log(`${this.name} stopped`);
+//     }
+// }
+
+// class Ship extends Vehicle {
+//     constructor (name, speed){
+//         super(name, false);
+//         this.speed = speed;
+//     }
+
+//     startMachine (){
+//         console.log(`${this.name} lifting anchor up`);
+//         this.move();
+//     }
+
+//     stopMachine(){
+//         this.stop();
+//         console.log(`${this.name} lifting anchor down`)
+//     }
+// }
+ 
+
+// const ship1 = new Ship('Aurora', 17);
+// console.log(ship1);
+
+// ship1.startMachine();
+// ship1.stopMachine();
+
+
+// class Wallet{
+//     constructor(){
+//         this._balance = 0;
+//     }
+
+//     getBalance(){
+//         return this._balance;
+//     }
+
+//     deposit(amount){
+//         this._balance += amount;
+//     }
+//     withdraw(amount){
+//         if(amount > this._balance) {
+//             console.log('No enough funds');
+//             return;
+//         }
+
+//         this._balance -= amount;
+//     }
+// }
+
+
+// const wallet1 = new Wallet();
+
+// console.log(wallet1._balance);
+// console.log(wallet1.getBalance())
+// console.log(wallet1._balance);
+// console.log(wallet1.getBalance());
+// console.log(wallet1.withdraw(100));
+// console.log(wallet1.getBalance())
+
