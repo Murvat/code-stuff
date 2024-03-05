@@ -433,4 +433,15 @@
 // console.log(wallet1.getBalance());
 // console.log(wallet1.withdraw(100));
 // console.log(wallet1.getBalance())
+const daysOf = [
+    's', 'm','w'
+]
+
+const getDayOfWeek  = (date, days)=> {
+    const day = new Date(date).getDate();
+    const dateInnFuture = new Date(date).setDate(day+ days)
+ return new Date(dateInnFuture).getDay};
+
+ const result = getDayOfWeek(new Date(2019, 0, 1), 14)
+console.log(new Date(result));
 
