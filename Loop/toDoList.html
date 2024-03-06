@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,51 +15,112 @@
         <ul class="list"></ul>
     </main>
     <script>
-        const tasks =  [
-            {text:'Buy milk', done:false},
-           { text:'Pick up Tom from airport',done: true},
-           { text:'Visit party',done: false},
-           { text:'Visit doctor', done:true},
-            {text:'Buy meat',done:false},
-        ];
-        const renderListItems = listItems => {
-            const listElem = document.querySelector('.list');
+//         const tasks =  [
+//             {text:'Buy milk', done:false},
+//            { text:'Pick up Tom from airport',done: true},
+//            { text:'Visit party',done: false},
+//            { text:'Visit doctor', done:true},
+//             {text:'Buy meat',done:false},
+//         ];
+//         const renderListItems = listItems => {
+//             const listElem = document.querySelector('.list');
 
-            const listItemsElems = listItems
-            .sort((a,b)=>a.done-b.done)
-            .map(({text, done}) =>{
-            const listItemElem = document.createElement('li');
+//             const listItemsElems = listItems
+//             .sort((a,b)=>a.done-b.done)
+//             .map(({text, done}) =>{
+//             const listItemElem = document.createElement('li');
 
-            const checkboxElem = document.createElement('input');
-            checkboxElem.setAttribute('type', 'checkbox');
-            checkboxElem.setAttribute('checked', done);
-            checkboxElem.checked = done;
-            listItemElem.classList.add('list__item');
-            listItemElem.append(text, checkboxElem);
+//             const checkboxElem = document.createElement('input');
+//             checkboxElem.setAttribute('type', 'checkbox');
+//             checkboxElem.setAttribute('checked', done);
+//             checkboxElem.checked = done;
+//             listItemElem.classList.add('list__item');
+//             listItemElem.append(text, checkboxElem);
 
-            return listItemElem;
-        })
+//             return listItemElem;
+//         })
 
-        listElem.append(...listItemsElems);
-    };
+//         listElem.append(...listItemsElems);
+//     };
 
-    renderListItems(tasks);
+//     renderListItems(tasks);
 
-    localStorage.setItem('hobbies', JSON.stringify({'name': 'Tom'}));
-    localStorage.setItem('name', JSON.stringify('Tom'));
-    localStorage.setItem('age', JSON.stringify(17))
-   console.log(JSON.parse(localStorage.getItem('hobbies')))
-   const getLocalStorageData = () => {
-        return Object.entries(localStorage)
-        .reduce((acc, [key, value])=> {
-            return {
-                ...acc, 
-                [key]:value,
-            }
-        },{})
-    }
-   console.log(getLocalStorageData())
+//     localStorage.setItem('hobbies', JSON.stringify({'name': 'Tom'}));
+//     localStorage.setItem('name', JSON.stringify('Tom'));
+//     localStorage.setItem('age', JSON.stringify(17))
+//    console.log(JSON.parse(localStorage.getItem('hobbies')))
+//    const getLocalStorageData = () => {
+//         return Object.entries(localStorage)
+//         .reduce((acc, [key, value])=> {
+//             return {
+//                 ...acc, 
+//                 [key]:value,
+//             }
+//         },{})
+//     }
+//    console.log(getLocalStorageData())
    
-   </script>
+//    const favorites = ['id-6', 'id-17'];
+
+// const newLocal = {
+//     id: 'id-1',
+//     name: 'Products',
+//     nodes: [
+//         {
+//             id: 'id-2',
+//             name: 'Food',
+//             nodes: [
+//                 {
+//                     id: 'id-6',
+//                     name: 'Drinks',
+//                     nodes: []
+//                 },
+//             ],
+//             id: 'id-1',
+//             name: 'Products',
+//             nodes: []
+//         }
+//     ]
+// };
+
+// const favorites = ['id-6', 'id-17'];
+
+// const newLocal = {
+//     id: 'id-1',
+//     name: 'Products',
+//     nodes: [
+//         {
+//             id: 'id-2',
+//             name: 'Food',
+//             nodes: [
+//                 {
+//                     id: 'id-6',
+//                     name: 'Drinks',
+//                     nodes: []
+//                 }
+//                     ],
+
+//                 },
+// {            id: 'id-17',
+//             name: 'Vehicles',
+//             nodes: []
+//         }
+//     ]
+// };
+
+
+// const getFavoriteNode = (tree, favorites)=>{
+//     const isFavorite = favorites.includes(tree.id);
+//     return {
+//         ...tree,
+//         isFavorite,
+//         nodes:tree.nodes.map(childNode=> getFavoriteNode(childNode,favorites))
+//     }
+// }
+
+// const result = getFavoriteNode(newLocal, favorites); 
+
+// console.log(result)
+//    </script>
 </body>
-</html> -->
+</html>

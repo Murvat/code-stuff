@@ -445,3 +445,96 @@
 //  const result = getDayOfWeek(new Date(2019, 0, 1), 14)
 // console.log(new Date(result));
 
+
+// const calc = initalValue => {
+//     let result= initalValue;
+
+//     const calculator = {
+//         add(value){
+//             result += value
+//             return this
+//         },
+//         div(value){
+//             result /= value
+//             return this
+
+//         },
+//         mult(value){
+//             result *= value
+//             return this
+//         },
+//         result(){
+//             return result
+//         },
+//         subs(value){
+//             result -= value
+//             return this
+
+//         },
+        
+//     }
+//     return calculator;
+// }
+
+// const result = calc(10).add(2).mult(10).subs(3).div(2).result();
+// console.log(result)
+
+// const favorites = ['id-6', 'id-17'];
+
+// const newLocal = {
+//     id: 'id-1',
+//     name: 'Products',
+//     nodes: [
+//         {
+//             id: 'id-2',
+//             name: 'Food',
+//             nodes: [
+//                 {
+//                     id: 'id-6',
+//                     name: 'Drinks',
+//                     nodes: []
+//                 },
+//             ],
+//             id: 'id-1',
+//             name: 'Products',
+//             nodes: []
+//         }
+//     ]
+// };
+
+
+// const getFavoriteNode = (tree, favorites)=>{
+//     const isFavorite = favorites.includes(tree.id);
+//     return {
+//         ...tree,
+//         isFavorite,
+//         nodes: tree.nodes.map(childNode=> getFavoriteNode(childNode,favorites))
+//     }
+// }
+
+// const result = getFavoriteNode(newLocal, favorites);
+
+// console.log(result)
+
+// const sum = a=>b=> a+ b;
+
+// const add3 = sum(3);
+
+// const result = add3(5);
+// console.log(result);
+
+const add3 = value => value + 3;
+const mult2 = value => value * 2;
+const div4 = value => value / 4;
+
+const compose = (...funcs) => value =>{
+     return funcs.reduce((acc, func)=> func(acc), value);
+};
+
+const doEvertytonh = compose(
+    add3,
+    mult2,
+    div4
+);
+
+console.log(doEvertytonh(4))
