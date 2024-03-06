@@ -523,18 +523,26 @@
 // const result = add3(5);
 // console.log(result);
 
-const add3 = value => value + 3;
-const mult2 = value => value * 2;
-const div4 = value => value / 4;
+// const add3 = value => value + 3;
+// const mult2 = value => value * 2;
+// const div4 = value => value / 4;
 
-const compose = (...funcs) => value =>{
-     return funcs.reduce((acc, func)=> func(acc), value);
-};
+// const compose = (...funcs) => value =>{
+//      return funcs.reduce((acc, func)=> func(acc), value);
+// };
 
-const doEvertytonh = compose(
-    add3,
-    mult2,
-    div4
-);
+// const doEvertytonh = compose(
+//     add3,
+//     mult2,
+//     div4
+// );
 
-console.log(doEvertytonh(4))
+// console.log(doEvertytonh(4))
+
+// const pinger = (num, period)=>{
+//     setInterval(()=>{
+//         console.log("Ping");
+//     },period);
+// };
+
+// pinger(10, 1)
