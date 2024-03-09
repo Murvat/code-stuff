@@ -546,3 +546,119 @@
 // };
 
 // pinger(10, 1)
+
+// const requestUserData = userİd => {
+//     const request = new Promise((resolve, reject) => {
+//         if(userİd === 'broken'){
+//             setTimeout(()=>{
+//                 reject(new Error('User not found'));
+//             }, 500) }else{
+//                 setTimeout(()=>{
+//                     resolve({
+//                         name: 'John',
+//                         age: 17,
+//                         email: `${userİd}`,
+//                         userİd
+//                     })
+//                 }, 1000)
+//             }
+//         });
+//         return request;
+// };
+    
+// requestUserData('broken')
+// .then(data=>console.log(data))
+
+// requestUserData('user-1')
+// .then
+// (data=> console.log(data))
+// requestUserData('broken-1')
+// .catch(error=> console.log(error))
+// .finally(()=>console.log('finally'))
+
+// const asyncCalculator = num => new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(num)
+//             resolve(num);
+//         }, 500);
+//     })
+//     .then(value =>new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 let res = value * value;
+//                 const n = console.log(`Squared value ${res}`)
+//                 resolve(res)
+//             }, 500)
+//         }))
+//         .then(value=>new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 const res = value*2
+//                 console.log(`Doubled value: ${res}`)
+//                 resolve(res)
+//             },500);
+//         }))
+
+//         asyncCalculator(5)
+
+
+// const p = Promise.resolve(17);
+// const r =Promise.reject(new Error('Noooo...'));
+
+// const getValueWDelay = (value, delay)=> new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log(value)
+//         resolve(value);
+//     },delay);
+// })
+// const num1 = getValueWDelay(596,1000)
+// const num2 = getValueWDelay(undefined,2000)
+// const num3 = getValueWDelay("5",3000)
+
+// const getSum = numbers =>
+// numbers
+// .filter(value =>!isNaN(value))
+// .reduce((acc, num)=> acc + Number(num) , 0)
+// const asyncSum = (...asyncNumbers) =>{
+//     return Promise.all(asyncNumbers)
+//     .then(numbers=>getSum(numbers))
+//     .catch(()=>Promise.reject('can\'t calculate'))
+// }
+
+// asyncSum(num1, Promise.reject(new Error('err')), num3)
+// .then(result => console.log(result)) 
+        
+
+const getRandomNum= (from, to)=>{
+     from + Math.random() * (to - from)
+};
+const request = url => new Promise(resolve =>{
+    const randomDelay = getRandomNum(1000, 3000);
+    setTimeout(() => {
+        resolve({
+            userData: {
+                name: 'Tom',
+            age: 17,
+            },
+            source:url
+        })
+        
+    }, randomDelay);
+})
+const servers =[
+    'https://server.com/us',
+    'https://server.com/us',
+    'https://server.com/us'
+];
+
+const getUserASAP = userId =>{
+    const userUrls = servers
+    .map(serverUrll => `${serverUrll}/users/${userId}`);
+
+    const requests = userUrls
+    .map(userUrl => request(userUrl));
+    return Promise.race(requests);
+};
+
+getUserASAP('user-id-1')
+.then(res => console.log(res))
+
+
