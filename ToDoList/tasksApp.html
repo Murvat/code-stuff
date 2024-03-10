@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">TaskApp</h1>
+    <main class="task-list">
+        <div class="actions">
+            <input id="taskInput" class="task-input" type="text">
+            <button id="createTaskButton" class="btn create-task-btn">Create</button>
+        </div>
+        <ul class="list"></ul>
+    </main>
+    <script>
+        const baseUrl='https://65ed804d08706c584d99e4df.mockapi.io/api/v1/test';
+
+        const renderListItems = listItems => {
+            const listElem = document.querySelector('.list');
+            listElem.innerHTML = ''; 
+
+            const listItemsElems = listItems
+            .sort((a,b) => a.done - b.done)
+            .map(({text, done}) => {
+                const listItemElem = document.createElement('li');
+
+                const checkboxElem = document.createElement('input');
+                checkboxElem.setAttribute('type', 'checkbox');
+                checkboxElem.checked = done;
+
+                listItemElem.classList.add('list__item');
+                listItemElem.append(text, checkboxElem);
+
+                return listItemElem;
+            });
+
+            listElem.append(...listItemsElems);
+        };
+
+        const addTask = () => {
+            const taskInput = document.getElementById('taskInput').value;
+            if (taskInput.trim() !== '') { 
+                fetch(baseUrl, {
+                    method: 'POST',
+                    headers:{
+                        'Content-Type':'application/json;charset=utf-8'
+                    },
+                    body: JSON.stringify({ text: taskInput, done: false })
+                })
+                .then(response => response.json())
+                .then(() => getTaskList()) 
+                .catch(error => console.error('Error adding task:', error));
+            }
+        };
+
+        document.getElementById('createTaskButton').addEventListener('click', addTask);
+
+        const mapTasks = tasks => tasks.map((({_id, ...rest}) => ({ id: _id, ...rest })));
+
+        const getTaskList = () =>
+            fetch(baseUrl)
+            .then(response => response.json())
+            .then(mapTasks)
+            .then(renderListItems)
+            .catch(error => console.error('Error fetching task list:', error));
+
+        getTaskList(); 
+    </script>
+</body>
+</html>

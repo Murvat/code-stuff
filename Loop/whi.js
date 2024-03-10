@@ -662,10 +662,10 @@
 // .then(res => console.log(res))
 
 
-const fetchUserData = userName =>{
-    fetch(`https://api.github.com/users/${userName}`)
-.then(response =>  {
-    console.log(response);
-})};
+// const fetchUserData = userName =>{
+//     fetch(`https://api.github.com/users/${userName}`)
+// .then(response =>  {
+//     console.log(response);
+// })};
 
-fetchUserData('facebook')
+// fetchUserData('facebook')
