@@ -627,38 +627,45 @@
 // .then(result => console.log(result)) 
         
 
-const getRandomNum= (from, to)=>{
-     from + Math.random() * (to - from)
-};
-const request = url => new Promise(resolve =>{
-    const randomDelay = getRandomNum(1000, 3000);
-    setTimeout(() => {
-        resolve({
-            userData: {
-                name: 'Tom',
-            age: 17,
-            },
-            source:url
-        })
+// const getRandomNum= (from, to)=>{
+//      from + Math.random() * (to - from)
+// };
+// const request = url => new Promise(resolve =>{
+//     const randomDelay = getRandomNum(1000, 3000);
+//     setTimeout(() => {
+//         resolve({
+//             userData: {
+//                 name: 'Tom',
+//             age: 17,
+//             },
+//             source:url
+//         })
         
-    }, randomDelay);
-})
-const servers =[
-    'https://server.com/us',
-    'https://server.com/us',
-    'https://server.com/us'
-];
+//     }, randomDelay);
+// })
+// const servers =[
+//     'https://server.com/us',
+//     'https://server.com/us',
+//     'https://server.com/us'
+// ];
 
-const getUserASAP = userId =>{
-    const userUrls = servers
-    .map(serverUrll => `${serverUrll}/users/${userId}`);
+// const getUserASAP = userId =>{
+//     const userUrls = servers
+//     .map(serverUrll => `${serverUrll}/users/${userId}`);
 
-    const requests = userUrls
-    .map(userUrl => request(userUrl));
-    return Promise.race(requests);
-};
+//     const requests = userUrls
+//     .map(userUrl => request(userUrl));
+//     return Promise.race(requests);
+// };
 
-getUserASAP('user-id-1')
-.then(res => console.log(res))
+// getUserASAP('user-id-1')
+// .then(res => console.log(res))
 
 
+const fetchUserData = userName =>{
+    fetch(`https://api.github.com/users/${userName}`)
+.then(response =>  {
+    console.log(response);
+})};
+
+fetchUserData('facebook')

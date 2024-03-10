@@ -99,7 +99,16 @@
 //         }
 //     ]
 // };
+const fetchUserData = userName =>{
+    fetch(`https://api.github.com/users/${userName}`)
+.then(response =>  response.json()
+.then(data=>{
+    const{location, id, login}=data
+    console.log(login,location, id)
+})
+)};
 
+fetchUserData('facebook')
 
 // const getFavoriteNode = (tree, favorites)=>{
 //     const isFavorite = favorites.includes(tree.id);
