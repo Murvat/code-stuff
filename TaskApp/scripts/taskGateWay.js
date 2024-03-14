@@ -30,25 +30,25 @@
 // .then(data=>console.log(data))
 // console.log(55)
 
-const asyncCalc = num => new Promise((resolve)=>{
-    setTimeout(() => {
-        console.log(num)
-        resolve(num)
-    },500);
-})
-.then(value =>new Promise((resolve)=>{
-    setTimeout(() => {
-        const res = value * value;
-        resolve(res);
-        console.log(res);
-}, 1000);
-}))
-.then(value=>{
-    const res = value*2
-    console.log(res)
-    return res;
-});
-asyncCalc(4).then(value=>console.log(value));
+// const asyncCalc = num => new Promise((resolve)=>{
+//     setTimeout(() => {
+//         console.log(num)
+//         resolve(num)
+//     },500);
+// })
+// .then(value =>new Promise((resolve)=>{
+//     setTimeout(() => {
+//         const res = value * value;
+//         resolve(res);
+//         console.log(res);
+// }, 1000);
+// }))
+// .then(value=>{
+//     const res = value*2
+//     console.log(res)
+//     return res;
+// });
+// asyncCalc(4).then(value=>console.log(value));
 // const asyncCalc = num => new Promise((resolve) => {
 //     setTimeout(() => {
 //         console.log(num);
