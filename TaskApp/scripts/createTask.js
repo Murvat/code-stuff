@@ -8,16 +8,16 @@
 //     if(!text) {
 //         return;
 //     }
-//     taskTitleInputElem.value ='';
-//     const takssList = getItem('tasksList') ||[];
+    taskTitleInputElem.value ='';
+    const takssList = getItem('tasksList') ||[];
 
-//     const newTasksList = tasksList.concat({
-//         text, 
-//         done: false,
-//         createDate: new Date().toISOString(),
-//         id:Math.random().toString()
-//     });
+    const newTasksList = tasksList.concat({
+        text, 
+        done: false,
+        createDate: new Date().toISOString(),
+        id:Math.random().toString()
+    });
 
-//     setItem('tasksList', newTasksList);
-//     renderTasks();
+    setItem('tasksList', newTasksList);
+    renderTasks();
 //  }
